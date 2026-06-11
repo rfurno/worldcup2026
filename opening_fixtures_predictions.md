@@ -4,7 +4,7 @@ See **`match_predictions.md`** for detailed next-day forecasts (probabilities, x
 
 | Date       | Match                  | Group | Predicted Winner | Win Prob | xG (H–A) | Key Factors |
 |------------|------------------------|-------|------------------|----------|----------|-------------|
-| Jun 11    | Mexico vs South Africa| A     | Mexico           | 79.8%    | 3.01–0.84 | Azteca opener, host boost, SA limited attack. |
-| Jun 11    | South Korea vs Czechia| A     | South Korea      | 63.0%    | 2.07–0.91 | Son/Kim fit; Czech playoff side, neutral venue. |
+| Jun 11    | Mexico vs South Africa| A     | Mexico           | 45.1%    | 1.79–1.47 | Tight opener; draw 23%. See `match_predictions.md`. |
+| Jun 11    | South Korea vs Czechia| A     | South Korea      | 61.3%    | 2.04–1.00 | Clearest pick tomorrow; Korea xG edge. |
 | Jun 12    | Canada vs Bosnia      | B     | Canada           | TBD      | TBD      | Host boost. |
 | Jun 13    | Brazil vs Morocco     | C     | Brazil           | TBD      | TBD      | Talent edge, despite form questions. |

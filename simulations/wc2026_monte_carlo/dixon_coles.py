@@ -41,6 +41,7 @@ class DixonColesModel:
         self.config = config
         self.xi = config.dixon_coles_xi
         self.historical_matches = historical_matches
+        self._h2h_cache: dict[tuple[str, str], tuple[float, float]] = {}
         self.base_home_rate, self.base_away_rate = calibrate_goal_baselines(
             historical_matches, xi=self.xi
         )
@@ -62,13 +63,16 @@ class DixonColesModel:
         home_shift, away_shift = sm.venue_adjustment(home, away, venue)
 
         if self.config.use_h2h_adjustment and self.historical_matches is not None:
-            h2h_h, h2h_a = h2h_log_shift(
-                self.historical_matches,
-                home,
-                away,
-                xi=self.xi,
-                scale=self.config.h2h_scale,
-            )
+            key = (home, away)
+            if key not in self._h2h_cache:
+                self._h2h_cache[key] = h2h_log_shift(
+                    self.historical_matches,
+                    home,
+                    away,
+                    xi=self.xi,
+                    scale=self.config.h2h_scale,
+                )
+            h2h_h, h2h_a = self._h2h_cache[key]
             home_shift += h2h_h
             away_shift += h2h_a
 

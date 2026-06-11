@@ -56,8 +56,8 @@ class SimulationConfig:
     market_calibration_blend: float = 0.90
     injury_market_discount: float = 0.40
     iterative_market_calibration: bool = True
-    calibration_iterations: int = 10
-    calibration_sims_per_iter: int = 4000
+    calibration_iterations: int = 5
+    calibration_sims_per_iter: int = 2000
     strength_temperature: float = 0.42
     home_advantage: float = 0.22
     travel_fatigue_per_1000km: float = 0.02
