@@ -1,11 +1,10 @@
-# Player Performance Tracker Template
+# Player Performance Tracker Template (Per Team)
 
-Use for expanding per-team or key players.
+**Team: [Team Name]**
 
-**Team:** [Team]
+| No. | Player Name | Pos | Age | Club | Caps | Goals | Recent Club Performance | Int'l Form | Fitness Status | Notes for WC |
+|-----|-------------|-----|-----|------|------|-------|--------------------------|------------|----------------|--------------|
+| 1   | Example GK | GK | 28 | Club | 50 | 0 | Strong saves | Good | Fit | Starter |
+| ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
 
-| No | Player | Pos | Club | Caps/Goals | Recent Performance | Fitness/Condition | Predicted Role/Impact |
-|----|--------|-----|------|------------|--------------------|-------------------|-----------------------|
-| 1 | Player Name | GK/FW/etc | Club | X/Y | Stats | Fit/Injured | High/Medium |
-
-Expand as needed for match predictions.
+Use this template for each team file or combine as needed.
