@@ -7,6 +7,7 @@ This repository tracks predictions for the 2026 FIFA World Cup, including top 3 
 - `winner_odds_table.md`: Tournament winner odds from betting sites.
 - `injury_tracker.md`: Key player injuries and physical condition tracker.
 - `opening_fixtures_predictions.md`: Early match predictions.
+- `match_predictions.md`: Daily match-by-match forecasts (probabilities, xG, scorelines).
 - `player_tracker.md`: Expanded key players per team (all teams summarized).
 - `betting_sites_odds.md`: Detailed tables from multiple betting sites.
 - `news_sources_reference.md`: Sources used for data and updates.

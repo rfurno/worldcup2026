@@ -1,0 +1,106 @@
+"""Blend Elo, market, squad value, xG, and injury signals into team strengths."""
+
+from __future__ import annotations
+
+import numpy as np
+import pandas as pd
+
+from .config import BlendWeights, SimulationConfig
+from .data_loaders import build_team_features, normalize_signal
+from .tournament_data import HOST_NATIONS, TEAM_HOME_VENUES, VENUE_COORDINATES
+
+
+def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    r = 6371.0
+    phi1, phi2 = np.radians(lat1), np.radians(lat2)
+    dphi = np.radians(lat2 - lat1)
+    dlambda = np.radians(lon2 - lon1)
+    a = np.sin(dphi / 2) ** 2 + np.cos(phi1) * np.cos(phi2) * np.sin(dlambda / 2) ** 2
+    return float(2 * r * np.arcsin(np.sqrt(a)))
+
+
+class TeamStrengthModel:
+    """Compute attack/defense parameters for Dixon-Coles simulation."""
+
+    def __init__(
+        self,
+        config: SimulationConfig,
+        features: pd.DataFrame | None = None,
+        refresh_external: bool = False,
+    ):
+        self.config = config
+        self.features = features if features is not None else build_team_features(
+            refresh_external=refresh_external
+        )
+        self.weights = config.blend_weights
+        self._strengths = self._compute_strengths()
+        self._attack, self._defense = self._compute_attack_defense()
+
+    def _compute_strengths(self) -> pd.Series:
+        df = self.features.set_index("team")
+        w = self.weights
+
+        composite = (
+            w.elo * normalize_signal(df["elo"])
+            + w.market * normalize_signal(df["market_prob"])
+            + w.squad_value * normalize_signal(df["squad_value_meur"])
+            + w.xg_form * normalize_signal(df["xg_diff_per_match"])
+            + w.player_tracker * normalize_signal(df["player_tracker_adj"])
+        )
+        composite *= df["injury_multiplier"]
+        return composite
+
+    def _compute_attack_defense(self) -> tuple[dict[str, float], dict[str, float]]:
+        strength = self._strengths
+        attack = {}
+        defense = {}
+        for team in strength.index:
+            s = float(strength.loc[team])
+            attack[team] = np.exp(0.35 * s)
+            defense[team] = np.exp(-0.30 * s)
+        return attack, defense
+
+    def get_attack(self, team: str) -> float:
+        return self._attack[team]
+
+    def get_defense(self, team: str) -> float:
+        return self._defense[team]
+
+    def venue_adjustment(
+        self, home: str, away: str, venue: str | None = None
+    ) -> tuple[float, float]:
+        """
+        Home advantage, host bonus, and travel fatigue (#6).
+        Returns (home_shift, away_shift) added to log-rate.
+        """
+        cfg = self.config
+        home_shift = cfg.home_advantage
+        away_shift = 0.0
+
+        if home in HOST_NATIONS:
+            home_shift += cfg.host_bonus
+
+        venue_name = venue or TEAM_HOME_VENUES.get(home)
+        if venue_name and venue_name in VENUE_COORDINATES:
+            vlat, vlon = VENUE_COORDINATES[venue_name]
+            for team, sign in ((away, -1.0),):
+                origin = TEAM_HOME_VENUES.get(team)
+                if origin and origin in VENUE_COORDINATES:
+                    olat, olon = VENUE_COORDINATES[origin]
+                    km = haversine_km(olat, olon, vlat, vlon)
+                    fatigue = cfg.travel_fatigue_per_1000km * (km / 1000.0)
+                    if sign < 0:
+                        away_shift += sign * fatigue
+        return home_shift, away_shift
+
+    def penalty_skill(self, team: str) -> float:
+        """Shootout skill from blended strength."""
+        base = float(self._strengths.get(team, 0.0))
+        return 1.0 / (1.0 + np.exp(-base))
+
+    def to_dataframe(self) -> pd.DataFrame:
+        df = self.features.copy()
+        df["strength"] = df["team"].map(self._strengths)
+        df["attack"] = df["team"].map(self._attack)
+        df["defense"] = df["team"].map(self._defense)
+        return df
