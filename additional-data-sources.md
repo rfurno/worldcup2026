@@ -18,10 +18,22 @@ Integrate these into the simulation for:
 - **Why valuable**: Transparent, updates after every match, proven in many WC models.
 
 ### 2. Player & Squad Valuation
-- **Primary**: Transfermarkt.com (market values, detailed squads, positions, ages, national team appearances and goals)
+- **Primary**: Transfermarkt.com (market values, detailed squads, positions, ages, national team caps/goals)
 - **Alternative**: FBref or Wikipedia for rosters
 - **Usage**: Compute team strength as sum/average of top players or use individual ratings. Adjust for our injury_tracker.md (e.g., reduce strength if key player injured).
 - **Why valuable**: Captures squad depth and star power beyond simple team Elo.
+
+### 2.5 Player Club Affiliation & Same-Nationality Clusters (Chemistry)
+- **Primary Sources**:
+  - **Transfermarkt** (Best): Filter players by nationality to see club distribution. Excellent for identifying clusters (e.g., multiple Brazilians at one club).
+  - **FBref**: Player stats combined with current club and national team data.
+  - **Sofascore / FotMob**: Good for current squad composition and same-club nationality tracking.
+- **Usage in MC Simulation**:
+  - Detect when 2+ players from the same national team play at the same club.
+  - Apply a **chemistry/synergy bonus** to team strength or individual player ratings.
+  - Use club form of same-nationality groups as a proxy for international chemistry and form.
+  - Correlate injury risk and performance among players at the same club.
+- **Why valuable**: Players from the same national team who play together at club level often develop better understanding, which can translate to international matches. This is especially relevant for teams like Brazil, France, Argentina, and Portugal.
 
 ### 3. Historical Match Results & Head-to-Head
 - **Primary**: Kaggle "international-football-results-from-1872-to-2017" + recent updates from FBref or Wikipedia
@@ -36,7 +48,7 @@ Integrate these into the simulation for:
 
 ## Contextual & Dynamic Factors
 
-### 5. Betting Markets & Prediction Markets (for Blending/Calibration)
+### 5. Betting Markets & Prediction Markets
 - **Primary**: Our betting_sites_odds.md + live odds from FanDuel, bet365, DraftKings
 - **Crowd Wisdom**: Polymarket or PredictIt (current probabilities for winner, paths)
 - **Usage**: Blend with Elo for hybrid strength ratings. Use as calibration target or for implied probabilities in MC.
