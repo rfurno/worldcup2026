@@ -1,4 +1,4 @@
-# World Cup 2026 Opening Fixtures & Early Predictions
+# Sample Group Stage Opening Fixtures & Early Predictions
 
 | Date       | Match                  | Group | Predicted Winner (Early) | Key Factors |
 |------------|------------------------|-------|---------------------------|-------------|

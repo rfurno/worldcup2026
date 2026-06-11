@@ -1,4 +1,4 @@
-# World Cup 2026 Injury & Physical Condition Tracker
+# Key Injuries & Physical Condition Tracker
 
 | Player          | Team     | Injury/Status              | Impact on Team                  | Expected Availability |
 |-----------------|----------|----------------------------|---------------------------------|-----------------------|

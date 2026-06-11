@@ -9,4 +9,4 @@
 | 5    | Brazil    | +850 to +900      | ~9-10%             | Talent but qualifying inconsistencies. |
 | 6    | Argentina | +900 to +1000     | ~8-9%              | Messi leadership, defending champs. |
 | 7    | Germany   | +1400             | ~6-7%              | Revamped under Nagelsmann. |
-| -    | Others (e.g. Netherlands, USA) | 20/1+ | <5% | Dark horses possible. |
+| -    | Others (e.g. Netherlands, USA) | 20/1+ | <5% | Dark horses possible.
