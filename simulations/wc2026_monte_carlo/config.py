@@ -13,6 +13,7 @@ OUTPUT_DIR = SIMULATIONS_DIR / "output"
 # Internal markdown sources (additional-data-sources.md #7, #5)
 INJURY_TRACKER_PATH = REPO_ROOT / "injury_tracker.md"
 PLAYER_TRACKER_PATH = REPO_ROOT / "player_tracker.md"
+PLAYER_TRACKER_KEY_PATH = REPO_ROOT / "player_tracker_key.md"
 WINNER_ODDS_PATH = REPO_ROOT / "winner_odds_table.md"
 BETTING_ODDS_PATH = REPO_ROOT / "betting_sites_odds.md"
 OPENING_FIXTURES_PATH = REPO_ROOT / "opening_fixtures_predictions.md"
@@ -22,6 +23,7 @@ ADDITIONAL_SOURCES_PATH = REPO_ROOT / "additional-data-sources.md"
 DEFAULT_ELO_PATH = DATA_DIR / "elo_ratings.csv"
 DEFAULT_SQUAD_VALUES_PATH = DATA_DIR / "squad_values.csv"
 DEFAULT_XG_FORM_PATH = DATA_DIR / "xg_form.csv"
+DEFAULT_SQUAD_CLUBS_PATH = DATA_DIR / "squad_clubs.csv"
 DEFAULT_HISTORICAL_MATCHES_PATH = DATA_DIR / "historical_matches.csv"
 
 # Elo fetch URL (additional-data-sources.md #1)
@@ -37,12 +39,13 @@ KAGGLE_RESULTS_URL = (
 class BlendWeights:
     """Weights for statistical signals (market handled via calibration anchor)."""
 
-    elo: float = 0.40
+    elo: float = 0.35
     market: float = 0.0
     squad_value: float = 0.20
-    xg_form: float = 0.15
-    recent_form: float = 0.15
+    xg_form: float = 0.12
+    recent_form: float = 0.13
     player_tracker: float = 0.10
+    club_chemistry: float = 0.10
 
 
 @dataclass

@@ -21,9 +21,11 @@ from .config import (
     INJURY_TRACKER_PATH,
     KAGGLE_RESULTS_URL,
     OPENING_FIXTURES_PATH,
+    PLAYER_TRACKER_KEY_PATH,
     PLAYER_TRACKER_PATH,
     WINNER_ODDS_PATH,
 )
+from .club_chemistry import build_club_chemistry_features
 from .form_and_h2h import compute_recent_form
 from .tournament_data import all_teams
 
@@ -272,6 +274,9 @@ def build_team_features(
     market = parse_winner_odds()
     injuries = parse_injury_tracker()
     player_adj = parse_player_tracker()
+    chemistry = build_club_chemistry_features(
+        player_tracker_text=_read_text(PLAYER_TRACKER_KEY_PATH),
+    )
 
     features = teams.merge(elo, on="team", how="left")
     features = features.merge(squad, on="team", how="left")
@@ -280,6 +285,7 @@ def build_team_features(
     features = features.merge(market, on="team", how="left")
     features = features.merge(injuries, on="team", how="left")
     features = features.merge(player_adj, on="team", how="left")
+    features = features.merge(chemistry, on="team", how="left")
 
     # Reasonable defaults for teams missing external data
     features["elo"] = features["elo"].fillna(features["elo"].median())
@@ -293,6 +299,8 @@ def build_team_features(
     )
     features["injury_multiplier"] = features["injury_multiplier"].fillna(1.0)
     features["player_tracker_adj"] = features["player_tracker_adj"].fillna(0.0)
+    features["club_chemistry"] = features["club_chemistry"].fillna(0.0)
+    features["cluster_count"] = features["cluster_count"].fillna(0).astype(int)
 
     return features
 

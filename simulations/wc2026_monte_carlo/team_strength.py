@@ -61,6 +61,7 @@ class TeamStrengthModel:
             + w.xg_form * normalize_signal(df["xg_diff_per_match"])
             + w.recent_form * normalize_signal(df["recent_form"])
             + w.player_tracker * normalize_signal(df["player_tracker_adj"])
+            + w.club_chemistry * normalize_signal(df["club_chemistry"])
         )
         if w.market > 0:
             statistical = statistical + w.market * normalize_signal(df["market_prob"])
