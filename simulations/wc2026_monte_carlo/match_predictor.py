@@ -7,9 +7,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from .config import SimulationConfig
-from .data_loaders import build_team_features, fetch_historical_matches
-from .dixon_coles import DixonColesModel
-from .team_strength import TeamStrengthModel
+from .model_factory import build_calibrated_models
 
 NEUTRAL_HOME_ADVANTAGE = 0.08
 
@@ -40,11 +38,8 @@ def _confidence_label(home_p: float, draw_p: float, away_p: float) -> str:
 
 class MatchPredictor:
     def __init__(self, config: SimulationConfig | None = None):
-        self.config = config or SimulationConfig()
-        features = build_team_features()
-        strength = TeamStrengthModel(self.config, features=features)
-        historical = fetch_historical_matches()
-        self.model = DixonColesModel(strength, self.config, historical_matches=historical)
+        self.config = config or SimulationConfig(verbose=False)
+        _, self.model, _ = build_calibrated_models(self.config)
 
     def predict(
         self,

@@ -58,6 +58,23 @@ GROUP_MATCH_SCHEDULE: list[tuple[int, int]] = [
     (1, 2),
 ]
 
+# Per-group match venues aligned to FIFA schedule where known (#6)
+# Order matches GROUP_MATCH_SCHEDULE indices 0..5
+GROUP_MATCH_VENUES: dict[str, list[str]] = {
+    "A": ["Mexico City", "Guadalajara", "Mexico City", "Guadalajara", "Monterrey", "Monterrey"],
+    "B": ["Toronto", "Vancouver", "Toronto", "Vancouver", "Toronto", "Vancouver"],
+    "C": ["New York", "Boston", "Miami", "Atlanta", "Miami", "Atlanta"],
+    "D": ["Los Angeles", "San Francisco", "Seattle", "Los Angeles", "San Francisco", "Seattle"],
+    "E": ["Houston", "Dallas", "Kansas City", "Houston", "Dallas", "Kansas City"],
+    "F": ["Miami", "Atlanta", "Philadelphia", "Miami", "Atlanta", "Philadelphia"],
+    "G": ["Dallas", "Houston", "Kansas City", "Dallas", "Houston", "Kansas City"],
+    "H": ["Miami", "Atlanta", "Boston", "Miami", "Atlanta", "Boston"],
+    "I": ["New York", "Philadelphia", "Boston", "New York", "Philadelphia", "Boston"],
+    "J": ["Dallas", "Houston", "Kansas City", "Dallas", "Houston", "Kansas City"],
+    "K": ["Los Angeles", "San Francisco", "Seattle", "Los Angeles", "San Francisco", "Seattle"],
+    "L": ["Boston", "Philadelphia", "New York", "Boston", "Philadelphia", "New York"],
+}
+
 STAGE_NAMES = {
     "group": "Group Stage",
     "r32": "Round of 32",
@@ -111,3 +128,11 @@ def team_group(team: str) -> str:
         if team in teams:
             return group
     raise KeyError(f"Unknown team: {team}")
+
+
+def venue_for_group_match(group: str, match_idx: int, home: str) -> str:
+    """Return stadium city for a group-stage fixture (#6)."""
+    venues = GROUP_MATCH_VENUES.get(group)
+    if venues and match_idx < len(venues):
+        return venues[match_idx]
+    return TEAM_HOME_VENUES.get(home, "Los Angeles")

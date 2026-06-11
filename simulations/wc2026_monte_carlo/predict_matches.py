@@ -6,6 +6,7 @@ import argparse
 import sys
 from datetime import date, timedelta
 
+from .group_position_predictor import GroupPositionPredictor
 from .match_predictor import MatchPredictor
 
 # Official Group A Matchday 1 fixtures (June 11, 2026)
@@ -55,6 +56,24 @@ def format_prediction(fixture: dict, pred) -> str:
     return "\n".join(lines)
 
 
+def format_group_positions(summary) -> str:
+    lines = [
+        f"## Group {summary.group} — First/Second Place Probabilities",
+        "",
+        "| Team | P(1st) | P(2nd) | P(Top 2) | P(3rd) | P(4th) |",
+        "|------|--------|--------|----------|--------|--------|",
+    ]
+    for t in summary.teams:
+        lines.append(
+            f"| {t.team} | {t.p_first * 100:.1f}% | {t.p_second * 100:.1f}% | "
+            f"{t.p_top_two * 100:.1f}% | {t.p_third * 100:.1f}% | {t.p_fourth * 100:.1f}% |"
+        )
+    lines.extend(["", "**Most likely 1st–2nd pairings**", ""])
+    for first, second, prob in summary.most_likely_top_two_pairs[:5]:
+        lines.append(f"- {first} / {second}: {prob * 100:.1f}%")
+    return "\n".join(lines)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Predict World Cup matches for a date")
     parser.add_argument(
@@ -62,6 +81,11 @@ def main(argv: list[str] | None = None) -> int:
         type=str,
         default=None,
         help="Date (YYYY-MM-DD). Default: tomorrow.",
+    )
+    parser.add_argument(
+        "--group-positions",
+        action="store_true",
+        help="Include full group first/second place probabilities",
     )
     args = parser.parse_args(argv)
 
@@ -86,6 +110,15 @@ def main(argv: list[str] | None = None) -> int:
         )
         print(format_prediction(fixture, pred))
         print()
+
+    groups = sorted({f["group"] for f in fixtures})
+    if args.group_positions or groups:
+        group_predictor = GroupPositionPredictor()
+        for group in groups:
+            summary = group_predictor.predict_group(group)
+            print(format_group_positions(summary))
+            print()
+
     return 0
 
 

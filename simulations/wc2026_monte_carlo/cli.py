@@ -123,9 +123,21 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Done in {elapsed:.1f}s")
         print(f"Expected goals/match: {summary.expected_goals_per_match:.2f}")
         print()
-        print("Top 10 Winner Probabilities:")
-        for _, row in summary.winner_probabilities.head(10).iterrows():
-            print(f"  {row['team']:<22} {row['win_probability'] * 100:5.2f}%")
+        print("Top 10 First / Second Place Probabilities:")
+        for _, row in summary.first_second_probabilities.head(10).iterrows():
+            print(
+                f"  {row['team']:<22} "
+                f"1st: {row['p_first'] * 100:5.2f}%  "
+                f"2nd: {row['p_second'] * 100:5.2f}%  "
+                f"podium: {row['p_podium'] * 100:5.2f}%"
+            )
+        print()
+        print("Top 5 Winner / Runner-up Pairs:")
+        for _, row in summary.winner_runner_up_pairs.head(5).iterrows():
+            print(
+                f"  {row['winner']} / {row['runner_up']}: "
+                f"{row['probability'] * 100:.2f}%"
+            )
         print()
         print(f"Results saved to {config.output_dir}/")
 

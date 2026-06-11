@@ -7,6 +7,7 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 
+from .calibration import fill_missing_market_probs, iterative_strength_adjustment
 from .config import SimulationConfig
 from .data_loaders import build_team_features, fetch_historical_matches
 from .dixon_coles import DixonColesModel
@@ -22,6 +23,8 @@ STAGE_ORDER = ["group", "r32", "r16", "qf", "sf", "final", "winner"]
 class SimulationSummary:
     n_simulations: int
     winner_probabilities: pd.DataFrame
+    first_second_probabilities: pd.DataFrame
+    winner_runner_up_pairs: pd.DataFrame
     stage_probabilities: pd.DataFrame
     expected_goals_per_match: float
     top_paths: pd.DataFrame
@@ -40,6 +43,36 @@ class MonteCarloEngine:
             self.strength_model, config, historical_matches=historical
         )
         self.simulator = TournamentSimulator(self.model)
+        self._calibrate_to_market_if_enabled(features)
+
+    def _calibrate_to_market_if_enabled(self, features: pd.DataFrame) -> None:
+        cfg = self.config
+        if not cfg.calibrate_to_market or not cfg.iterative_market_calibration:
+            return
+
+        if cfg.verbose:
+            print("Calibrating strengths to betting market odds...")
+
+        df = features.set_index("team")
+        target = fill_missing_market_probs(
+            teams=list(df.index),
+            market_probs=df["market_prob"],
+            elo=df["elo"],
+        )
+
+        def simulate_fn(rng, strengths):
+            self.strength_model.set_strengths(strengths)
+            return self.simulator.simulate(rng).winner
+
+        adjusted = iterative_strength_adjustment(
+            strengths=self.strength_model._strengths,
+            target_probs=target,
+            simulate_fn=simulate_fn,
+            n_iterations=cfg.calibration_iterations,
+            n_sims_per_iter=cfg.calibration_sims_per_iter,
+            seed=cfg.random_seed,
+        )
+        self.strength_model.set_strengths(adjusted)
 
     def run(self) -> SimulationSummary:
         cfg = self.config
@@ -47,6 +80,8 @@ class MonteCarloEngine:
         teams = all_teams()
 
         winner_counts = {team: 0 for team in teams}
+        runner_up_counts = {team: 0 for team in teams}
+        podium_pair_counts: dict[tuple[str, str], int] = {}
         stage_counts = {team: {stage: 0 for stage in STAGE_ORDER} for team in teams}
         total_goals = 0
         total_matches = 0
@@ -58,6 +93,9 @@ class MonteCarloEngine:
 
             result = self.simulator.simulate(rng)
             winner_counts[result.winner] += 1
+            runner_up_counts[result.runner_up] += 1
+            pair = (result.winner, result.runner_up)
+            podium_pair_counts[pair] = podium_pair_counts.get(pair, 0) + 1
             total_goals += result.total_goals
             total_matches += result.match_count
 
@@ -95,6 +133,32 @@ class MonteCarloEngine:
             ]
         ).sort_values("win_probability", ascending=False)
 
+        first_second_df = pd.DataFrame(
+            [
+                {
+                    "team": team,
+                    "p_first": winner_counts[team] / n,
+                    "p_second": runner_up_counts[team] / n,
+                    "p_podium": (winner_counts[team] + runner_up_counts[team]) / n,
+                    "first_place_finishes": winner_counts[team],
+                    "second_place_finishes": runner_up_counts[team],
+                }
+                for team in teams
+            ]
+        ).sort_values("p_first", ascending=False)
+
+        pairs_df = pd.DataFrame(
+            [
+                {
+                    "winner": w,
+                    "runner_up": r,
+                    "count": c,
+                    "probability": c / n,
+                }
+                for (w, r), c in podium_pair_counts.items()
+            ]
+        ).sort_values("probability", ascending=False)
+
         stage_rows = []
         for team in teams:
             row = {"team": team}
@@ -116,6 +180,8 @@ class MonteCarloEngine:
         return SimulationSummary(
             n_simulations=n,
             winner_probabilities=winner_df,
+            first_second_probabilities=first_second_df,
+            winner_runner_up_pairs=pairs_df,
             stage_probabilities=stage_df,
             expected_goals_per_match=expected_gpg,
             top_paths=paths_df,
@@ -125,6 +191,12 @@ class MonteCarloEngine:
         out = self.config.output_dir
         out.mkdir(parents=True, exist_ok=True)
         summary.winner_probabilities.to_csv(out / "winner_probabilities.csv", index=False)
+        summary.first_second_probabilities.to_csv(
+            out / "first_second_probabilities.csv", index=False
+        )
+        summary.winner_runner_up_pairs.to_csv(
+            out / "winner_runner_up_pairs.csv", index=False
+        )
         summary.stage_probabilities.to_csv(out / "stage_probabilities.csv", index=False)
         if not summary.top_paths.empty:
             summary.top_paths.to_csv(out / "top_paths.csv", index=False)
@@ -135,10 +207,19 @@ class MonteCarloEngine:
             f.write(
                 f"Expected goals per match: {summary.expected_goals_per_match:.2f}\n\n"
             )
-            f.write("Top 10 Winner Probabilities:\n")
-            for _, row in summary.winner_probabilities.head(10).iterrows():
+            f.write("Top 10 First / Second Place Probabilities:\n")
+            for _, row in summary.first_second_probabilities.head(10).iterrows():
                 f.write(
-                    f"  {row['team']:<22} {row['win_probability'] * 100:5.2f}%\n"
+                    f"  {row['team']:<22} "
+                    f"1st:{row['p_first'] * 100:5.2f}%  "
+                    f"2nd:{row['p_second'] * 100:5.2f}%  "
+                    f"podium:{row['p_podium'] * 100:5.2f}%\n"
+                )
+            f.write("\nTop 10 Winner / Runner-up Pairs:\n")
+            for _, row in summary.winner_runner_up_pairs.head(10).iterrows():
+                f.write(
+                    f"  {row['winner']} / {row['runner_up']}: "
+                    f"{row['probability'] * 100:.2f}%\n"
                 )
             f.write("\nStage Reach Probabilities (Top 10):\n")
             for _, row in summary.stage_probabilities.head(10).iterrows():

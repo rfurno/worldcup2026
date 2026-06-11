@@ -10,8 +10,8 @@ from .dixon_coles import DixonColesModel, MatchOutcome
 from .tournament_data import (
     GROUPS,
     GROUP_MATCH_SCHEDULE,
-    HOST_NATIONS,
     GroupStanding,
+    venue_for_group_match,
 )
 
 
@@ -248,12 +248,10 @@ class TournamentSimulator:
             standings = [GroupStanding(team=t, group=group) for t in teams]
             lookup = {s.team: s for s in standings}
 
-            for home_idx, away_idx in GROUP_MATCH_SCHEDULE:
+            for match_idx, (home_idx, away_idx) in enumerate(GROUP_MATCH_SCHEDULE):
                 home = teams[home_idx]
                 away = teams[away_idx]
-                venue = None
-                if home in HOST_NATIONS:
-                    venue = None
+                venue = venue_for_group_match(group, match_idx, home)
                 hg, ag = self.model.simulate_scoreline(home, away, rng, venue=venue)
                 lookup[home].record_result(hg, ag)
                 lookup[away].record_result(ag, hg)

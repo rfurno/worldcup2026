@@ -10,6 +10,8 @@ import pandas as pd
 from scipy.stats import poisson
 
 from .config import SimulationConfig
+from .form_and_h2h import h2h_log_shift
+from .historical_calibration import calibrate_goal_baselines, estimate_rho
 from .team_strength import TeamStrengthModel
 
 
@@ -26,7 +28,7 @@ class DixonColesModel:
     """
     Dixon & Coles (1997) adjustment for low-score correlation.
 
-    Calibrated using historical international results when available.
+    Calibrated on time-decayed international results (#3, #8).
     """
 
     def __init__(
@@ -37,26 +39,17 @@ class DixonColesModel:
     ):
         self.strength_model = strength_model
         self.config = config
-        self.rho = config.dixon_coles_rho
         self.xi = config.dixon_coles_xi
-        self.base_home_rate, self.base_away_rate = self._calibrate_baseline(
-            historical_matches
+        self.historical_matches = historical_matches
+        self.base_home_rate, self.base_away_rate = calibrate_goal_baselines(
+            historical_matches, xi=self.xi
         )
-
-    def _calibrate_baseline(
-        self, historical_matches: pd.DataFrame | None
-    ) -> tuple[float, float]:
-        if historical_matches is None or historical_matches.empty:
-            return 1.35, 1.05
-
-        recent = historical_matches.copy()
-        if "date" in recent.columns:
-            recent = recent.sort_values("date").tail(8000)
-        home_goals = recent["home_score"].mean()
-        away_goals = recent["away_score"].mean()
-        if np.isnan(home_goals) or np.isnan(away_goals):
-            return 1.35, 1.05
-        return float(home_goals), float(away_goals)
+        if config.estimate_rho_from_history:
+            self.rho = estimate_rho(
+                historical_matches, xi=self.xi, default=config.dixon_coles_rho
+            )
+        else:
+            self.rho = config.dixon_coles_rho
 
     def expected_rates(
         self,
@@ -67,6 +60,17 @@ class DixonColesModel:
     ) -> tuple[float, float]:
         sm = self.strength_model
         home_shift, away_shift = sm.venue_adjustment(home, away, venue)
+
+        if self.config.use_h2h_adjustment and self.historical_matches is not None:
+            h2h_h, h2h_a = h2h_log_shift(
+                self.historical_matches,
+                home,
+                away,
+                xi=self.xi,
+                scale=self.config.h2h_scale,
+            )
+            home_shift += h2h_h
+            away_shift += h2h_a
 
         home_attack = sm.get_attack(home)
         away_attack = sm.get_attack(away)
@@ -176,5 +180,4 @@ class DixonColesModel:
         )
 
 
-# Avoid circular import for default venue lookup
 from .tournament_data import TEAM_HOME_VENUES  # noqa: E402

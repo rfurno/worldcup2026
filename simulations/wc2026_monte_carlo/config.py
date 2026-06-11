@@ -35,12 +35,13 @@ KAGGLE_RESULTS_URL = (
 
 @dataclass
 class BlendWeights:
-    """Weights for combining strength signals (additional-data-sources.md integration)."""
+    """Weights for statistical signals (market handled via calibration anchor)."""
 
     elo: float = 0.40
-    market: float = 0.25
-    squad_value: float = 0.15
-    xg_form: float = 0.10
+    market: float = 0.0
+    squad_value: float = 0.20
+    xg_form: float = 0.15
+    recent_form: float = 0.15
     player_tracker: float = 0.10
 
 
@@ -51,6 +52,13 @@ class SimulationConfig:
     n_simulations: int = 10_000
     random_seed: int = 42
     blend_weights: BlendWeights = field(default_factory=BlendWeights)
+    calibrate_to_market: bool = True
+    market_calibration_blend: float = 0.90
+    injury_market_discount: float = 0.40
+    iterative_market_calibration: bool = True
+    calibration_iterations: int = 10
+    calibration_sims_per_iter: int = 4000
+    strength_temperature: float = 0.42
     home_advantage: float = 0.22
     travel_fatigue_per_1000km: float = 0.02
     host_bonus: float = 0.15
@@ -58,6 +66,9 @@ class SimulationConfig:
     penalty_strength_weight: float = 0.6
     dixon_coles_rho: float = -0.13
     dixon_coles_xi: float = 0.003
+    use_h2h_adjustment: bool = True
+    h2h_scale: float = 0.06
+    estimate_rho_from_history: bool = True
     output_dir: Path = field(default_factory=lambda: OUTPUT_DIR)
     save_plot: bool = True
     verbose: bool = True

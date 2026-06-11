@@ -24,6 +24,7 @@ from .config import (
     PLAYER_TRACKER_PATH,
     WINNER_ODDS_PATH,
 )
+from .form_and_h2h import compute_recent_form
 from .tournament_data import all_teams
 
 
@@ -253,9 +254,9 @@ def build_team_features(
     """
     teams = pd.DataFrame({"team": all_teams()})
 
+    historical = fetch_historical_matches()
     if refresh_external:
         elo = fetch_elo_ratings()
-        historical = fetch_historical_matches()
         if not historical.empty:
             historical.to_csv(DEFAULT_HISTORICAL_MATCHES_PATH, index=False)
         if not elo.empty:
@@ -267,6 +268,7 @@ def build_team_features(
 
     squad = load_csv_ratings(DEFAULT_SQUAD_VALUES_PATH, "squad_value_meur")
     xg = load_csv_ratings(DEFAULT_XG_FORM_PATH, "xg_diff_per_match")
+    recent_form = compute_recent_form(historical, all_teams())
     market = parse_winner_odds()
     injuries = parse_injury_tracker()
     player_adj = parse_player_tracker()
@@ -274,6 +276,7 @@ def build_team_features(
     features = teams.merge(elo, on="team", how="left")
     features = features.merge(squad, on="team", how="left")
     features = features.merge(xg, on="team", how="left")
+    features = features.merge(recent_form, on="team", how="left")
     features = features.merge(market, on="team", how="left")
     features = features.merge(injuries, on="team", how="left")
     features = features.merge(player_adj, on="team", how="left")
@@ -284,6 +287,7 @@ def build_team_features(
         features["squad_value_meur"].median()
     )
     features["xg_diff_per_match"] = features["xg_diff_per_match"].fillna(0.0)
+    features["recent_form"] = features["recent_form"].fillna(0.0)
     features["market_prob"] = features["market_prob"].fillna(
         1.0 / len(features)
     )
