@@ -1,0 +1,7 @@
+| Rank | Source                  | 2018 Performance                          | 2022 Performance                          | Overall Notes / Strengths |
+|------|-------------------------|-------------------------------------------|-------------------------------------------|---------------------------|
+| 1    | Betting Markets (Consensus) | Strong (France winner well-priced)       | Very strong (Argentina favored late)     | Best crowd-sourced calibration; implied probs often beat pure models after vig. |
+| 2    | Opta / Supercomputers (ESPN-aligned) | Good top-4 hits                          | Strong group/winner sims (Brazil pre-fav, adjusted well) | Outperforms bookies in some sim metrics; consistent depth. |
+| 3    | Nate Silver / 538 (PELE precursor) | Mixed (pre-tournament misses but good early) | Solid simulations (post-analysis available) | Strong on long-term ratings; occasional big misses (e.g., 2014 Brazil) but recovers. PELE is updated evolution. |
+| 4    | ESPN (non-Opta) / News Aggregates | Decent previews/injuries                 | Mixed match-by-match                         | Excellent for player conditions/form; weaker on pure probabilities. |
+| 5    | FIFA Official / Basic Elo | Baseline only                            | Lower hit rates                              | Good for rosters; lacks advanced sim depth. |
