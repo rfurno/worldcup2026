@@ -9,7 +9,7 @@ from datetime import date, timedelta
 from .group_position_predictor import GroupPositionPredictor
 from .match_predictor import MatchPredictor
 
-# Official Group A Matchday 1 fixtures (June 11, 2026)
+# Official matchday fixtures (FIFA schedule)
 FIXTURES_BY_DATE: dict[str, list[dict]] = {
     "2026-06-11": [
         {
@@ -31,6 +31,28 @@ FIXTURES_BY_DATE: dict[str, list[dict]] = {
             "group": "A",
             "match": 2,
             "neutral": True,
+        },
+    ],
+    "2026-06-12": [
+        {
+            "home": "Canada",
+            "away": "Bosnia and Herzegovina",
+            "venue": "Toronto",
+            "kickoff": "3:00 PM EDT",
+            "stadium": "BMO Field",
+            "group": "B",
+            "match": 3,
+            "neutral": False,
+        },
+        {
+            "home": "United States",
+            "away": "Paraguay",
+            "venue": "Los Angeles",
+            "kickoff": "9:00 PM EDT",
+            "stadium": "SoFi Stadium",
+            "group": "D",
+            "match": 4,
+            "neutral": False,
         },
     ],
 }
