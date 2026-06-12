@@ -1,3 +1,7 @@
-date,match_num,group,home,away,venue,neutral,p_home_win,p_draw,p_away_win,predicted_winner,xg_home,xg_away,most_likely_score,p_most_likely_score,confidence
-2026-06-11,1,A,Mexico,South Africa,Mexico City,false,0.466,0.229,0.305,Mexico,1.83,1.44,1-1,0.100,Low
-2026-06-11,2,A,South Korea,Czechia,Guadalajara,true,0.600,0.215,0.186,South Korea,1.99,1.02,1-1,0.100,Moderate
+date,match_num,group,home,away,venue,neutral,p_home_win,p_draw,p_away_win,predicted_winner,xg_home,xg_away,most_likely_score,p_most_likely_score,confidence,logged_at
+2026-06-11,1,A,Mexico,South Africa,Mexico City,False,0.466,0.229,0.305,Mexico,1.83,1.44,1-1,0.1,Low,
+2026-06-11,2,A,South Korea,Czechia,Guadalajara,True,0.6,0.215,0.186,South Korea,1.99,1.02,1-1,0.1,Moderate,
+2026-06-13,8,B,Qatar,Switzerland,San Francisco,True,0.5803304917992812,0.22064982342174183,0.19901968477897705,Qatar,1.9359622471867213,1.0441233973623527,1-1,0.10154,Moderate,2026-06-13
+2026-06-13,7,C,Brazil,Morocco,New York,True,0.5326160493836001,0.231291097569591,0.2360928530468089,Brazil,1.8275308519560178,1.1436727803141882,1-1,0.1072,Low,2026-06-13
+2026-06-13,5,C,Haiti,Scotland,Boston,True,0.526103510948752,0.23354442018489038,0.24035206886635774,Haiti,1.8009431444643016,1.1453225961925044,1-1,0.1071,Low,2026-06-13
+2026-06-13,6,D,Australia,Turkey,Vancouver,True,0.5361810672884648,0.23208195248167926,0.23173698022985592,Australia,1.8173229315079409,1.1183032393983854,1-1,0.10712,Low,2026-06-13
