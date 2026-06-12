@@ -1,0 +1,15 @@
+date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
+2026-06-11,Mexico,César Montes,red_card,0.12,true,0,Captain/CB DOGSO ban vs South Korea Jun 18,BBC Sport
+2026-06-11,South Africa,Sphephelo Sithole,red_card,0.08,true,0,MF DOGSO ban vs Czechia Jun 18,BBC Sport
+2026-06-11,South Africa,Themba Zwane,red_card,0.06,true,0,Violent conduct ban vs Czechia Jun 18,BBC Sport
+2026-06-11,Mexico,Brian Gutiérrez,yellow_card,0.0,false,1,Accumulation watch,NYT Athletic
+2026-06-11,South Africa,Nkosinathi Sibisi,yellow_card,0.0,false,1,Accumulation watch,Wikipedia
+2026-06-11,Mexico,Julián Quiñones,form_boost,-0.04,false,0,Opening goal star; 33-goal Saudi season,NYT Athletic
+2026-06-11,Mexico,Raúl Jiménez,form_boost,-0.03,false,0,First WC goal comeback narrative,NYT Athletic
+2026-06-11,South Africa,Ronwen Williams,form_concern,0.04,false,0,Error on opener; risky GK passes,NYT Athletic
+2026-06-11,South Africa,,team_discipline,0.05,false,0,Finished with nine men; two reds,match-results.md
+2026-06-11,South Korea,Lee Gi-hyuk,yellow_card,0.0,false,1,Late booking vs Czechia,ESPN
+2026-06-11,South Korea,Hwang In-beom,form_boost,-0.04,false,0,Goal+assist after injury comeback,Korea Herald
+2026-06-11,South Korea,Oh Hyeon-gyu,form_boost,-0.03,false,0,Winner despite 38C fever; monitor,Korea Herald
+2026-06-11,South Korea,Kim Seung-gyu,form_boost,-0.02,false,0,Decisive saves praised by Czech coach,Korea Herald
+2026-06-11,Czechia,,form_concern,0.02,false,0,Late collapse after leading 59min,Al Jazeera

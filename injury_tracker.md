@@ -7,3 +7,5 @@
 | Hugo Ekitike   | France  | Achilles/Rupture          | Forward options reduced        | Out                  |
 | Others (e.g. Timber) | Netherlands | ACL/etc.             | Defensive concerns             | Limited/Out          |
 | Estêvão Willian| Brazil  | Hamstring (recent)        | Recovery progress; possible late return? | Monitoring          |
+| Cho Yu-min     | South Korea | Plantar fascia tear     | Defensive depth loss                   | Out for WC          |
+| Bae Jun-ho     | South Korea | Ankle knock (friendly)  | Minor concern                          | Monitoring          |

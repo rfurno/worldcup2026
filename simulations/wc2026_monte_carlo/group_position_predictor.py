@@ -15,6 +15,7 @@ from .tournament_data import (
     GroupStanding,
     venue_for_group_match,
 )
+from .group_results import apply_completed_matches, load_completed_group_matches
 from .tournament_simulator import rank_group
 
 # Neutral-site fixtures within each group: (home_idx, away_idx) tuples
@@ -52,7 +53,12 @@ def _simulate_group(
     neutral_fixtures = GROUP_NEUTRAL_FIXTURES.get(group, set())
     saved_ha = config.home_advantage
 
+    completed = load_completed_group_matches()
+    played = apply_completed_matches(group, standings, completed)
+
     for match_idx, (home_idx, away_idx) in enumerate(GROUP_MATCH_SCHEDULE):
+        if match_idx in played:
+            continue
         home = teams[home_idx]
         away = teams[away_idx]
         if (home_idx, away_idx) in neutral_fixtures:

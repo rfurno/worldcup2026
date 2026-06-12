@@ -1,0 +1,3 @@
+date,match_num,group,home,away,venue,neutral,p_home_win,p_draw,p_away_win,predicted_winner,xg_home,xg_away,most_likely_score,p_most_likely_score,confidence
+2026-06-11,1,A,Mexico,South Africa,Mexico City,false,0.466,0.229,0.305,Mexico,1.83,1.44,1-1,0.100,Low
+2026-06-11,2,A,South Korea,Czechia,Guadalajara,true,0.600,0.215,0.186,South Korea,1.99,1.02,1-1,0.100,Moderate

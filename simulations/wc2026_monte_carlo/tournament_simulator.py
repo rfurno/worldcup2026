@@ -7,6 +7,7 @@ from dataclasses import dataclass, field
 import numpy as np
 
 from .dixon_coles import DixonColesModel, MatchOutcome
+from .group_results import apply_completed_matches, load_completed_group_matches
 from .tournament_data import (
     GROUPS,
     GROUP_MATCH_SCHEDULE,
@@ -244,11 +245,15 @@ class TournamentSimulator:
         total_goals = 0
         match_count = 0
 
+        completed = load_completed_group_matches()
         for group, teams in GROUPS.items():
             standings = [GroupStanding(team=t, group=group) for t in teams]
             lookup = {s.team: s for s in standings}
+            played = apply_completed_matches(group, standings, completed)
 
             for match_idx, (home_idx, away_idx) in enumerate(GROUP_MATCH_SCHEDULE):
+                if match_idx in played:
+                    continue
                 home = teams[home_idx]
                 away = teams[away_idx]
                 venue = venue_for_group_match(group, match_idx, home)

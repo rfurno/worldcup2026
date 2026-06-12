@@ -73,6 +73,16 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--no-plot", action="store_true", help="Skip matplotlib plots")
     parser.add_argument("-q", "--quiet", action="store_true", help="Less console output")
+    parser.add_argument(
+        "--snapshot",
+        action="store_true",
+        help="Append a prediction snapshot for evolution tracking after the run",
+    )
+    parser.add_argument(
+        "--no-group-snapshot",
+        action="store_true",
+        help="With --snapshot, skip group-position probabilities (faster)",
+    )
     return parser
 
 
@@ -106,6 +116,21 @@ def main(argv: list[str] | None = None) -> int:
 
     summary = engine.run()
     engine.save_results(summary)
+
+    if args.snapshot:
+        from .prediction_tracker import save_snapshot_from_summary
+
+        saved = save_snapshot_from_summary(
+            summary,
+            config,
+            include_groups=not args.no_group_snapshot,
+            group_simulations=10_000,
+        )
+        if config.verbose:
+            if saved:
+                print(f"Prediction snapshot saved: {saved.snapshot_id}")
+            else:
+                print("Snapshot for current checkpoint already exists — skipped.")
 
     if config.save_plot:
         plot_winner_probabilities(

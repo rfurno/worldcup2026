@@ -109,6 +109,11 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Include full group first/second place probabilities",
     )
+    parser.add_argument(
+        "--log",
+        action="store_true",
+        help="Append match predictions to match_predictions_log.csv",
+    )
     args = parser.parse_args(argv)
 
     if args.date:
@@ -123,15 +128,25 @@ def main(argv: list[str] | None = None) -> int:
 
     predictor = MatchPredictor()
     print(f"# Match Predictions — {target.strftime('%B %d, %Y')}\n")
+    predictions = []
     for fixture in fixtures:
+        fixture = {**fixture, "date": target.isoformat()}
         pred = predictor.predict(
             fixture["home"],
             fixture["away"],
             venue=fixture.get("venue"),
             neutral=fixture.get("neutral", False),
         )
+        predictions.append(pred)
         print(format_prediction(fixture, pred))
         print()
+
+    if args.log:
+        from .prediction_tracker import log_match_predictions
+
+        logged = log_match_predictions(fixtures, predictions, snapshot_date=target.isoformat())
+        if logged:
+            print(f"Logged {logged} match prediction(s) to match_predictions_log.csv\n")
 
     groups = sorted({f["group"] for f in fixtures})
     if args.group_positions or groups:

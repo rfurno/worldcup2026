@@ -27,6 +27,7 @@ from .config import (
 )
 from .club_chemistry import build_club_chemistry_features
 from .form_and_h2h import compute_recent_form
+from .match_availability import build_availability_features
 from .tournament_data import all_teams
 
 
@@ -277,6 +278,7 @@ def build_team_features(
     chemistry = build_club_chemistry_features(
         player_tracker_text=_read_text(PLAYER_TRACKER_KEY_PATH),
     )
+    availability = build_availability_features()
 
     features = teams.merge(elo, on="team", how="left")
     features = features.merge(squad, on="team", how="left")
@@ -286,6 +288,7 @@ def build_team_features(
     features = features.merge(injuries, on="team", how="left")
     features = features.merge(player_adj, on="team", how="left")
     features = features.merge(chemistry, on="team", how="left")
+    features = features.merge(availability, on="team", how="left")
 
     # Reasonable defaults for teams missing external data
     features["elo"] = features["elo"].fillna(features["elo"].median())
@@ -298,6 +301,16 @@ def build_team_features(
         1.0 / len(features)
     )
     features["injury_multiplier"] = features["injury_multiplier"].fillna(1.0)
+    features["availability_multiplier"] = features["availability_multiplier"].fillna(1.0)
+    features["form_adjustment"] = features["form_adjustment"].fillna(0.0)
+    features["suspension_count"] = features["suspension_count"].fillna(0).astype(int)
+    features["yellow_risk_count"] = features["yellow_risk_count"].fillna(0).astype(int)
+    features["injury_multiplier"] = (
+        features["injury_multiplier"] * features["availability_multiplier"]
+    ).clip(0.65, 1.0)
+    features["player_tracker_adj"] = (
+        features["player_tracker_adj"] + features["form_adjustment"]
+    )
     features["player_tracker_adj"] = features["player_tracker_adj"].fillna(0.0)
     features["club_chemistry"] = features["club_chemistry"].fillna(0.0)
     features["cluster_count"] = features["cluster_count"].fillna(0).astype(int)
