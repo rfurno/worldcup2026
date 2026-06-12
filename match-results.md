@@ -82,4 +82,4 @@ Full report: `simulations/output/prediction_evaluation.md`
 
 ---
 
-*Data: `simulations/data/match_results.csv` | Evaluate: `python -m wc2026_monte_carlo.evaluate_predictions`*
+*Data: `simulations/data/match_results.csv` | After adding results: `python -m wc2026_monte_carlo.refresh_predictions`*

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -27,6 +27,18 @@ DEFAULT_PAIRS_LOG_PATH = DATA_DIR / "winner_runner_up_log.csv"
 
 STAGE_METRICS = ("p_r32", "p_r16", "p_qf", "p_sf", "p_final", "p_winner")
 GROUP_METRICS = ("p_first", "p_second", "p_third", "p_fourth", "p_top_two")
+RESULT_COLUMNS = [
+    "date",
+    "match_num",
+    "group",
+    "home",
+    "away",
+    "home_goals",
+    "away_goals",
+    "venue",
+    "stadium",
+    "neutral",
+]
 
 # Retrospective baseline from June 10 pre-opening run (tournament_first_second_predictions.md)
 PRE_OPENING_TOURNAMENT: dict[str, dict[str, float]] = {
@@ -72,6 +84,16 @@ class CheckpointInfo:
     matches_completed: int
     last_result_date: str | None
     label: str
+
+
+@dataclass
+class RefreshSummary:
+    checkpoint: CheckpointInfo
+    snapshot_created: bool
+    evolution_report_path: Path
+    evaluation_report_path: Path | None = None
+    matches_completed: int = 0
+    groups_updated: list[str] = field(default_factory=list)
 
 
 def _utc_now_iso() -> str:
@@ -130,6 +152,58 @@ def load_pairs_log(path: Path | str = DEFAULT_PAIRS_LOG_PATH) -> pd.DataFrame:
             ]
         )
     return pd.read_csv(path)
+
+
+def groups_with_results(
+    results_path: Path | str = DEFAULT_MATCH_RESULTS_PATH,
+) -> list[str]:
+    df = load_completed_group_matches(results_path)
+    if df.empty or "group" not in df.columns:
+        return []
+    return sorted(df["group"].astype(str).unique().tolist())
+
+
+def append_match_results(
+    rows: list[dict] | pd.DataFrame,
+    path: Path | str = DEFAULT_MATCH_RESULTS_PATH,
+) -> int:
+    """Append new results to match_results.csv (skips date+match_num duplicates)."""
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    if isinstance(rows, list):
+        new_df = pd.DataFrame(rows)
+    else:
+        new_df = rows.copy()
+
+    if new_df.empty:
+        return 0
+
+    for col in RESULT_COLUMNS:
+        if col not in new_df.columns:
+            new_df[col] = None
+
+    existing = load_completed_group_matches(path) if path.exists() else pd.DataFrame()
+    added = 0
+    to_append: list[dict] = []
+
+    for _, row in new_df.iterrows():
+        date_val = str(row["date"])
+        match_num = int(row["match_num"])
+        if not existing.empty:
+            dup = (existing["date"].astype(str) == date_val) & (
+                existing["match_num"].astype(int) == match_num
+            )
+            if dup.any():
+                continue
+        to_append.append({col: row.get(col) for col in RESULT_COLUMNS})
+        added += 1
+
+    if not to_append:
+        return 0
+
+    _append_rows(path, to_append, RESULT_COLUMNS)
+    return added
 
 
 def resolve_checkpoint(
@@ -410,6 +484,7 @@ def save_snapshot_from_summary(
     config: SimulationConfig,
     checkpoint_override: str | None = None,
     include_groups: bool = True,
+    groups_filter: list[str] | None = None,
     group_simulations: int = 10_000,
     force: bool = False,
     snapshot_date: str | None = None,
@@ -430,9 +505,11 @@ def save_snapshot_from_summary(
     )
     evolution_rows.extend(pair_evo)
 
+    groups_to_run: list[str] = []
     if include_groups:
+        groups_to_run = groups_filter if groups_filter is not None else list(GROUPS.keys())
         group_predictor = GroupPositionPredictor(config)
-        for group in GROUPS:
+        for group in groups_to_run:
             group_summary = group_predictor.predict_group(
                 group, n_simulations=group_simulations, seed=config.random_seed
             )
@@ -447,7 +524,7 @@ def save_snapshot_from_summary(
         "matches_completed": checkpoint.matches_completed,
         "last_result_date": checkpoint.last_result_date,
         "n_simulations": config.n_simulations,
-        "group_simulations": group_simulations if include_groups else 0,
+        "group_simulations": group_simulations if groups_to_run else 0,
         "notes": checkpoint.label,
     }
 
@@ -590,6 +667,98 @@ def capture_snapshot(
         group_simulations=group_simulations,
         force=force,
         snapshot_date=snapshot_date,
+    )
+
+
+def refresh_after_results(
+    config: SimulationConfig | None = None,
+    force: bool = False,
+    run_evaluation: bool = True,
+    group_simulations: int = 10_000,
+    report_only: bool = False,
+) -> RefreshSummary:
+    """
+    Post-results pipeline: re-simulate, snapshot, evaluate, and write evolution report.
+
+    Call this after updating match_results.csv (and match events, if any).
+    """
+    cfg = config or SimulationConfig(verbose=False)
+    checkpoint = resolve_checkpoint()
+    groups = groups_with_results()
+
+    if report_only:
+        report_path = save_evolution_report()
+        return RefreshSummary(
+            checkpoint=checkpoint,
+            snapshot_created=False,
+            evolution_report_path=report_path,
+            matches_completed=checkpoint.matches_completed,
+            groups_updated=groups,
+        )
+
+    need_snapshot = force or not snapshot_exists(checkpoint.snapshot_id)
+
+    if cfg.verbose:
+        print(f"Refreshing predictions at checkpoint: {checkpoint.label}")
+
+    snapshot_created = False
+    if need_snapshot:
+        engine = MonteCarloEngine(cfg, refresh_external=False)
+        if cfg.verbose:
+            print(f"  Running {cfg.n_simulations:,} tournament simulations...")
+            if groups:
+                print(f"  Updating group probabilities for: {', '.join(groups)}")
+        summary = engine.run()
+        engine.save_results(summary)
+        saved = save_snapshot_from_summary(
+            summary,
+            cfg,
+            include_groups=bool(groups),
+            groups_filter=groups,
+            group_simulations=group_simulations,
+            force=force,
+        )
+        snapshot_created = saved is not None
+    elif cfg.verbose:
+        print(f"  Snapshot `{checkpoint.snapshot_id}` exists — skipping re-simulation.")
+
+    report_path = save_evolution_report()
+
+    eval_path = None
+    if run_evaluation:
+        from .prediction_evaluator import (
+            evaluate_predictions,
+            load_predictions_log,
+            save_evaluation,
+        )
+
+        results = load_completed_group_matches()
+        predictions = load_predictions_log()
+        if not results.empty and not predictions.empty:
+            if cfg.verbose:
+                print("  Evaluating logged match predictions...")
+            eval_summary = evaluate_predictions(
+                results=results,
+                predictions=predictions,
+                config=cfg,
+            )
+            if eval_summary.matches_evaluated > 0:
+                eval_path, _ = save_evaluation(eval_summary)
+
+    if cfg.verbose:
+        print(f"  Evolution report: {report_path}")
+        if snapshot_created:
+            print(f"  New snapshot: {checkpoint.snapshot_id}")
+        if eval_path:
+            print(f"  Evaluation report: {eval_path}")
+
+    return RefreshSummary(
+        checkpoint=checkpoint,
+        snapshot_created=snapshot_created,
+        evolution_report_path=report_path,
+        evaluation_report_path=eval_path,
+        matches_completed=checkpoint.matches_completed,
+        groups_updated=groups,
     )
 
 
@@ -805,15 +974,15 @@ def format_evolution_report(
         [
             "## How to update",
             "",
-            "After each matchday (or when results/events change):",
+            "After adding results to `simulations/data/match_results.csv`:",
             "",
             "```bash",
             "cd simulations && source .venv/bin/activate",
-            "python -m wc2026_monte_carlo.snapshot_predictions",
-            "python -m wc2026_monte_carlo.evolution_report",
+            "python -m wc2026_monte_carlo.refresh_predictions",
             "```",
             "",
-            "Match-level forecasts are logged separately in `simulations/data/match_predictions_log.csv`.",
+            "That command re-simulates, captures a new snapshot (if the checkpoint changed),",
+            "evaluates logged match predictions, and regenerates this report automatically.",
         ]
     )
     return "\n".join(lines)

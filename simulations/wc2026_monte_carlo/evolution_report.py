@@ -6,12 +6,14 @@ import argparse
 import sys
 from pathlib import Path
 
-from .config import OUTPUT_DIR
-from .prediction_tracker import save_evolution_report
+from .config import OUTPUT_DIR, SimulationConfig
+from .prediction_tracker import refresh_after_results, save_evolution_report
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Build prediction evolution report")
+    parser = argparse.ArgumentParser(
+        description="Build prediction evolution report (alias for refresh_predictions --report-only)"
+    )
     parser.add_argument(
         "--output",
         type=str,
@@ -20,8 +22,14 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
-    output = Path(args.output) if args.output else OUTPUT_DIR / "prediction_evolution.md"
-    path = save_evolution_report(output_path=output)
+    if args.output:
+        path = save_evolution_report(output_path=Path(args.output))
+    else:
+        summary = refresh_after_results(
+            config=SimulationConfig(verbose=False),
+            report_only=True,
+        )
+        path = summary.evolution_report_path
     print(f"Evolution report saved to {path}")
     return 0
 
