@@ -1,225 +1,344 @@
 # World Cup 2026 Match Predictions
 
-Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (Elo + squad value + xG + recent form + club chemistry + injuries, anchored to betting odds).
+Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (Elo + squad value + xG + recent form + club chemistry + injuries + match events, anchored to betting odds).
 
-**Updated**: June 11, 2026 (forecasts for June 12)
+**Updated**: June 13, 2026 (forecasts for June 13–14)
+
+*Source: `simulations/data/match_predictions_log.csv` · Regenerate: `python -m wc2026_monte_carlo.predict_matches --date YYYY-MM-DD --log`*
 
 ---
 
-## June 12, 2026 — Groups B & D (Matchday 1)
+## June 14, 2026 — Groups D, E & F (Matchday 1)
 
-Second day of the tournament. Two fixtures: Canada hosts Group B in Toronto; USA opens Group D in Los Angeles.
+Five fixtures. Australia vs Turkey kicks off last in Vancouver (FIFA schedule: **June 14**, not June 13).
 
-### Match 3: Canada vs Bosnia and Herzegovina
+### Match 6: Australia vs Turkey
 
 | Field | Detail |
 |-------|--------|
-| **Date** | June 12, 2026 |
-| **Kickoff** | 3:00 PM EDT (UTC−4) |
-| **Venue** | BMO Field, Toronto |
-| **Group** | B |
-| **Context** | Canada co-host; first competitive meeting between the sides. |
-
-**Model prediction**
-
-| Outcome | Probability |
-|---------|-------------|
-| Canada win | 32.3% |
-| Draw | 23.5% |
-| Bosnia and Herzegovina win | **44.2%** |
-
-| Metric | Value |
-|--------|-------|
-| Expected goals (xG) | Canada 1.45 — Bosnia 1.73 |
-| Most likely scoreline | **1-1** (10.3%) |
-| Other likely scores | 1-2 (9.2%), 2-1 (7.5%), 0-1 (7.1%), 2-2 (6.5%) |
-| Predicted winner | **Bosnia and Herzegovina** (slight edge) |
-| Confidence | Low |
-
-**Key factors**
-- Host advantage at BMO Field, but calibrated model still favors Bosnia on xG (1.73 vs 1.45)
-- Bosnia stronger on Elo/squad depth; Džeko, Kolašinac, Pjanić (`squad_clubs.csv`)
-- Canada relies on Davies, David, Larin — competitive but outgunned in model blend
-- Draw live at ~24%; Canada upset path ~32%
-
-**Recommendation**: **Bosnia and Herzegovina or Draw** — don't assume host boost wins it. Canada double-chance (win or draw) for safer play at reduced value.
-
----
-
-## Group B — Full Standings Probabilities (50k sims)
-
-| Team | P(1st) | P(2nd) | P(Top 2) | P(3rd) | P(4th) |
-|------|--------|--------|----------|--------|--------|
-| Switzerland | **31.5%** | 29.2% | **60.8%** | 25.3% | 13.9% |
-| Bosnia and Herzegovina | 29.9% | 26.1% | 56.1% | 24.1% | 19.8% |
-| Qatar | 28.2% | 27.5% | 55.6% | 24.5% | 19.9% |
-| Canada | 10.4% | 17.2% | 27.5% | 26.1% | 46.4% |
-
-**Most likely 1st–2nd pairings:** Qatar/Switzerland (13.7%), Bosnia/Qatar (12.7%), Switzerland/Bosnia (12.6%), Switzerland/Qatar (11.7%), Bosnia/Switzerland (11.7%)
-
-**Note**: Group B is tight among Switzerland, Bosnia, and Qatar. Canada only ~28% to finish top two despite co-hosting.
-
----
-
-### Match 4: United States vs Paraguay
-
-| Field | Detail |
-|-------|--------|
-| **Date** | June 12, 2026 |
-| **Kickoff** | 9:00 PM EDT (UTC−4) |
-| **Venue** | SoFi Stadium, Los Angeles |
+| **Date** | June 14, 2026 |
+| **Kickoff** | 9:00 PM PDT (UTC−7) |
+| **Venue** | BC Place, Vancouver |
 | **Group** | D |
-| **Context** | USA co-host; Paraguay qualified via CONMEBOL. |
+| **Context** | Neutral site. USA beat Paraguay 4–1 on June 12; Turkey still group favorite. |
 
 **Model prediction**
 
 | Outcome | Probability |
 |---------|-------------|
-| United States win | **57.4%** |
-| Draw | 20.8% |
-| Paraguay win | 21.8% |
+| Australia win | **50.7%** |
+| Draw | 24.0% |
+| Turkey win | 25.3% |
 
 | Metric | Value |
 |--------|-------|
-| Expected goals (xG) | United States 2.14 — Paraguay 1.26 |
-| Most likely scoreline | **2-1** (9.4%) |
-| Other likely scores | 1-1 (9.0%), 2-0 (7.6%), 1-0 (7.1%), 3-1 (6.9%) |
-| Predicted winner | **United States** |
-| Confidence | Moderate |
-
-**Key factors**
-- Host advantage at SoFi; USA clear xG edge (2.14 vs 1.26)
-- Pulisic, Musah, McKennie, Adams in squad (`squad_clubs.csv`)
-- Paraguay competitive but model rates upset at ~22%
-- Most likely score 2-1 aligns with USA as moderate favorite
-
-**Recommendation**: **United States to win** — stronger pick than Canada's opener. USA or Draw for safer play.
-
----
-
-## Group D — Full Standings Probabilities (50k sims)
-
-| Team | P(1st) | P(2nd) | P(Top 2) | P(3rd) | P(4th) |
-|------|--------|--------|----------|--------|--------|
-| Turkey | **34.5%** | 27.8% | **62.2%** | 22.4% | 15.4% |
-| United States | 30.0% | 28.1% | 58.1% | 24.0% | 17.9% |
-| Paraguay | 19.5% | 23.0% | 42.5% | 26.8% | 30.7% |
-| Australia | 16.0% | 21.1% | 37.1% | 26.8% | 36.1% |
-
-**Most likely 1st–2nd pairings:** Turkey/United States (16.2%), United States/Turkey (13.0%), Turkey/Paraguay (9.6%), United States/Paraguay (9.4%), Turkey/Australia (8.6%)
-
-**Note**: Turkey slight group-favorite despite USA winning tomorrow's opener. USA ~58% to finish top two.
-
----
-
-## June 12 Summary
-
-| Match | Prediction | xG | Confidence |
-|-------|------------|-----|------------|
-| Canada vs Bosnia and Herzegovina | **Bosnia** (44%) | 1.45–1.73 | Low — draw live |
-| United States vs Paraguay | **United States** (57%) | 2.14–1.26 | Moderate |
-
-**Next fixtures (June 13):** Qatar vs Switzerland, Brazil vs Morocco, Haiti vs Scotland, Australia vs Turkey
-
----
-
-## June 11, 2026 — Group A (Matchday 1) *(completed)*
-
-Opening day of the tournament. Two Group A fixtures in Mexico.
-
-### Match 1: Mexico vs South Africa
-
-| Field | Detail |
-|-------|--------|
-| **Date** | June 11, 2026 |
-| **Kickoff** | 1:00 PM CDT (UTC−6) |
-| **Venue** | Estadio Azteca, Mexico City |
-| **Group** | A |
-| **Context** | Tournament opener; Mexico co-host. Last met at 2010 WC opener (1-1). |
-
-**Model prediction**
-
-| Outcome | Probability |
-|---------|-------------|
-| Mexico win | **46.6%** |
-| Draw | 22.9% |
-| South Africa win | 30.5% |
-
-| Metric | Value |
-|--------|-------|
-| Expected goals (xG) | Mexico 1.83 — South Africa 1.44 |
-| Most likely scoreline | **1-1** (10.0%) |
-| Other likely scores | 2-1 (8.9%), 1-2 (7.3%), 1-0 (6.9%), 2-2 (6.6%) |
-| Predicted winner | **Mexico** (slight edge) |
+| Expected goals (xG) | Australia 1.73 — Turkey 1.16 |
+| Most likely scoreline | **1-1** (11.1%) |
+| Other likely scores | 2-1 (9.5%), 1-0 (9.4%), 2-0 (8.4%), 1-2 (6.5%) |
+| Predicted winner | **Australia** |
 | Confidence | Low |
 
-**Key factors**
-- Host advantage at Azteca, but calibrated model sees a tight contest
-- South Africa competitive on xG (1.44) — not a walkover
-- 2010 opener ended 1-1 at same venue; draw live at ~23%
-- Mexico key players fit: Ochoa, Álvarez, Giménez (`player_tracker.md`)
-
-**Recommendation**: Mexico to edge it, but **draw or South Africa** are real outcomes. Avoid heavy Mexico handicap.
+**Recommendation**: Coin-flip game — lean Australia on xG, but Turkey can absolutely take points.
 
 ---
 
-### Match 2: South Korea vs Czechia
+### Match 9: Ivory Coast vs Ecuador
 
 | Field | Detail |
 |-------|--------|
-| **Date** | June 11, 2026 |
-| **Kickoff** | 8:00 PM CDT (UTC−6) |
-| **Venue** | Estadio Akron, Zapopan (Guadalajara) |
-| **Group** | A |
-| **Context** | Neutral venue. Czechia qualified via UEFA Path D. |
+| **Date** | June 14, 2026 |
+| **Kickoff** | 7:00 PM EDT (UTC−4) |
+| **Venue** | Lincoln Financial Field, Philadelphia |
+| **Group** | E |
 
-**Model prediction** *(neutral venue)*
+**Model prediction**
 
 | Outcome | Probability |
 |---------|-------------|
-| South Korea win | **60.0%** |
-| Draw | 21.5% |
-| Czechia win | 18.6% |
+| Ivory Coast win | **54.2%** |
+| Draw | 23.0% |
+| Ecuador win | 22.8% |
 
 | Metric | Value |
 |--------|-------|
-| Expected goals (xG) | South Korea 1.99 — Czechia 1.02 |
-| Most likely scoreline | **1-1** (10.0%) |
-| Other likely scores | 2-1 (10.0%), 2-0 (9.8%), 1-0 (9.8%), 3-1 (6.8%) |
-| Predicted winner | **South Korea** |
-| Confidence | Moderate |
-
-**Key factors**
-- Son Heung-min, Kim Min-jae, Lee Kang-in all fit (`player_tracker.md`)
-- Korea superior xG edge (1.99 vs 1.02) at neutral site
-- Czechia defensive but outgunned; upset path ~19%
-
-**Recommendation**: **South Korea to win** — clearest pick of the day. Korea or Draw for safer play.
+| Expected goals (xG) | Ivory Coast 1.84 — Ecuador 1.12 |
+| Most likely scoreline | **1-1** (10.6%) |
+| Predicted winner | **Ivory Coast** |
+| Confidence | Low |
 
 ---
 
-## Group A — Full Standings Probabilities (50k sims)
+### Match 10: Germany vs Curaçao
+
+| Field | Detail |
+|-------|--------|
+| **Date** | June 14, 2026 |
+| **Kickoff** | 12:00 PM CDT (UTC−5) |
+| **Venue** | NRG Stadium, Houston |
+| **Group** | E |
+
+**Model prediction**
+
+| Outcome | Probability |
+|---------|-------------|
+| Germany win | **54.4%** |
+| Draw | 22.9% |
+| Curaçao win | 22.7% |
+
+| Metric | Value |
+|--------|-------|
+| Expected goals (xG) | Germany 1.85 — Curaçao 1.12 |
+| Most likely scoreline | **1-1** (10.5%) |
+| Predicted winner | **Germany** |
+| Confidence | Low |
+
+---
+
+### Match 11: Netherlands vs Japan
+
+| Field | Detail |
+|-------|--------|
+| **Date** | June 14, 2026 |
+| **Kickoff** | 3:00 PM CDT (UTC−5) |
+| **Venue** | AT&T Stadium, Dallas |
+| **Group** | F |
+
+**Model prediction**
+
+| Outcome | Probability |
+|---------|-------------|
+| Netherlands win | **47.5%** |
+| Draw | 24.5% |
+| Japan win | 28.0% |
+
+| Metric | Value |
+|--------|-------|
+| Expected goals (xG) | Netherlands 1.65 — Japan 1.21 |
+| Most likely scoreline | **1-1** (11.3%) |
+| Predicted winner | **Netherlands** |
+| Confidence | Low |
+
+**Note**: Effectively a toss-up — Japan win probability nearly matches the Dutch edge.
+
+---
+
+### Match 12: Sweden vs Tunisia
+
+| Field | Detail |
+|-------|--------|
+| **Date** | June 14, 2026 |
+| **Kickoff** | 8:00 PM CDT (UTC−5) |
+| **Venue** | Estadio BBVA, Monterrey |
+| **Group** | F |
+
+**Model prediction**
+
+| Outcome | Probability |
+|---------|-------------|
+| Sweden win | **58.8%** |
+| Draw | 21.8% |
+| Tunisia win | 19.4% |
+
+| Metric | Value |
+|--------|-------|
+| Expected goals (xG) | Sweden 1.96 — Tunisia 1.04 |
+| Most likely scoreline | **1-1** (10.0%) |
+| Predicted winner | **Sweden** |
+| Confidence | Moderate |
+
+---
+
+## Group D — Standings Probabilities *(after USA 4–1 Paraguay)*
 
 | Team | P(1st) | P(2nd) | P(Top 2) | P(3rd) | P(4th) |
 |------|--------|--------|----------|--------|--------|
-| Czechia | **32.1%** | 28.2% | **60.3%** | 22.8% | 16.9% |
-| South Africa | 24.1% | 23.7% | 47.8% | 25.5% | 26.7% |
-| South Korea | 22.8% | 24.3% | 47.2% | 25.7% | 27.2% |
-| Mexico | 20.9% | 23.8% | 44.7% | 26.1% | 29.2% |
+| Turkey | **39.9%** | 27.7% | **67.6%** | 18.1% | 14.3% |
+| United States | 28.8% | 32.6% | 61.4% | 27.2% | 11.4% |
+| Australia | 22.5% | 22.8% | 45.4% | 24.8% | 29.9% |
+| Paraguay | 8.8% | 16.9% | 25.6% | 30.0% | 44.4% |
 
-**Most likely 1st–2nd pairings:** Czechia/Mexico (11.3%), Czechia/South Africa (10.5%), Korea/Czechia (10.3%), Czechia/Korea (10.3%), South Africa/Czechia (9.3%)
-
-**Note**: Calibrated model rates Group A as wide open — Czechia slight group-favorite despite Korea winning the June 11 head-to-head. Mexico ~45% to finish top two.
+**Most likely 1st–2nd pairings:** Turkey/United States (22.3%), United States/Turkey (13.8%), Turkey/Australia (13.5%), Australia/Turkey (11.8%)
 
 ---
 
-## June 11 Summary
+## Group E — Standings Probabilities *(pre–Matchday 1)*
+
+| Team | P(1st) | P(2nd) | P(Top 2) | P(3rd) | P(4th) |
+|------|--------|--------|----------|--------|--------|
+| Germany | **42.7%** | 26.3% | **69.0%** | 18.7% | 12.3% |
+| Ecuador | 23.9% | 27.0% | 50.8% | 25.3% | 23.9% |
+| Ivory Coast | 16.9% | 23.7% | 40.6% | 28.0% | 31.4% |
+| Curaçao | 16.5% | 23.0% | 39.5% | 28.1% | 32.4% |
+
+**Most likely 1st–2nd pairings:** Germany/Ecuador (16.0%), Germany/Curaçao (13.6%), Germany/Ivory Coast (13.2%)
+
+---
+
+## Group F — Standings Probabilities *(pre–Matchday 1)*
+
+| Team | P(1st) | P(2nd) | P(Top 2) | P(3rd) | P(4th) |
+|------|--------|--------|----------|--------|--------|
+| Tunisia | **38.8%** | 27.6% | **66.4%** | 19.9% | 13.6% |
+| Netherlands | 28.2% | 28.3% | 56.5% | 24.2% | 19.3% |
+| Sweden | 17.3% | 22.3% | 39.6% | 27.5% | 32.9% |
+| Japan | 15.7% | 21.8% | 37.5% | 28.3% | 34.2% |
+
+**Most likely 1st–2nd pairings:** Tunisia/Netherlands (17.7%), Netherlands/Tunisia (13.0%), Tunisia/Japan (10.7%)
+
+---
+
+## June 14 Summary
 
 | Match | Prediction | xG | Confidence |
 |-------|------------|-----|------------|
-| Mexico vs South Africa | **Mexico** (47%) | 1.83–1.44 | Low — draw live |
-| South Korea vs Czechia | **South Korea** (60%) | 1.99–1.02 | Moderate |
+| Ivory Coast vs Ecuador | **Ivory Coast** (54%) | 1.84–1.12 | Low |
+| Germany vs Curaçao | **Germany** (54%) | 1.85–1.12 | Low |
+| Sweden vs Tunisia | **Sweden** (59%) | 1.96–1.04 | Moderate |
+| Australia vs Turkey | **Australia** (51%) | 1.73–1.16 | Low |
+| Netherlands vs Japan | **Netherlands** (48%) | 1.65–1.21 | Low |
 
 ---
 
-*Regenerate: `python -m wc2026_monte_carlo.predict_matches --date 2026-06-12`*
+## June 13, 2026 — Groups B & C (Matchday 1)
+
+Three fixtures today. Australia vs Turkey is **not** on this date.
+
+### Match 8: Qatar vs Switzerland
+
+| Field | Detail |
+|-------|--------|
+| **Date** | June 13, 2026 |
+| **Kickoff** | 12:00 PM PDT (UTC−7) |
+| **Venue** | Levi's Stadium, San Francisco |
+| **Group** | B |
+
+**Model prediction**
+
+| Outcome | Probability |
+|---------|-------------|
+| Qatar win | **58.0%** |
+| Draw | 22.1% |
+| Switzerland win | 19.9% |
+
+| Metric | Value |
+|--------|-------|
+| Expected goals (xG) | Qatar 1.94 — Switzerland 1.04 |
+| Most likely scoreline | **1-1** (10.2%) |
+| Predicted winner | **Qatar** |
+| Confidence | Moderate |
+
+---
+
+### Match 7: Brazil vs Morocco
+
+| Field | Detail |
+|-------|--------|
+| **Date** | June 13, 2026 |
+| **Kickoff** | 6:00 PM EDT (UTC−4) |
+| **Venue** | MetLife Stadium, New York |
+| **Group** | C |
+
+**Model prediction**
+
+| Outcome | Probability |
+|---------|-------------|
+| Brazil win | **53.3%** |
+| Draw | 23.1% |
+| Morocco win | 23.6% |
+
+| Metric | Value |
+|--------|-------|
+| Expected goals (xG) | Brazil 1.83 — Morocco 1.14 |
+| Most likely scoreline | **1-1** (10.7%) |
+| Predicted winner | **Brazil** |
+| Confidence | Low |
+
+**Key factors**: Rodrygo out (ACL); Estêvão monitoring per `injury_tracker.md`.
+
+---
+
+### Match 5: Haiti vs Scotland
+
+| Field | Detail |
+|-------|--------|
+| **Date** | June 13, 2026 |
+| **Kickoff** | 9:00 PM EDT (UTC−4) |
+| **Venue** | Gillette Stadium, Boston |
+| **Group** | C |
+
+**Model prediction**
+
+| Outcome | Probability |
+|---------|-------------|
+| Haiti win | **52.6%** |
+| Draw | 23.4% |
+| Scotland win | 24.0% |
+
+| Metric | Value |
+|--------|-------|
+| Expected goals (xG) | Haiti 1.80 — Scotland 1.15 |
+| Most likely scoreline | **1-1** (10.7%) |
+| Predicted winner | **Haiti** |
+| Confidence | Low |
+
+---
+
+## Group B — Standings Probabilities *(after Canada 1–1 Bosnia)*
+
+| Team | P(1st) | P(2nd) | P(Top 2) | P(3rd) | P(4th) |
+|------|--------|--------|----------|--------|--------|
+| Canada | 26.8% | **32.3%** | **59.1%** | 24.9% | 16.0% |
+| Switzerland | **29.5%** | 19.0% | 48.5% | 25.7% | 25.8% |
+| Bosnia and Herzegovina | 22.7% | 28.1% | 50.7% | 26.0% | 23.3% |
+| Qatar | 21.1% | 20.6% | 41.6% | 23.4% | 35.0% |
+
+**Most likely 1st–2nd pairings:** Canada/Bosnia and Herzegovina (13.3%), Bosnia/Canada (12.8%), Switzerland/Canada (12.1%)
+
+---
+
+## Group C — Standings Probabilities *(pre–Matchday 1)*
+
+| Team | P(1st) | P(2nd) | P(Top 2) | P(3rd) | P(4th) |
+|------|--------|--------|----------|--------|--------|
+| Brazil | **48.2%** | 26.4% | **74.6%** | 16.2% | 9.2% |
+| Scotland | 22.4% | 26.6% | 49.0% | 26.1% | 24.9% |
+| Morocco | 16.0% | 24.3% | 40.3% | 27.9% | 31.8% |
+| Haiti | 13.4% | 22.7% | 36.1% | 29.8% | 34.1% |
+
+**Most likely 1st–2nd pairings:** Brazil/Scotland (17.7%), Brazil/Morocco (16.1%), Brazil/Haiti (14.5%)
+
+---
+
+## June 13 Summary
+
+| Match | Prediction | xG | Confidence |
+|-------|------------|-----|------------|
+| Qatar vs Switzerland | **Qatar** (58%) | 1.94–1.04 | Moderate |
+| Brazil vs Morocco | **Brazil** (53%) | 1.83–1.14 | Low |
+| Haiti vs Scotland | **Haiti** (53%) | 1.80–1.15 | Low |
+
+---
+
+## June 12, 2026 — Groups B & D *(completed)*
+
+| Match | Result | Pre-match pick |
+|-------|--------|----------------|
+| Canada 1–1 Bosnia and Herzegovina | Draw | Bosnia (44%) — **upset avoided**; Canada first WC point |
+| United States 4–1 Paraguay | USA win | United States (57%) — **correct** |
+
+*Post-match events logged: Pulisic injury monitor, Balogun form boost, Paraguay yellow-card accumulation (`match_events.csv`).*
+
+---
+
+## June 11, 2026 — Group A *(completed)*
+
+| Match | Result | Pre-match pick |
+|-------|--------|----------------|
+| Mexico 2–0 South Africa | Mexico win | Mexico (47%) — **correct** |
+| South Korea 2–1 Czechia | Korea win | South Korea (60%) — **correct** |
+
+*Post-match events: Montes red (suspended), South Africa two reds, Korea form boosts (`match_events.csv`).*
+
+---
+
+*After adding results: `python -m wc2026_monte_carlo.refresh_predictions` then re-run `predict_matches --date … --log` and refresh this file.*
