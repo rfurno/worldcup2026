@@ -2,7 +2,7 @@
 
 Official results for completed group-stage matches. Sources: [FIFA](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures), [Wikipedia Group A](https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A).
 
-**Updated**: June 12, 2026
+**Updated**: June 13, 2026
 
 ---
 
@@ -57,6 +57,53 @@ Official results for completed group-stage matches. Sources: [FIFA](https://www.
 
 ---
 
+## June 12, 2026 — Groups B & D (Matchday 1)
+
+### Match 3: Canada 1–1 Bosnia and Herzegovina
+
+| Field | Detail |
+|-------|--------|
+| **Date** | June 12, 2026 |
+| **Kickoff** | 3:00 PM EDT |
+| **Venue** | BMO Field, Toronto |
+| **Group** | B |
+
+| | Canada | Bosnia and Herzegovina |
+|---|--------|------------------------|
+| **Goals** | Larin 78′ | Lukic 21′ |
+| **Result** | **D** | **D** |
+
+**Notes**: Bosnia led through Jovo Lukic; Cyle Larin equalized after coming off the bench. Canada's first-ever World Cup point.
+
+---
+
+### Match 4: United States 4–1 Paraguay
+
+| Field | Detail |
+|-------|--------|
+| **Date** | June 12, 2026 |
+| **Kickoff** | 6:00 PM PDT |
+| **Venue** | SoFi Stadium, Los Angeles |
+| **Group** | D |
+
+| | United States | Paraguay |
+|---|---------------|----------|
+| **Goals** | Bobadilla 7′ (o.g.), Balogun 31′, 45+5′, Reyna 90+8′ | Maurício 73′ |
+| **Result** | **W** | **L** |
+
+**Notes**: Folarin Balogun brace on his World Cup debut; Giovanni Reyna sealed it in stoppage time.
+
+---
+
+## June 12 Summary
+
+| Match | Score | Winner |
+|-------|-------|--------|
+| Canada vs Bosnia and Herzegovina | **1–1** | Draw |
+| United States vs Paraguay | **4–1** | United States |
+
+---
+
 ## June 11 Summary
 
 | Match | Score | Winner |
@@ -82,4 +129,4 @@ Full report: `simulations/output/prediction_evaluation.md`
 
 ---
 
-*Data: `simulations/data/match_results.csv` | After adding results: `python -m wc2026_monte_carlo.refresh_predictions`*
+*Data: `simulations/data/match_results.csv` | After adding results: `python -m wc2026_monte_carlo.refresh_predictions` (auto-collects cards/injuries/form into `match_events.csv`)*

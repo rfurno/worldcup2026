@@ -1,15 +1,37 @@
 date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
-2026-06-11,Mexico,César Montes,red_card,0.12,true,0,Captain/CB DOGSO ban vs South Korea Jun 18,BBC Sport
-2026-06-11,South Africa,Sphephelo Sithole,red_card,0.08,true,0,MF DOGSO ban vs Czechia Jun 18,BBC Sport
-2026-06-11,South Africa,Themba Zwane,red_card,0.06,true,0,Violent conduct ban vs Czechia Jun 18,BBC Sport
-2026-06-11,Mexico,Brian Gutiérrez,yellow_card,0.0,false,1,Accumulation watch,NYT Athletic
-2026-06-11,South Africa,Nkosinathi Sibisi,yellow_card,0.0,false,1,Accumulation watch,Wikipedia
-2026-06-11,Mexico,Julián Quiñones,form_boost,-0.04,false,0,Opening goal star; 33-goal Saudi season,NYT Athletic
-2026-06-11,Mexico,Raúl Jiménez,form_boost,-0.03,false,0,First WC goal comeback narrative,NYT Athletic
-2026-06-11,South Africa,Ronwen Williams,form_concern,0.04,false,0,Error on opener; risky GK passes,NYT Athletic
-2026-06-11,South Africa,,team_discipline,0.05,false,0,Finished with nine men; two reds,match-results.md
-2026-06-11,South Korea,Lee Gi-hyuk,yellow_card,0.0,false,1,Late booking vs Czechia,ESPN
-2026-06-11,South Korea,Hwang In-beom,form_boost,-0.04,false,0,Goal+assist after injury comeback,Korea Herald
-2026-06-11,South Korea,Oh Hyeon-gyu,form_boost,-0.03,false,0,Winner despite 38C fever; monitor,Korea Herald
-2026-06-11,South Korea,Kim Seung-gyu,form_boost,-0.02,false,0,Decisive saves praised by Czech coach,Korea Herald
-2026-06-11,Czechia,,form_concern,0.02,false,0,Late collapse after leading 59min,Al Jazeera
+2026-06-11,Mexico,César Montes,red_card,0.12,True,0,Captain/CB DOGSO ban vs South Korea Jun 18,BBC Sport
+2026-06-11,South Africa,Sphephelo Sithole,red_card,0.08,True,0,MF DOGSO ban vs Czechia Jun 18,BBC Sport
+2026-06-11,South Africa,Themba Zwane,red_card,0.06,True,0,Violent conduct ban vs Czechia Jun 18,BBC Sport
+2026-06-11,Mexico,Brian Gutiérrez,yellow_card,0.0,False,1,Accumulation watch,NYT Athletic
+2026-06-11,South Africa,Nkosinathi Sibisi,yellow_card,0.0,False,1,Accumulation watch,Wikipedia
+2026-06-11,Mexico,Julián Quiñones,form_boost,-0.04,False,0,Opening goal star; 33-goal Saudi season,NYT Athletic
+2026-06-11,Mexico,Raúl Jiménez,form_boost,-0.03,False,0,First WC goal comeback narrative,NYT Athletic
+2026-06-11,South Africa,Ronwen Williams,form_concern,0.04,False,0,Error on opener; risky GK passes,NYT Athletic
+2026-06-11,South Africa,,team_discipline,0.05,False,0,Finished with nine men; two reds,match-results.md
+2026-06-11,South Korea,Lee Gi-hyuk,yellow_card,0.0,False,1,Late booking vs Czechia,ESPN
+2026-06-11,South Korea,Hwang In-beom,form_boost,-0.04,False,0,Goal+assist after injury comeback,Korea Herald
+2026-06-11,South Korea,Oh Hyeon-gyu,form_boost,-0.03,False,0,Winner despite 38C fever; monitor,Korea Herald
+2026-06-11,South Korea,Kim Seung-gyu,form_boost,-0.02,False,0,Decisive saves praised by Czech coach,Korea Herald
+2026-06-11,Czechia,,form_concern,0.02,False,0,Late collapse after leading 59min,Al Jazeera
+2026-06-12,Canada,Alistair Johnston,yellow_card,0.0,False,1,yellow card 11′,Wikipedia
+2026-06-12,Canada,Luc de Fougerolles,yellow_card,0.0,False,1,yellow card 53′,Wikipedia
+2026-06-12,Bosnia and Herzegovina,Nikola Katić,yellow_card,0.0,False,1,yellow card 90+3′,Wikipedia
+2026-06-12,Bosnia and Herzegovina,Ermedin Demirović,yellow_card,0.0,False,1,yellow card 44′,Wikipedia
+2026-06-12,Bosnia and Herzegovina,Jovo Lukić,yellow_card,0.0,False,1,yellow card 45+1′,Wikipedia
+2026-06-12,Canada,Cyle Larin,form_boost,-0.04,False,0,Equalizer 121s after sub; first-ever WC point catalyst,Yahoo Sports
+2026-06-12,Canada,Ismaël Koné,form_boost,-0.03,False,0,Man of the Match; controlled midfield,Wikipedia
+2026-06-12,Canada,Jonathan David,form_concern,0.02,False,0,0.39 xG no goal; missed chances,ESPN
+2026-06-12,Bosnia and Herzegovina,Jovo Lukić,form_boost,-0.03,False,0,First international goal; early lead,Wikipedia
+2026-06-12,Bosnia and Herzegovina,Ermedin Demirović,form_concern,0.02,False,0,Booked 44′; unable to extend lead,ESPN
+2026-06-12,United States,Tyler Adams,yellow_card,0.0,False,1,yellow card 59′,Wikipedia
+2026-06-12,Paraguay,Juan José Cáceres,yellow_card,0.0,False,1,yellow card 9′,Wikipedia
+2026-06-12,Paraguay,Júnior Alonso,yellow_card,0.0,False,1,yellow card 90+3′,Wikipedia
+2026-06-12,Paraguay,Diego Gómez,yellow_card,0.0,False,1,yellow card 79′,Wikipedia
+2026-06-12,Paraguay,Miguel Almirón,yellow_card,0.0,False,1,yellow card 53′,Wikipedia
+2026-06-12,Paraguay,Álex Arce,yellow_card,0.0,False,1,yellow card 88′,Wikipedia
+2026-06-12,United States,Christian Pulisic,injury_monitor,0.05,False,0,Calf kick; subbed HT; hopeful for Jun 19 vs Australia,USA Today
+2026-06-12,United States,Folarin Balogun,form_boost,-0.05,False,0,WC debut brace; elevated striker profile,ESPN
+2026-06-12,United States,Malik Tillman,form_boost,-0.04,False,0,Best player on pitch per ESPN recap,ESPN
+2026-06-12,United States,Giovanni Reyna,form_boost,-0.03,False,0,Stoppage-time curl; depth boost,ESPN
+2026-06-12,Paraguay,Maurício,form_boost,-0.03,False,0,Solitary goal; bright off bench,ESPN
+2026-06-12,Paraguay,,form_concern,0.03,False,0,Conceded four; defensive structure exposed,match-results.md

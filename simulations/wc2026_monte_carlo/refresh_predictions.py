@@ -6,6 +6,7 @@ import argparse
 import sys
 
 from .config import SimulationConfig
+from .match_event_collector import collect_events_for_new_results, regenerate_events_tracker
 from .prediction_tracker import append_match_results, refresh_after_results
 
 
@@ -44,6 +45,11 @@ def main(argv: list[str] | None = None) -> int:
         "--report-only",
         action="store_true",
         help="Only regenerate prediction_evolution.md (no re-simulation)",
+    )
+    parser.add_argument(
+        "--skip-events",
+        action="store_true",
+        help="Skip Wikipedia/supplement event collection before re-simulation",
     )
     parser.add_argument(
         "--date",
@@ -101,6 +107,13 @@ def main(argv: list[str] | None = None) -> int:
             print(f"Added {added} result(s) to match_results.csv")
         else:
             print("No new results added (duplicate or empty).")
+
+    if not args.report_only and not args.skip_events:
+        events_added = collect_events_for_new_results()
+        tracker_path = regenerate_events_tracker()
+        if events_added:
+            print(f"Collected {events_added} match event(s) → match_events.csv")
+        print(f"Events tracker: {tracker_path}")
 
     config = SimulationConfig(
         n_simulations=args.simulations,

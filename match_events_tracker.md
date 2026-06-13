@@ -1,66 +1,77 @@
 # Match Events Tracker — World Cup 2026
 
-Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.  
-FIFA rules ([BBC Sport](https://www.bbc.com/sport/football/articles/cd95xz5xndlo)): **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
+Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
+FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: June 12, 2026 (after Group A Matchday 1)
+**Updated**: 2026-06-13 (auto-generated from `simulations/data/match_events.csv`)
 
----
-
-## June 11, 2026 — Group A
+## 2026-06-11 — Group(s) A
 
 ### Mexico 2–0 South Africa
 
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
-| César Montes | Mexico | Red card 90+2′ (DOGSO) | **Suspended** vs South Korea (Jun 18) | [BBC](https://www.bbc.com/sport/football/articles/cd95xz5xndlo), [NYT Athletic](https://www.nytimes.com/athletic/7352092/2026/06/11/mexico-world-cup-south-africa-quinones-red-cards/) |
-| Sphephelo Sithole | South Africa | Red card 49′ (DOGSO) | **Suspended** vs Czechia (Jun 18) | BBC, NYT Athletic |
-| Themba Zwane | South Africa | Red card 73′ (violent conduct) | **Suspended** vs Czechia (Jun 18) | BBC, NYT Athletic |
-| Brian Gutiérrez | Mexico | Yellow 23′ | On **1 yellow** — second triggers ban | Wikipedia match report |
-| Nkosinathi Sibisi | South Africa | Yellow 74′ | On **1 yellow** | Wikipedia match report |
-| Julián Quiñones | Mexico | 2 goals, MOTM-level display | **Form boost** — breakout WC star | [NYT Athletic](https://www.nytimes.com/athletic/7352092/2026/06/11/mexico-world-cup-south-africa-quinones-red-cards/) |
-| Raúl Jiménez | Mexico | WC goal, emotional comeback | **Form boost** | NYT Athletic |
-| Ronwen Williams | South Africa | Error on opener, risky distribution | **Form concern** | [NYT Athletic](https://www.nytimes.com/athletic/7352092/2026/06/11/mexico-world-cup-south-africa-quinones-red-cards/) |
-| Gilberto Mora | Mexico | Sub 66′, bright cameo | Minor positive depth signal | Wikipedia |
-
-**Team notes**
-- South Africa finished with **9 men** — depth and defensive structure severely tested for next fixture.
-- Mexico lose captain/center-back Montes for Korea clash; Quiñones/Jiménez elevate attack profile.
-
----
+| Julián Quiñones | Mexico | Form boost — Opening goal star; 33-goal Saudi season | **Form boost** | NYT Athletic |
+| Raúl Jiménez | Mexico | Form boost — First WC goal comeback narrative | **Form boost** | NYT Athletic |
+| César Montes | Mexico | Red card (Captain/CB DOGSO ban vs South Korea Jun 18) | **Suspended** next match | BBC Sport |
+| Brian Gutiérrez | Mexico | Yellow card (Accumulation watch) | On **1 yellow** — second triggers ban | NYT Athletic |
+| Ronwen Williams | South Africa | Form concern — Error on opener; risky GK passes | **Form concern** | NYT Athletic |
+| Sphephelo Sithole | South Africa | Red card (MF DOGSO ban vs Czechia Jun 18) | **Suspended** next match | BBC Sport |
+| Themba Zwane | South Africa | Red card (Violent conduct ban vs Czechia Jun 18) | **Suspended** next match | BBC Sport |
+| nan | South Africa | Team discipline — Finished with nine men; two reds | — | match-results.md |
+| Nkosinathi Sibisi | South Africa | Yellow card (Accumulation watch) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ### South Korea 2–1 Czechia
 
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
-| Lee Gi-hyuk | South Korea | Yellow 90+6′ | On **1 yellow** | [ESPN](https://www.espn.com/soccer/match/_/gameId/760414/czechia-south-korea) |
-| Hwang In-beom | South Korea | Goal + assist, injury comeback | **Form boost** | [Korea Herald](https://www.koreaherald.com/article/10770701) |
-| Oh Hyeon-gyu | South Korea | Winning goal; played with fever (38°C) | **Form boost** but monitor fitness | Korea Herald |
-| Kim Seung-gyu | South Korea | Match-saving saves | **Form boost** (GK) | Korea Herald, Czech coach praise |
-| Son Heung-min | South Korea | Quiet first half, 6 shots | Neutral — depth concern if form dips | ESPN match stats |
-| Ladislav Krejčí | Czechia | Opener, captain | Scored but team lost lead | [Al Jazeera](https://www.aljazeera.com/sports/2026/6/12/south-korea-vs-czechia-world-cup-2026-oh-hyeon-gyu-hwang-in-beom) |
-| Matej Kovář | Czechia | 6 saves, 2.30 xGC | **Form boost** despite loss | ESPN |
+| nan | Czechia | Form concern — Late collapse after leading 59min | **Form concern** | Al Jazeera |
+| Hwang In-beom | South Korea | Form boost — Goal+assist after injury comeback | **Form boost** | Korea Herald |
+| Kim Seung-gyu | South Korea | Form boost — Decisive saves praised by Czech coach | **Form boost** | Korea Herald |
+| Oh Hyeon-gyu | South Korea | Form boost — Winner despite 38C fever; monitor | **Form boost** | Korea Herald |
+| Lee Gi-hyuk | South Korea | Yellow card (Late booking vs Czechia) | On **1 yellow** — second triggers ban | ESPN |
 
-**Pre-tournament injuries** (tracked in `injury_tracker.md`, not duplicated in `match_events.csv`): Cho Yu-min out; Bae Jun-ho monitoring.
+## 2026-06-12 — Group(s) B, D
 
-**Team notes**
-- No suspensions for either side before Matchday 2.
-- Korea's comeback morale + Hwang/Oh/Kim form upgrades; Czechia competitive but vulnerable after late collapse.
+### Canada 1–1 Bosnia and Herzegovina
 
----
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Jovo Lukić | Bosnia and Herzegovina | Form boost — First international goal; early lead | **Form boost** | Wikipedia |
+| Ermedin Demirović | Bosnia and Herzegovina | Form concern — Booked 44′; unable to extend lead | **Form concern** | ESPN |
+| Ermedin Demirović | Bosnia and Herzegovina | Yellow card (yellow card 44′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Jovo Lukić | Bosnia and Herzegovina | Yellow card (yellow card 45+1′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Nikola Katić | Bosnia and Herzegovina | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Cyle Larin | Canada | Form boost — Equalizer 121s after sub; first-ever WC point catalyst | **Form boost** | Yahoo Sports |
+| Ismaël Koné | Canada | Form boost — Man of the Match; controlled midfield | **Form boost** | Wikipedia |
+| Jonathan David | Canada | Form concern — 0.39 xG no goal; missed chances | **Form concern** | ESPN |
+| Alistair Johnston | Canada | Yellow card (yellow card 11′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Luc de Fougerolles | Canada | Yellow card (yellow card 53′) | On **1 yellow** — second triggers ban | Wikipedia |
 
-## Upcoming fixtures affected (Group A, Jun 18)
+### United States 4–1 Paraguay
 
-| Match | Key absences / risks |
-|-------|----------------------|
-| **Mexico vs South Korea** | Mexico: **Montes suspended**. Korea: Lee Gi-hyuk on 1 yellow; Oh fitness monitor. |
-| **Czechia vs South Africa** | South Africa: **Sithole + Zwane suspended**; Sibisi on 1 yellow; Williams confidence shaken. |
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Maurício | Paraguay | Form boost — Solitary goal; bright off bench | **Form boost** | ESPN |
+| nan | Paraguay | Form concern — Conceded four; defensive structure exposed | **Form concern** | match-results.md |
+| Diego Gómez | Paraguay | Yellow card (yellow card 79′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Juan José Cáceres | Paraguay | Yellow card (yellow card 9′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Júnior Alonso | Paraguay | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Miguel Almirón | Paraguay | Yellow card (yellow card 53′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Álex Arce | Paraguay | Yellow card (yellow card 88′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Folarin Balogun | United States | Form boost — WC debut brace; elevated striker profile | **Form boost** | ESPN |
+| Giovanni Reyna | United States | Form boost — Stoppage-time curl; depth boost | **Form boost** | ESPN |
+| Malik Tillman | United States | Form boost — Best player on pitch per ESPN recap | **Form boost** | ESPN |
+| Christian Pulisic | United States | Injury monitor — Calf kick; subbed HT; hopeful for Jun 19 vs Australia | Monitor fitness | USA Today |
+| Tyler Adams | United States | Yellow card (yellow card 59′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 
 ## Model integration
 
-Structured data: `simulations/data/match_events.csv`  
-Parser: `wc2026_monte_carlo.match_availability` → `availability_multiplier` + `form_adjustment` merged into team features before predictions.
+Structured data: `simulations/data/match_events.csv`
+Supplements (form/injuries): `simulations/data/match_events_supplement.csv`
+Collector: `python -m wc2026_monte_carlo.match_event_collector`
+Parser: `wc2026_monte_carlo.match_availability` → merged into team features.
 
-*Evaluate impact: `python -m wc2026_monte_carlo.evaluate_predictions --show-availability`*
+Evaluate impact: `python -m wc2026_monte_carlo.availability_report --compare`

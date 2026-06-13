@@ -1,0 +1,12 @@
+date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
+2026-06-12,United States,Christian Pulisic,injury_monitor,0.05,false,0,Calf kick; subbed HT; hopeful for Jun 19 vs Australia,USA Today
+2026-06-12,United States,Folarin Balogun,form_boost,-0.05,false,0,WC debut brace; elevated striker profile,ESPN
+2026-06-12,United States,Malik Tillman,form_boost,-0.04,false,0,Best player on pitch per ESPN recap,ESPN
+2026-06-12,United States,Giovanni Reyna,form_boost,-0.03,false,0,Stoppage-time curl; depth boost,ESPN
+2026-06-12,Paraguay,Maurício,form_boost,-0.03,false,0,Solitary goal; bright off bench,ESPN
+2026-06-12,Paraguay,,form_concern,0.03,false,0,Conceded four; defensive structure exposed,match-results.md
+2026-06-12,Canada,Cyle Larin,form_boost,-0.04,false,0,Equalizer 121s after sub; first-ever WC point catalyst,Yahoo Sports
+2026-06-12,Canada,Ismaël Koné,form_boost,-0.03,false,0,Man of the Match; controlled midfield,Wikipedia
+2026-06-12,Canada,Jonathan David,form_concern,0.02,false,0,0.39 xG no goal; missed chances,ESPN
+2026-06-12,Bosnia and Herzegovina,Jovo Lukić,form_boost,-0.03,false,0,First international goal; early lead,Wikipedia
+2026-06-12,Bosnia and Herzegovina,Ermedin Demirović,form_concern,0.02,false,0,Booked 44′; unable to extend lead,ESPN

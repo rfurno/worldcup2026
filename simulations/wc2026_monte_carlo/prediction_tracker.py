@@ -680,7 +680,8 @@ def refresh_after_results(
     """
     Post-results pipeline: re-simulate, snapshot, evaluate, and write evolution report.
 
-    Call this after updating match_results.csv (and match events, if any).
+    Call this after updating match_results.csv. Event collection runs automatically
+    via refresh_predictions (Wikipedia cards + match_events_supplement.csv).
     """
     cfg = config or SimulationConfig(verbose=False)
     checkpoint = resolve_checkpoint()

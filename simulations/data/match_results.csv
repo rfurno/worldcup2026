@@ -1,3 +1,5 @@
 date,match_num,group,home,away,home_goals,away_goals,venue,stadium,neutral
-2026-06-11,1,A,Mexico,South Africa,2,0,Mexico City,Estadio Azteca,false
-2026-06-11,2,A,South Korea,Czechia,2,1,Guadalajara,Estadio Akron,true
+2026-06-11,1,A,Mexico,South Africa,2,0,Mexico City,Estadio Azteca,False
+2026-06-11,2,A,South Korea,Czechia,2,1,Guadalajara,Estadio Akron,True
+2026-06-12,3,B,Canada,Bosnia and Herzegovina,1,1,Toronto,BMO Field,False
+2026-06-12,4,D,United States,Paraguay,4,1,Los Angeles,SoFi Stadium,False
