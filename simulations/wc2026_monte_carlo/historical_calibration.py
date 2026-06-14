@@ -84,5 +84,4 @@ def estimate_rho(
         return default
 
     ratio = low_rate / indep
-    rho = float(np.clip((1.0 - ratio) * 0.25, -0.25, 0.05))
-    return rho
+    return float(np.clip((1.0 - ratio) * 0.30, -0.25, 0.05))

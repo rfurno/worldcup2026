@@ -26,6 +26,8 @@ from .config import (
     WINNER_ODDS_PATH,
 )
 from .club_chemistry import build_club_chemistry_features
+from .config import SimulationConfig
+from .fbref_xg_loader import build_intl_xg_features
 from .form_and_h2h import compute_recent_form
 from .match_availability import build_availability_features
 from .tournament_data import all_teams
@@ -251,6 +253,7 @@ def fetch_historical_matches(
 
 def build_team_features(
     refresh_external: bool = False,
+    config: SimulationConfig | None = None,
 ) -> pd.DataFrame:
     """
     Merge all data sources into a single team feature table.
@@ -279,6 +282,8 @@ def build_team_features(
         player_tracker_text=_read_text(PLAYER_TRACKER_KEY_PATH),
     )
     availability = build_availability_features()
+    cfg = config or SimulationConfig(verbose=False)
+    intl_xg = build_intl_xg_features() if cfg.use_intl_xg else None
 
     features = teams.merge(elo, on="team", how="left")
     features = features.merge(squad, on="team", how="left")
@@ -289,6 +294,13 @@ def build_team_features(
     features = features.merge(player_adj, on="team", how="left")
     features = features.merge(chemistry, on="team", how="left")
     features = features.merge(availability, on="team", how="left")
+    if intl_xg is not None:
+        features = features.merge(intl_xg, on="team", how="left")
+        w = cfg.intl_xg_blend
+        features["xg_diff_per_match"] = (
+            (1.0 - w) * features["xg_diff_per_match"].fillna(0.0)
+            + w * features["intl_xg_diff_per_match"].fillna(0.0)
+        )
 
     # Reasonable defaults for teams missing external data
     features["elo"] = features["elo"].fillna(features["elo"].median())

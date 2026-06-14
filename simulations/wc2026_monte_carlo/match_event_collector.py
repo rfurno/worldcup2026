@@ -80,15 +80,87 @@ def _parse_lineup_table(table_html: str) -> list[dict[str, str | bool]]:
     return cards
 
 
-def parse_wiki_match_cards(html: str, home: str, away: str) -> list[dict]:
-    """Extract discipline events from a Wikipedia group-page match section."""
-    idx = html.find(f"{home} vs")
-    if idx < 0:
+def _score_variants(home_goals: int | None, away_goals: int | None) -> list[str]:
+    if home_goals is None or away_goals is None:
         return []
-    chunk = html[idx:]
-    end = chunk.find("<h3><span")
-    if end > 0:
-        chunk = chunk[:end]
+    return [
+        f"{home_goals}–{away_goals}",
+        f"{home_goals}&ndash;{away_goals}",
+        f"{home_goals}-{away_goals}",
+        f"{home_goals}&#8211;{away_goals}",
+    ]
+
+
+def _extract_match_chunk(
+    html: str,
+    home: str,
+    away: str,
+    home_goals: int | None = None,
+    away_goals: int | None = None,
+) -> str:
+    """
+    Locate the completed-match section on a group page.
+
+    Wikipedia group pages use `### Home vs Away` headings; we anchor on those
+    and require the final score in the section body.
+    """
+    score_tokens = _score_variants(home_goals, away_goals)
+    heading_patterns = [
+        rf"<h3[^>]*>\s*(?:<span[^>]*>)?\s*{re.escape(home)}\s+vs\.?\s+{re.escape(away)}",
+        rf"<h3[^>]*>\s*(?:<span[^>]*>)?\s*{re.escape(away)}\s+vs\.?\s+{re.escape(home)}",
+    ]
+
+    sections = re.split(r"(?=<h3[^>]*>)", html)
+    best = ""
+    best_score = -1
+
+    for section in sections:
+        heading_hit = any(re.search(pat, section, re.IGNORECASE) for pat in heading_patterns)
+        if not heading_hit:
+            continue
+
+        score = 10
+        if score_tokens and any(token in section for token in score_tokens):
+            score += 8
+        else:
+            continue
+        if "Yellow_card" in section or "Red_card" in section:
+            score += 3
+        if len(section) > len(best) or score > best_score:
+            best = section
+            best_score = score
+
+    return best
+
+
+def _team_from_lineup_block(table_html: str) -> str | None:
+    bold = re.search(r"\*\*([^*\[]+)\[", table_html)
+    if bold:
+        return unescape(bold.group(1)).strip()
+    header = re.search(
+        r"<th[^>]*>(?:<a[^>]*>)?([^<]+?)(?:</a>)?</th>",
+        table_html,
+        re.IGNORECASE,
+    )
+    if not header:
+        return None
+    name = unescape(header.group(1)).strip()
+    if " (" in name:
+        name = name.split(" (")[0]
+    return name or None
+
+
+def parse_wiki_match_cards(
+    html: str,
+    home: str,
+    away: str,
+    home_goals: int | None = None,
+    away_goals: int | None = None,
+) -> list[dict]:
+    """Extract discipline events from a Wikipedia group-page match section."""
+    chunk = _extract_match_chunk(html, home, away, home_goals, away_goals)
+    if not chunk:
+        return []
 
     tables = [
         match.group(1)
@@ -102,8 +174,18 @@ def parse_wiki_match_cards(html: str, home: str, away: str) -> list[dict]:
     if len(lineup_tables) < 2:
         return []
 
+    team_tables: list[tuple[str, str]] = []
+    for table_html in lineup_tables[:2]:
+        header_team = _team_from_lineup_block(table_html)
+        if header_team in {home, away}:
+            team_tables.append((header_team, table_html))
+
+    if len(team_tables) < 2:
+        # Validated match section: Wikipedia lists home lineup before away
+        team_tables = [(home, lineup_tables[0]), (away, lineup_tables[1])]
+
     events: list[dict] = []
-    for team, table_html in zip([home, away], lineup_tables[:2]):
+    for team, table_html in team_tables:
         for card in _parse_lineup_table(table_html):
             severity = 0.12 if card["event_type"] == "red_card" else 0.0
             notes = f"{card['event_type'].replace('_', ' ')}"
@@ -230,7 +312,13 @@ def collect_events_for_new_results(
 
         try:
             html = _fetch_wiki_group_page(group)
-            cards = parse_wiki_match_cards(html, home, away)
+            cards = parse_wiki_match_cards(
+                html,
+                home,
+                away,
+                home_goals=int(match["home_goals"]),
+                away_goals=int(match["away_goals"]),
+            )
             new_rows.extend(_cards_to_rows(match_date, cards))
         except Exception as exc:
             print(f"  Warning: could not fetch Wikipedia cards for {home} vs {away}: {exc}")
@@ -370,10 +458,9 @@ def regenerate_events_tracker(
             "",
             "Structured data: `simulations/data/match_events.csv`",
             "Supplements (form/injuries): `simulations/data/match_events_supplement.csv`",
-            "Collector: `python -m wc2026_monte_carlo.match_event_collector`",
-            "Parser: `wc2026_monte_carlo.match_availability` → merged into team features.",
-            "",
-            "Evaluate impact: `python -m wc2026_monte_carlo.availability_report --compare`",
+            "Collected automatically by `python -m wc2026_monte_carlo add-results`.",
+            "Manual re-scrape: `python -m wc2026_monte_carlo.match_event_collector --force-date YYYY-MM-DD`",
+            "Parser: `match_availability` → merged into team features for `predict`.",
         ]
     )
 

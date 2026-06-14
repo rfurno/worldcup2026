@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-13 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-14 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -65,13 +65,44 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Christian Pulisic | United States | Injury monitor — Calf kick; subbed HT; hopeful for Jun 19 vs Australia | Monitor fitness | USA Today |
 | Tyler Adams | United States | Yellow card (yellow card 59′) | On **1 yellow** — second triggers ban | Wikipedia |
 
+## 2026-06-13 — Group(s) B, C, D
+
+### Qatar 1–1 Switzerland
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Jassem Gaber | Qatar | Yellow card (yellow card 23′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Mahmud Abunada | Qatar | Yellow card (yellow card 14′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Denis Zakaria | Switzerland | Yellow card (yellow card 42′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Brazil 1–1 Morocco
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Casemiro | Brazil | Yellow card (yellow card 37′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Roger Ibañez | Brazil | Yellow card (yellow card 43′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Haiti 0–1 Scotland
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Jean-Ricner Bellegarde | Haiti | Yellow card (yellow card 39′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Aaron Hickey | Scotland | Yellow card (yellow card 46′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Findlay Curtis | Scotland | Yellow card (yellow card 90+1′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Kenny McLean | Scotland | Yellow card (yellow card 90+5′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Australia 2–0 Turkey
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Yunus Akgün | Turkey | Yellow card (yellow card 86′) | On **1 yellow** — second triggers ban | Wikipedia |
+
 ---
 
 ## Model integration
 
 Structured data: `simulations/data/match_events.csv`
 Supplements (form/injuries): `simulations/data/match_events_supplement.csv`
-Collector: `python -m wc2026_monte_carlo.match_event_collector`
-Parser: `wc2026_monte_carlo.match_availability` → merged into team features.
-
-Evaluate impact: `python -m wc2026_monte_carlo.availability_report --compare`
+Collected automatically by `python -m wc2026_monte_carlo add-results`.
+Manual re-scrape: `python -m wc2026_monte_carlo.match_event_collector --force-date YYYY-MM-DD`
+Parser: `match_availability` → merged into team features for `predict`.

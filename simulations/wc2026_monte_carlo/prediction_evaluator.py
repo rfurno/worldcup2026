@@ -45,15 +45,25 @@ class MatchEvaluation:
 
 
 @dataclass
+class ConfidenceTierSummary:
+    tier: str
+    count: int
+    winner_accuracy: float
+    three_way_accuracy: float
+
+
+@dataclass
 class EvaluationSummary:
     matches_evaluated: int
     outcome_accuracy: float
+    three_way_accuracy: float
     mean_brier_score: float
     mean_log_loss: float
     mean_xg_error: float
     mean_actual_outcome_prob: float
     mean_actual_score_prob: float
     match_evaluations: list[MatchEvaluation] = field(default_factory=list)
+    confidence_tiers: list[ConfidenceTierSummary] = field(default_factory=list)
 
 
 def load_match_results(path: Path | str = DEFAULT_MATCH_RESULTS_PATH) -> pd.DataFrame:
@@ -78,6 +88,26 @@ def _actual_outcome(home_goals: int, away_goals: int, home: str, away: str) -> s
     if away_goals > home_goals:
         return away
     return "Draw"
+
+
+def _three_way_correct(predicted: str, actual: str) -> bool:
+    return predicted == actual
+
+
+def _confidence_tier_from_row(row: pd.Series) -> str:
+    if "confidence" in row and pd.notna(row["confidence"]):
+        return str(row["confidence"])
+    probs = (
+        float(row["p_home_win"]),
+        float(row["p_draw"]),
+        float(row["p_away_win"]),
+    )
+    top = max(probs)
+    if top >= 0.70:
+        return "High"
+    if top >= 0.55:
+        return "Moderate"
+    return "Low"
 
 
 def _outcome_index(outcome: str, home: str, away: str) -> int:
@@ -146,6 +176,7 @@ def evaluate_predictions(
         return EvaluationSummary(
             matches_evaluated=0,
             outcome_accuracy=0.0,
+            three_way_accuracy=0.0,
             mean_brier_score=0.0,
             mean_log_loss=0.0,
             mean_xg_error=0.0,
@@ -226,6 +257,7 @@ def evaluate_predictions(
         return EvaluationSummary(
             matches_evaluated=0,
             outcome_accuracy=0.0,
+            three_way_accuracy=0.0,
             mean_brier_score=0.0,
             mean_log_loss=0.0,
             mean_xg_error=0.0,
@@ -234,15 +266,42 @@ def evaluate_predictions(
         )
 
     n = len(evaluations)
+    three_way = [
+        _three_way_correct(e.predicted_winner, e.actual_outcome) for e in evaluations
+    ]
+
+    tier_rows: dict[str, list[tuple[bool, bool]]] = {}
+    for e, (_, row) in zip(evaluations, merged.iterrows(), strict=True):
+        tier = _confidence_tier_from_row(row)
+        tier_rows.setdefault(tier, []).append(
+            (e.outcome_correct, _three_way_correct(e.predicted_winner, e.actual_outcome))
+        )
+
+    confidence_tiers = []
+    for tier in ("High", "Moderate", "Low"):
+        rows = tier_rows.get(tier, [])
+        if not rows:
+            continue
+        confidence_tiers.append(
+            ConfidenceTierSummary(
+                tier=tier,
+                count=len(rows),
+                winner_accuracy=sum(r[0] for r in rows) / len(rows),
+                three_way_accuracy=sum(r[1] for r in rows) / len(rows),
+            )
+        )
+
     return EvaluationSummary(
         matches_evaluated=n,
         outcome_accuracy=sum(e.outcome_correct for e in evaluations) / n,
+        three_way_accuracy=sum(three_way) / n,
         mean_brier_score=sum(e.brier_score for e in evaluations) / n,
         mean_log_loss=sum(e.log_loss for e in evaluations) / n,
         mean_xg_error=sum(e.xg_home_error + e.xg_away_error for e in evaluations) / n,
         mean_actual_outcome_prob=sum(e.p_actual_outcome for e in evaluations) / n,
         mean_actual_score_prob=sum(e.p_actual_score for e in evaluations) / n,
         match_evaluations=evaluations,
+        confidence_tiers=confidence_tiers,
     )
 
 
@@ -257,15 +316,24 @@ def format_evaluation_report(summary: EvaluationSummary) -> str:
         "| Metric | Value |",
         "|--------|-------|",
         f"| Outcome accuracy (predicted winner) | **{summary.outcome_accuracy * 100:.1f}%** |",
+        f"| 3-way accuracy (incl. draws) | **{summary.three_way_accuracy * 100:.1f}%** |",
         f"| Mean Brier score (3-way) | {summary.mean_brier_score:.4f} |",
         f"| Mean log loss | {summary.mean_log_loss:.4f} |",
         f"| Mean xG total error (|xG−goals| per team) | {summary.mean_xg_error:.2f} |",
         f"| Mean P(actual outcome) | {summary.mean_actual_outcome_prob * 100:.1f}% |",
         f"| Mean P(actual scoreline) | {summary.mean_actual_score_prob * 100:.1f}% |",
         "",
-        "## Match-by-match",
+        "## By confidence tier",
         "",
+        "| Tier | N | Winner accuracy | 3-way accuracy |",
+        "|------|---|-----------------|----------------|",
     ]
+    for tier in summary.confidence_tiers:
+        lines.append(
+            f"| {tier.tier} | {tier.count} | "
+            f"{tier.winner_accuracy * 100:.1f}% | {tier.three_way_accuracy * 100:.1f}% |"
+        )
+    lines.extend(["", "## Match-by-match", ""])
 
     for e in summary.match_evaluations:
         correct = "✓" if e.outcome_correct else "✗"

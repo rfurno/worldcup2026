@@ -1,4 +1,4 @@
-"""CLI to generate match predictions for a given date."""
+"""Fixture list and formatting; CLI delegates to workflow.predict."""
 
 from __future__ import annotations
 
@@ -7,7 +7,6 @@ import sys
 from datetime import date, timedelta
 
 from .group_position_predictor import GroupPositionPredictor
-from .match_predictor import MatchPredictor
 
 # Official matchday fixtures (FIFA schedule)
 FIXTURES_BY_DATE: dict[str, list[dict]] = {
@@ -96,14 +95,46 @@ FIXTURES_BY_DATE: dict[str, list[dict]] = {
             "match": 12,
             "neutral": True,
         },
+    ],
+    "2026-06-15": [
         {
-            "home": "Australia",
-            "away": "Turkey",
-            "venue": "Vancouver",
-            "kickoff": "9:00 PM PDT",
-            "stadium": "BC Place",
-            "group": "D",
-            "match": 6,
+            "home": "Spain",
+            "away": "Cape Verde",
+            "venue": "Atlanta",
+            "kickoff": "12:00 PM EDT",
+            "stadium": "Mercedes-Benz Stadium",
+            "group": "H",
+            "match": 14,
+            "neutral": True,
+        },
+        {
+            "home": "Belgium",
+            "away": "Egypt",
+            "venue": "Seattle",
+            "kickoff": "3:00 PM EDT",
+            "stadium": "Lumen Field",
+            "group": "G",
+            "match": 16,
+            "neutral": True,
+        },
+        {
+            "home": "Saudi Arabia",
+            "away": "Uruguay",
+            "venue": "Miami",
+            "kickoff": "6:00 PM EDT",
+            "stadium": "Hard Rock Stadium",
+            "group": "H",
+            "match": 13,
+            "neutral": True,
+        },
+        {
+            "home": "Iran",
+            "away": "New Zealand",
+            "venue": "Los Angeles",
+            "kickoff": "9:00 PM EDT",
+            "stadium": "SoFi Stadium",
+            "group": "G",
+            "match": 15,
             "neutral": True,
         },
     ],
@@ -136,6 +167,16 @@ FIXTURES_BY_DATE: dict[str, list[dict]] = {
             "stadium": "Gillette Stadium",
             "group": "C",
             "match": 5,
+            "neutral": True,
+        },
+        {
+            "home": "Australia",
+            "away": "Turkey",
+            "venue": "Vancouver",
+            "kickoff": "9:00 PM PDT",
+            "stadium": "BC Place",
+            "group": "D",
+            "match": 6,
             "neutral": True,
         },
     ],
@@ -181,63 +222,32 @@ def format_group_positions(summary) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Predict World Cup matches for a date")
-    parser.add_argument(
-        "--date",
-        type=str,
-        default=None,
-        help="Date (YYYY-MM-DD). Default: tomorrow.",
+    parser = argparse.ArgumentParser(
+        description="[deprecated] Use: python -m wc2026_monte_carlo predict",
     )
-    parser.add_argument(
-        "--group-positions",
-        action="store_true",
-        help="Include full group first/second place probabilities",
-    )
-    parser.add_argument(
-        "--log",
-        action="store_true",
-        help="Append match predictions to match_predictions_log.csv",
-    )
+    parser.add_argument("--date", type=str, default=None)
+    parser.add_argument("--group-positions", action="store_true")
     args = parser.parse_args(argv)
 
-    if args.date:
-        target = date.fromisoformat(args.date)
-    else:
-        target = date.today() + timedelta(days=1)
+    from .workflow import run_predict
 
-    fixtures = fixtures_for(target)
-    if not fixtures:
-        print(f"No fixtures loaded for {target.isoformat()}")
+    target = (
+        date.fromisoformat(args.date)
+        if args.date
+        else date.today() + timedelta(days=1)
+    )
+    try:
+        run_predict(target)
+    except ValueError as exc:
+        print(exc)
         return 1
 
-    predictor = MatchPredictor()
-    print(f"# Match Predictions — {target.strftime('%B %d, %Y')}\n")
-    predictions = []
-    for fixture in fixtures:
-        fixture = {**fixture, "date": target.isoformat()}
-        pred = predictor.predict(
-            fixture["home"],
-            fixture["away"],
-            venue=fixture.get("venue"),
-            neutral=fixture.get("neutral", False),
-        )
-        predictions.append(pred)
-        print(format_prediction(fixture, pred))
-        print()
-
-    if args.log:
-        from .prediction_tracker import log_match_predictions
-
-        logged = log_match_predictions(fixtures, predictions, snapshot_date=target.isoformat())
-        if logged:
-            print(f"Logged {logged} match prediction(s) to match_predictions_log.csv\n")
-
-    groups = sorted({f["group"] for f in fixtures})
-    if args.group_positions or groups:
-        group_predictor = GroupPositionPredictor()
+    if args.group_positions:
+        fixtures = fixtures_for(target)
+        groups = sorted({f["group"] for f in fixtures})
+        predictor = GroupPositionPredictor()
         for group in groups:
-            summary = group_predictor.predict_group(group)
-            print(format_group_positions(summary))
+            print(format_group_positions(predictor.predict_group(group)))
             print()
 
     return 0

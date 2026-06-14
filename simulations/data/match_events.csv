@@ -35,3 +35,13 @@ date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
 2026-06-12,United States,Giovanni Reyna,form_boost,-0.03,False,0,Stoppage-time curl; depth boost,ESPN
 2026-06-12,Paraguay,Maurício,form_boost,-0.03,False,0,Solitary goal; bright off bench,ESPN
 2026-06-12,Paraguay,,form_concern,0.03,False,0,Conceded four; defensive structure exposed,match-results.md
+2026-06-13,Qatar,Mahmud Abunada,yellow_card,0.0,False,1,yellow card 14′,Wikipedia
+2026-06-13,Qatar,Jassem Gaber,yellow_card,0.0,False,1,yellow card 23′,Wikipedia
+2026-06-13,Switzerland,Denis Zakaria,yellow_card,0.0,False,1,yellow card 42′,Wikipedia
+2026-06-13,Brazil,Roger Ibañez,yellow_card,0.0,False,1,yellow card 43′,Wikipedia
+2026-06-13,Brazil,Casemiro,yellow_card,0.0,False,1,yellow card 37′,Wikipedia
+2026-06-13,Haiti,Jean-Ricner Bellegarde,yellow_card,0.0,False,1,yellow card 39′,Wikipedia
+2026-06-13,Scotland,Aaron Hickey,yellow_card,0.0,False,1,yellow card 46′,Wikipedia
+2026-06-13,Scotland,Kenny McLean,yellow_card,0.0,False,1,yellow card 90+5′,Wikipedia
+2026-06-13,Scotland,Findlay Curtis,yellow_card,0.0,False,1,yellow card 90+1′,Wikipedia
+2026-06-13,Turkey,Yunus Akgün,yellow_card,0.0,False,1,yellow card 86′,Wikipedia

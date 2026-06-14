@@ -3,3 +3,7 @@ date,match_num,group,home,away,home_goals,away_goals,venue,stadium,neutral
 2026-06-11,2,A,South Korea,Czechia,2,1,Guadalajara,Estadio Akron,True
 2026-06-12,3,B,Canada,Bosnia and Herzegovina,1,1,Toronto,BMO Field,False
 2026-06-12,4,D,United States,Paraguay,4,1,Los Angeles,SoFi Stadium,False
+2026-06-13,8,B,Qatar,Switzerland,1,1,San Francisco,Levi's Stadium,True
+2026-06-13,7,C,Brazil,Morocco,1,1,New York,MetLife Stadium,True
+2026-06-13,5,C,Haiti,Scotland,0,1,Boston,Gillette Stadium,True
+2026-06-13,6,D,Australia,Turkey,2,0,Vancouver,BC Place,True

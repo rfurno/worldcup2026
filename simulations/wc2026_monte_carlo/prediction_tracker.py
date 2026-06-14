@@ -975,15 +975,14 @@ def format_evolution_report(
         [
             "## How to update",
             "",
-            "After adding results to `simulations/data/match_results.csv`:",
+            "After each matchday:",
             "",
             "```bash",
             "cd simulations && source .venv/bin/activate",
-            "python -m wc2026_monte_carlo.refresh_predictions",
+            "python -m wc2026_monte_carlo add-results --date ... --match-num ... \\",
+            "  --group ... --home ... --away ... --home-goals N --away-goals N",
+            "python -m wc2026_monte_carlo predict",
             "```",
-            "",
-            "That command re-simulates, captures a new snapshot (if the checkpoint changed),",
-            "evaluates logged match predictions, and regenerates this report automatically.",
         ]
     )
     return "\n".join(lines)

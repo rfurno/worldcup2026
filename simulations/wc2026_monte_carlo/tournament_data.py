@@ -46,6 +46,8 @@ VENUE_COORDINATES: dict[str, tuple[float, float]] = {
     "Boston": (42.36, -71.06),
     "Philadelphia": (39.95, -75.17),
     "New York": (40.71, -74.01),
+    "Miami": (25.76, -80.19),
+    "Seattle": (47.61, -122.33),
 }
 
 # Group match schedule: (home_idx, away_idx) within each group's team list

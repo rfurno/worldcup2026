@@ -1,0 +1,17 @@
+date,match_num,home,away,p_home,p_draw,p_away,source
+2026-06-11,1,Mexico,South Africa,0.451,0.23,0.319,opening_fixtures_ensemble
+2026-06-11,2,South Korea,Czechia,0.613,0.215,0.172,opening_fixtures_ensemble
+2026-06-12,3,Canada,Bosnia and Herzegovina,0.318,0.24,0.442,opening_fixtures_ensemble
+2026-06-12,4,United States,Paraguay,0.574,0.22,0.206,opening_fixtures_ensemble
+2026-06-13,5,Haiti,Scotland,0.38,0.26,0.36,market_estimate_ensemble
+2026-06-13,6,Australia,Turkey,0.48,0.25,0.27,market_estimate_ensemble
+2026-06-13,7,Brazil,Morocco,0.52,0.24,0.24,market_estimate_ensemble
+2026-06-13,8,Qatar,Switzerland,0.28,0.27,0.45,market_estimate_ensemble
+2026-06-14,9,Ivory Coast,Ecuador,0.56,0.23,0.21,market_estimate_ensemble
+2026-06-14,10,Germany,Curaçao,0.62,0.21,0.17,market_estimate_ensemble
+2026-06-14,11,Netherlands,Japan,0.42,0.26,0.32,market_estimate_ensemble
+2026-06-14,12,Sweden,Tunisia,0.48,0.26,0.26,market_estimate_ensemble
+2026-06-15,13,Saudi Arabia,Uruguay,0.22,0.26,0.52,market_estimate_ensemble
+2026-06-15,14,Spain,Cape Verde,0.72,0.18,0.1,market_estimate_ensemble
+2026-06-15,15,Iran,New Zealand,0.58,0.24,0.18,market_estimate_ensemble
+2026-06-15,16,Belgium,Egypt,0.62,0.22,0.16,market_estimate_ensemble

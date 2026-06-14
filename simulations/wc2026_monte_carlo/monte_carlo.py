@@ -34,7 +34,7 @@ class MonteCarloEngine:
     def __init__(self, config: SimulationConfig, refresh_external: bool = False):
         self.config = config
         self.refresh_external = refresh_external
-        features = build_team_features(refresh_external=refresh_external)
+        features = build_team_features(refresh_external=refresh_external, config=config)
         self.strength_model = TeamStrengthModel(
             config, features=features, refresh_external=False
         )

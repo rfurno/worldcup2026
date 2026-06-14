@@ -46,9 +46,12 @@ class DixonColesModel:
             historical_matches, xi=self.xi
         )
         if config.estimate_rho_from_history:
-            self.rho = estimate_rho(
+            estimated = estimate_rho(
                 historical_matches, xi=self.xi, default=config.dixon_coles_rho
             )
+            self.rho = float(np.clip(estimated, config.rho_floor, 0.05))
+            if self.rho > config.dixon_coles_rho:
+                self.rho = config.dixon_coles_rho
         else:
             self.rho = config.dixon_coles_rho
 

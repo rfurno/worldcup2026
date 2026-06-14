@@ -26,12 +26,20 @@ SETUP
    - winner_odds_table.md / betting_sites_odds.md (#5)
    - opening_fixtures_predictions.md (#3, #6)
 
-USAGE
------
+DAILY WORKFLOW
+--------------
 ::
 
-    python -m wc2026_monte_carlo --simulations 10000 --seed 42
-    python -m wc2026_monte_carlo --refresh-external --simulations 50000
+    cd simulations && source .venv/bin/activate
+    python -m wc2026_monte_carlo predict
+    python -m wc2026_monte_carlo add-results --date YYYY-MM-DD --match-num N \\
+        --group X --home "Team A" --away "Team B" --home-goals N --away-goals N
+
+FULL TOURNAMENT SIM (advanced)
+------------------------------
+::
+
+    python -m wc2026_monte_carlo.cli --simulations 10000 --seed 42
 
 Outputs land in ``simulations/output/``.
 """

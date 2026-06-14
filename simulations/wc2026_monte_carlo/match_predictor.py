@@ -7,6 +7,9 @@ from dataclasses import dataclass
 import numpy as np
 
 from .config import SimulationConfig
+from .external_sims_loader import lookup_external_sim
+from .lineup_signals import lineup_multipliers_for_match
+from .match_odds_loader import blend_match_probabilities, lookup_match_odds
 from .model_factory import build_calibrated_models
 
 NEUTRAL_HOME_ADVANTAGE = 0.08
@@ -25,6 +28,7 @@ class MatchPrediction:
     predicted_winner: str
     most_likely_scorelines: list[tuple[str, float]]
     confidence: str
+    pick_method: str = "max_outcome"
 
 
 def _confidence_label(home_p: float, draw_p: float, away_p: float) -> str:
@@ -34,6 +38,48 @@ def _confidence_label(home_p: float, draw_p: float, away_p: float) -> str:
     if top >= 0.55:
         return "Moderate"
     return "Low"
+
+
+def _pick_winner(
+    home: str,
+    away: str,
+    home_win: float,
+    draw: float,
+    away_win: float,
+    most_likely_score: str,
+    config: SimulationConfig,
+) -> tuple[str, str]:
+    """Draw-aware winner selection."""
+    top = max(home_win, draw, away_win)
+    margin = config.draw_pick_margin
+    modal = most_likely_score.strip()
+
+    if draw >= top - margin and draw >= config.draw_modal_min_prob:
+        return "Draw", "draw_within_margin"
+
+    if modal in {"0-0", "1-1", "2-2"} and draw >= config.draw_modal_min_prob:
+        if draw >= top - 0.05:
+            return "Draw", "modal_draw"
+
+    if home_win >= away_win and home_win >= draw:
+        return home, "max_outcome"
+    if away_win >= home_win and away_win >= draw:
+        return away, "max_outcome"
+    return "Draw", "max_outcome"
+
+
+def _apply_md1_draw_bump(
+    home_win: float,
+    draw: float,
+    away_win: float,
+    factor: float,
+) -> tuple[float, float, float]:
+    draw_adj = draw * factor
+    total = home_win + draw_adj + away_win
+    if total <= 0:
+        return home_win, draw, away_win
+    scale = (home_win + draw + away_win) / total
+    return home_win * scale, draw_adj * scale, away_win * scale
 
 
 class MatchPredictor:
@@ -49,17 +95,56 @@ class MatchPredictor:
         n_samples: int = 50_000,
         seed: int = 42,
         neutral: bool = False,
+        match_date: str | None = None,
+        match_num: int | None = None,
+        matchday: int = 1,
     ) -> MatchPrediction:
         saved_ha = self.config.home_advantage
         if neutral:
             self.config.home_advantage = NEUTRAL_HOME_ADVANTAGE
 
         try:
+            home_mult, away_mult = (1.0, 1.0)
+            if self.config.use_lineup_signals:
+                home_mult, away_mult = lineup_multipliers_for_match(
+                    home, away, match_date=match_date, match_num=match_num
+                )
+
             lam_h, lam_a = self.model.expected_rates(home, away, venue)
+            lam_h *= home_mult
+            lam_a *= away_mult
+
             matrix = self.model.score_matrix(lam_h, lam_a, max_goals=8)
             home_win = float(np.tril(matrix, -1).sum())
             draw = float(np.trace(matrix).sum())
             away_win = float(np.triu(matrix, 1).sum())
+
+            if self.config.use_md1_draw_bump and matchday == 1:
+                home_win, draw, away_win = _apply_md1_draw_bump(
+                    home_win, draw, away_win, self.config.md1_draw_factor
+                )
+
+            model_probs = (home_win, draw, away_win)
+
+            if self.config.use_match_odds:
+                market = lookup_match_odds(
+                    home, away, match_date=match_date, match_num=match_num
+                )
+                if market is not None:
+                    model_probs = blend_match_probabilities(
+                        model_probs, market, self.config.match_odds_blend
+                    )
+
+            if self.config.use_external_ensemble:
+                external = lookup_external_sim(
+                    home, away, match_date=match_date, match_num=match_num
+                )
+                if external is not None:
+                    model_probs = blend_match_probabilities(
+                        model_probs, external, self.config.ensemble_external_weight
+                    )
+
+            home_win, draw, away_win = model_probs
 
             rng = np.random.default_rng(seed)
             scores: dict[str, int] = {}
@@ -70,13 +155,11 @@ class MatchPredictor:
 
             top_scores = sorted(scores.items(), key=lambda x: -x[1])[:5]
             most_likely = [(s, c / n_samples) for s, c in top_scores]
+            modal_score = most_likely[0][0] if most_likely else "1-1"
 
-            if home_win >= away_win and home_win >= draw:
-                winner = home
-            elif away_win >= home_win and away_win >= draw:
-                winner = away
-            else:
-                winner = "Draw"
+            winner, pick_method = _pick_winner(
+                home, away, home_win, draw, away_win, modal_score, self.config
+            )
 
             return MatchPrediction(
                 home=home,
@@ -90,6 +173,7 @@ class MatchPredictor:
                 predicted_winner=winner,
                 most_likely_scorelines=most_likely,
                 confidence=_confidence_label(home_win, draw, away_win),
+                pick_method=pick_method,
             )
         finally:
             self.config.home_advantage = saved_ha

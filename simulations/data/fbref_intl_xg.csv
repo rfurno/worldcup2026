@@ -1,0 +1,49 @@
+team,xg_for_per_match,xg_against_per_match,matches,source
+Algeria,1.4,1.3,10,derived_from_xg_form
+Argentina,1.625,1.075,10,derived_from_xg_form
+Australia,1.375,1.325,10,derived_from_xg_form
+Austria,1.46,1.24,10,derived_from_xg_form
+Belgium,1.525,1.175,10,derived_from_xg_form
+Bosnia and Herzegovina,1.35,1.35,10,derived_from_xg_form
+Brazil,1.55,1.15,10,derived_from_xg_form
+Canada,1.4,1.3,10,derived_from_xg_form
+Cape Verde,1.35,1.35,10,derived_from_xg_form
+Colombia,1.51,1.19,10,derived_from_xg_form
+Croatia,1.5,1.2,10,derived_from_xg_form
+Curaçao,1.275,1.425,10,derived_from_xg_form
+Czechia,1.39,1.31,10,derived_from_xg_form
+DR Congo,1.36,1.34,10,derived_from_xg_form
+Ecuador,1.425,1.275,10,derived_from_xg_form
+Egypt,1.39,1.31,10,derived_from_xg_form
+England,1.675,1.025,10,derived_from_xg_form
+France,1.71,0.99,10,derived_from_xg_form
+Germany,1.6,1.1,10,derived_from_xg_form
+Ghana,1.375,1.325,10,derived_from_xg_form
+Haiti,1.29,1.41,10,derived_from_xg_form
+Iran,1.36,1.34,10,derived_from_xg_form
+Iraq,1.325,1.375,10,derived_from_xg_form
+Ivory Coast,1.41,1.29,10,derived_from_xg_form
+Japan,1.475,1.225,10,derived_from_xg_form
+Jordan,1.34,1.36,10,derived_from_xg_form
+Mexico,1.425,1.275,10,derived_from_xg_form
+Morocco,1.575,1.125,10,derived_from_xg_form
+Netherlands,1.56,1.14,10,derived_from_xg_form
+New Zealand,1.3,1.4,10,derived_from_xg_form
+Norway,1.44,1.26,10,derived_from_xg_form
+Panama,1.31,1.39,10,derived_from_xg_form
+Paraguay,1.39,1.31,10,derived_from_xg_form
+Portugal,1.59,1.11,10,derived_from_xg_form
+Qatar,1.325,1.375,10,derived_from_xg_form
+Saudi Arabia,1.375,1.325,10,derived_from_xg_form
+Scotland,1.41,1.29,10,derived_from_xg_form
+Senegal,1.45,1.25,10,derived_from_xg_form
+South Africa,1.34,1.36,10,derived_from_xg_form
+South Korea,1.41,1.29,10,derived_from_xg_form
+Spain,1.775,0.925,10,derived_from_xg_form
+Sweden,1.375,1.325,10,derived_from_xg_form
+Switzerland,1.44,1.26,10,derived_from_xg_form
+Tunisia,1.36,1.34,10,derived_from_xg_form
+Turkey,1.45,1.25,10,derived_from_xg_form
+United States,1.46,1.24,10,derived_from_xg_form
+Uruguay,1.49,1.21,10,derived_from_xg_form
+Uzbekistan,1.35,1.35,10,derived_from_xg_form

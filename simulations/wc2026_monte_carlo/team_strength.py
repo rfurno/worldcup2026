@@ -32,7 +32,8 @@ class TeamStrengthModel:
     ):
         self.config = config
         self.features = features if features is not None else build_team_features(
-            refresh_external=refresh_external
+            refresh_external=refresh_external,
+            config=config,
         )
         self.weights = config.blend_weights
         if strengths is not None:
