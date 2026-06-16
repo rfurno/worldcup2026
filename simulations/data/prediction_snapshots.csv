@@ -3,3 +3,5 @@ pre_opening,2026-06-10,pre_opening,0,,10000,50000,Retrospective baseline from Ju
 after_match_2,2026-06-12,after_match_2,2,2026-06-11,10000,0,After Matchday 1 (2026-06-11) (imported from output CSVs)
 after_match_4,2026-06-13,after_match_4,4,2026-06-12,10000,10000,After Matchday 2 (2026-06-12)
 after_match_8,2026-06-14,after_match_8,8,2026-06-13,10000,10000,After Matchday 4 (2026-06-13)
+after_match_14,2026-06-15,after_match_14,14,2026-06-15,10000,10000,After Matchday 7 (2026-06-15)
+after_match_16,2026-06-16,after_match_16,16,2026-06-15,10000,10000,After Matchday 8 (2026-06-15)

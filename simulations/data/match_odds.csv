@@ -15,3 +15,11 @@ date,match_num,home,away,p_home,p_draw,p_away,source
 2026-06-15,14,Spain,Cape Verde,0.720,0.180,0.100,market_estimate
 2026-06-15,15,Iran,New Zealand,0.580,0.240,0.180,market_estimate
 2026-06-15,16,Belgium,Egypt,0.620,0.220,0.160,market_estimate
+2026-06-16,17,France,Senegal,0.680,0.200,0.120,market_estimate
+2026-06-16,18,Iraq,Norway,0.320,0.260,0.420,market_estimate
+2026-06-16,19,Argentina,Algeria,0.650,0.220,0.130,market_estimate
+2026-06-16,20,Austria,Jordan,0.520,0.260,0.220,market_estimate
+2026-06-17,21,Portugal,DR Congo,0.620,0.220,0.160,market_estimate
+2026-06-17,22,England,Croatia,0.480,0.260,0.260,market_estimate
+2026-06-17,23,Ghana,Panama,0.450,0.270,0.280,market_estimate
+2026-06-17,24,Uzbekistan,Colombia,0.280,0.260,0.460,market_estimate

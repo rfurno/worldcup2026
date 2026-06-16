@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-14 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-16 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -96,6 +96,66 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
 | Yunus Akgün | Turkey | Yellow card (yellow card 86′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-14 — Group(s) E, F
+
+### Ivory Coast 1–0 Ecuador
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Jackson Porozo | Ecuador | Yellow card (yellow card 73′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Guéla Doué | Ivory Coast | Yellow card (yellow card 40′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Seko Fofana | Ivory Coast | Yellow card (yellow card 28′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Germany 7–1 Curaçao
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+### Netherlands 2–2 Japan
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Crysencio Summerville | Netherlands | Yellow card (yellow card 61′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Memphis Depay | Netherlands | Yellow card (yellow card 83′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Micky van de Ven | Netherlands | Yellow card (yellow card 90+1′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Sweden 5–1 Tunisia
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Rani Khedira | Tunisia | Yellow card (yellow card 54′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-15 — Group(s) G, H
+
+### Spain 0–0 Cape Verde
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Sidny Lopes Cabral | Cape Verde | Yellow card (yellow card 16′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Pedri | Spain | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Belgium 1–1 Egypt
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Maxim De Cuyper | Belgium | Yellow card (yellow card 75′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Timothy Castagne | Belgium | Yellow card (yellow card 14′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Ahmed Fatouh | Egypt | Yellow card (yellow card 34′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Marwan Attia | Egypt | Yellow card (yellow card 13′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Saudi Arabia 1–1 Uruguay
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Abdulelah Al-Amri | Saudi Arabia | Yellow card (yellow card 44′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Iran 2–2 New Zealand
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Ehsan Hajsafi | Iran | Yellow card (yellow card 89′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 
