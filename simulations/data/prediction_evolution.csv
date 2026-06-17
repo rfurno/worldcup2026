@@ -2792,3 +2792,695 @@ after_match_16,2026-06-16,after_match_16,16,group,H,Saudi Arabia,p_second,0.1222
 after_match_16,2026-06-16,after_match_16,16,group,H,Saudi Arabia,p_third,0.2383
 after_match_16,2026-06-16,after_match_16,16,group,H,Saudi Arabia,p_fourth,0.6026
 after_match_16,2026-06-16,after_match_16,16,group,H,Saudi Arabia,p_top_two,0.1591
+after_match_22,2026-06-17,after_match_22,22,tournament,,Spain,p_win,0.1302
+after_match_22,2026-06-17,after_match_22,22,tournament,,Spain,p_runner_up,0.0614
+after_match_22,2026-06-17,after_match_22,22,tournament,,Spain,p_podium,0.1916
+after_match_22,2026-06-17,after_match_22,22,tournament,,France,p_win,0.09
+after_match_22,2026-06-17,after_match_22,22,tournament,,France,p_runner_up,0.0675
+after_match_22,2026-06-17,after_match_22,22,tournament,,France,p_podium,0.1575
+after_match_22,2026-06-17,after_match_22,22,tournament,,Portugal,p_win,0.0803
+after_match_22,2026-06-17,after_match_22,22,tournament,,Portugal,p_runner_up,0.0574
+after_match_22,2026-06-17,after_match_22,22,tournament,,Portugal,p_podium,0.1377
+after_match_22,2026-06-17,after_match_22,22,tournament,,Brazil,p_win,0.0795
+after_match_22,2026-06-17,after_match_22,22,tournament,,Brazil,p_runner_up,0.0561
+after_match_22,2026-06-17,after_match_22,22,tournament,,Brazil,p_podium,0.1356
+after_match_22,2026-06-17,after_match_22,22,tournament,,England,p_win,0.0787
+after_match_22,2026-06-17,after_match_22,22,tournament,,England,p_runner_up,0.0697
+after_match_22,2026-06-17,after_match_22,22,tournament,,England,p_podium,0.1484
+after_match_22,2026-06-17,after_match_22,22,tournament,,Argentina,p_win,0.0532
+after_match_22,2026-06-17,after_match_22,22,tournament,,Argentina,p_runner_up,0.0538
+after_match_22,2026-06-17,after_match_22,22,tournament,,Argentina,p_podium,0.107
+after_match_22,2026-06-17,after_match_22,22,tournament,,Germany,p_win,0.033
+after_match_22,2026-06-17,after_match_22,22,tournament,,Germany,p_runner_up,0.0369
+after_match_22,2026-06-17,after_match_22,22,tournament,,Germany,p_podium,0.0699
+after_match_22,2026-06-17,after_match_22,22,tournament,,Algeria,p_win,0.0175
+after_match_22,2026-06-17,after_match_22,22,tournament,,Algeria,p_runner_up,0.0161
+after_match_22,2026-06-17,after_match_22,22,tournament,,Algeria,p_podium,0.0336
+after_match_22,2026-06-17,after_match_22,22,tournament,,Panama,p_win,0.0164
+after_match_22,2026-06-17,after_match_22,22,tournament,,Panama,p_runner_up,0.0187
+after_match_22,2026-06-17,after_match_22,22,tournament,,Panama,p_podium,0.0351
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ghana,p_win,0.016
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ghana,p_runner_up,0.0187
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ghana,p_podium,0.0347
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Korea,p_win,0.0152
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Korea,p_runner_up,0.0203
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Korea,p_podium,0.0355
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Africa,p_win,0.0139
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Africa,p_runner_up,0.0142
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Africa,p_podium,0.0281
+after_match_22,2026-06-17,after_match_22,22,tournament,,Qatar,p_win,0.0138
+after_match_22,2026-06-17,after_match_22,22,tournament,,Qatar,p_runner_up,0.0133
+after_match_22,2026-06-17,after_match_22,22,tournament,,Qatar,p_podium,0.0271
+after_match_22,2026-06-17,after_match_22,22,tournament,,Croatia,p_win,0.0138
+after_match_22,2026-06-17,after_match_22,22,tournament,,Croatia,p_runner_up,0.0147
+after_match_22,2026-06-17,after_match_22,22,tournament,,Croatia,p_podium,0.0285
+after_match_22,2026-06-17,after_match_22,22,tournament,,Saudi Arabia,p_win,0.0132
+after_match_22,2026-06-17,after_match_22,22,tournament,,Saudi Arabia,p_runner_up,0.0107
+after_match_22,2026-06-17,after_match_22,22,tournament,,Saudi Arabia,p_podium,0.0239
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ivory Coast,p_win,0.0132
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ivory Coast,p_runner_up,0.014
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ivory Coast,p_podium,0.0272
+after_match_22,2026-06-17,after_match_22,22,tournament,,New Zealand,p_win,0.013
+after_match_22,2026-06-17,after_match_22,22,tournament,,New Zealand,p_runner_up,0.0209
+after_match_22,2026-06-17,after_match_22,22,tournament,,New Zealand,p_podium,0.0339
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iran,p_win,0.0125
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iran,p_runner_up,0.0111
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iran,p_podium,0.0236
+after_match_22,2026-06-17,after_match_22,22,tournament,,Czechia,p_win,0.0124
+after_match_22,2026-06-17,after_match_22,22,tournament,,Czechia,p_runner_up,0.0164
+after_match_22,2026-06-17,after_match_22,22,tournament,,Czechia,p_podium,0.0288
+after_match_22,2026-06-17,after_match_22,22,tournament,,Colombia,p_win,0.0123
+after_match_22,2026-06-17,after_match_22,22,tournament,,Colombia,p_runner_up,0.0156
+after_match_22,2026-06-17,after_match_22,22,tournament,,Colombia,p_podium,0.0279
+after_match_22,2026-06-17,after_match_22,22,tournament,,DR Congo,p_win,0.0122
+after_match_22,2026-06-17,after_match_22,22,tournament,,DR Congo,p_runner_up,0.0184
+after_match_22,2026-06-17,after_match_22,22,tournament,,DR Congo,p_podium,0.0306
+after_match_22,2026-06-17,after_match_22,22,tournament,,Scotland,p_win,0.0119
+after_match_22,2026-06-17,after_match_22,22,tournament,,Scotland,p_runner_up,0.0239
+after_match_22,2026-06-17,after_match_22,22,tournament,,Scotland,p_podium,0.0358
+after_match_22,2026-06-17,after_match_22,22,tournament,,Netherlands,p_win,0.0118
+after_match_22,2026-06-17,after_match_22,22,tournament,,Netherlands,p_runner_up,0.0183
+after_match_22,2026-06-17,after_match_22,22,tournament,,Netherlands,p_podium,0.0301
+after_match_22,2026-06-17,after_match_22,22,tournament,,Japan,p_win,0.0115
+after_match_22,2026-06-17,after_match_22,22,tournament,,Japan,p_runner_up,0.0131
+after_match_22,2026-06-17,after_match_22,22,tournament,,Japan,p_podium,0.0246
+after_match_22,2026-06-17,after_match_22,22,tournament,,Bosnia and Herzegovina,p_win,0.0115
+after_match_22,2026-06-17,after_match_22,22,tournament,,Bosnia and Herzegovina,p_runner_up,0.0154
+after_match_22,2026-06-17,after_match_22,22,tournament,,Bosnia and Herzegovina,p_podium,0.0269
+after_match_22,2026-06-17,after_match_22,22,tournament,,Australia,p_win,0.0115
+after_match_22,2026-06-17,after_match_22,22,tournament,,Australia,p_runner_up,0.0185
+after_match_22,2026-06-17,after_match_22,22,tournament,,Australia,p_podium,0.03
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ecuador,p_win,0.0113
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ecuador,p_runner_up,0.0155
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ecuador,p_podium,0.0268
+after_match_22,2026-06-17,after_match_22,22,tournament,,Austria,p_win,0.0112
+after_match_22,2026-06-17,after_match_22,22,tournament,,Austria,p_runner_up,0.0188
+after_match_22,2026-06-17,after_match_22,22,tournament,,Austria,p_podium,0.03
+after_match_22,2026-06-17,after_match_22,22,tournament,,Paraguay,p_win,0.0111
+after_match_22,2026-06-17,after_match_22,22,tournament,,Paraguay,p_runner_up,0.0142
+after_match_22,2026-06-17,after_match_22,22,tournament,,Paraguay,p_podium,0.0253
+after_match_22,2026-06-17,after_match_22,22,tournament,,Tunisia,p_win,0.011
+after_match_22,2026-06-17,after_match_22,22,tournament,,Tunisia,p_runner_up,0.012
+after_match_22,2026-06-17,after_match_22,22,tournament,,Tunisia,p_podium,0.023
+after_match_22,2026-06-17,after_match_22,22,tournament,,Senegal,p_win,0.0109
+after_match_22,2026-06-17,after_match_22,22,tournament,,Senegal,p_runner_up,0.0125
+after_match_22,2026-06-17,after_match_22,22,tournament,,Senegal,p_podium,0.0234
+after_match_22,2026-06-17,after_match_22,22,tournament,,Morocco,p_win,0.0109
+after_match_22,2026-06-17,after_match_22,22,tournament,,Morocco,p_runner_up,0.0177
+after_match_22,2026-06-17,after_match_22,22,tournament,,Morocco,p_podium,0.0286
+after_match_22,2026-06-17,after_match_22,22,tournament,,Switzerland,p_win,0.0107
+after_match_22,2026-06-17,after_match_22,22,tournament,,Switzerland,p_runner_up,0.0174
+after_match_22,2026-06-17,after_match_22,22,tournament,,Switzerland,p_podium,0.0281
+after_match_22,2026-06-17,after_match_22,22,tournament,,Curaçao,p_win,0.0106
+after_match_22,2026-06-17,after_match_22,22,tournament,,Curaçao,p_runner_up,0.0081
+after_match_22,2026-06-17,after_match_22,22,tournament,,Curaçao,p_podium,0.0187
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uruguay,p_win,0.0105
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uruguay,p_runner_up,0.0205
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uruguay,p_podium,0.031
+after_match_22,2026-06-17,after_match_22,22,tournament,,Turkey,p_win,0.0104
+after_match_22,2026-06-17,after_match_22,22,tournament,,Turkey,p_runner_up,0.0145
+after_match_22,2026-06-17,after_match_22,22,tournament,,Turkey,p_podium,0.0249
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uzbekistan,p_win,0.0104
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uzbekistan,p_runner_up,0.0145
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uzbekistan,p_podium,0.0249
+after_match_22,2026-06-17,after_match_22,22,tournament,,Cape Verde,p_win,0.0102
+after_match_22,2026-06-17,after_match_22,22,tournament,,Cape Verde,p_runner_up,0.0104
+after_match_22,2026-06-17,after_match_22,22,tournament,,Cape Verde,p_podium,0.0206
+after_match_22,2026-06-17,after_match_22,22,tournament,,Jordan,p_win,0.0101
+after_match_22,2026-06-17,after_match_22,22,tournament,,Jordan,p_runner_up,0.0119
+after_match_22,2026-06-17,after_match_22,22,tournament,,Jordan,p_podium,0.022
+after_match_22,2026-06-17,after_match_22,22,tournament,,Sweden,p_win,0.0099
+after_match_22,2026-06-17,after_match_22,22,tournament,,Sweden,p_runner_up,0.0166
+after_match_22,2026-06-17,after_match_22,22,tournament,,Sweden,p_podium,0.0265
+after_match_22,2026-06-17,after_match_22,22,tournament,,Canada,p_win,0.0093
+after_match_22,2026-06-17,after_match_22,22,tournament,,Canada,p_runner_up,0.0134
+after_match_22,2026-06-17,after_match_22,22,tournament,,Canada,p_podium,0.0227
+after_match_22,2026-06-17,after_match_22,22,tournament,,Belgium,p_win,0.0091
+after_match_22,2026-06-17,after_match_22,22,tournament,,Belgium,p_runner_up,0.015
+after_match_22,2026-06-17,after_match_22,22,tournament,,Belgium,p_podium,0.0241
+after_match_22,2026-06-17,after_match_22,22,tournament,,Egypt,p_win,0.0089
+after_match_22,2026-06-17,after_match_22,22,tournament,,Egypt,p_runner_up,0.0148
+after_match_22,2026-06-17,after_match_22,22,tournament,,Egypt,p_podium,0.0237
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iraq,p_win,0.0087
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iraq,p_runner_up,0.0073
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iraq,p_podium,0.016
+after_match_22,2026-06-17,after_match_22,22,tournament,,Norway,p_win,0.0076
+after_match_22,2026-06-17,after_match_22,22,tournament,,Norway,p_runner_up,0.0156
+after_match_22,2026-06-17,after_match_22,22,tournament,,Norway,p_podium,0.0232
+after_match_22,2026-06-17,after_match_22,22,tournament,,Haiti,p_win,0.0066
+after_match_22,2026-06-17,after_match_22,22,tournament,,Haiti,p_runner_up,0.0068
+after_match_22,2026-06-17,after_match_22,22,tournament,,Haiti,p_podium,0.0134
+after_match_22,2026-06-17,after_match_22,22,tournament,,Mexico,p_win,0.0011
+after_match_22,2026-06-17,after_match_22,22,tournament,,Mexico,p_runner_up,0.004
+after_match_22,2026-06-17,after_match_22,22,tournament,,Mexico,p_podium,0.0051
+after_match_22,2026-06-17,after_match_22,22,tournament,,United States,p_win,0.001
+after_match_22,2026-06-17,after_match_22,22,tournament,,United States,p_runner_up,0.0034
+after_match_22,2026-06-17,after_match_22,22,tournament,,United States,p_podium,0.0044
+after_match_22,2026-06-17,after_match_22,22,tournament,,Spain,p_r32,0.8795
+after_match_22,2026-06-17,after_match_22,22,tournament,,Spain,p_r16,0.64
+after_match_22,2026-06-17,after_match_22,22,tournament,,Spain,p_qf,0.4465
+after_match_22,2026-06-17,after_match_22,22,tournament,,Spain,p_sf,0.3021
+after_match_22,2026-06-17,after_match_22,22,tournament,,Spain,p_final,0.1916
+after_match_22,2026-06-17,after_match_22,22,tournament,,Spain,p_winner,0.1302
+after_match_22,2026-06-17,after_match_22,22,tournament,,France,p_r32,0.9611
+after_match_22,2026-06-17,after_match_22,22,tournament,,France,p_r16,0.6639
+after_match_22,2026-06-17,after_match_22,22,tournament,,France,p_qf,0.406
+after_match_22,2026-06-17,after_match_22,22,tournament,,France,p_sf,0.2664
+after_match_22,2026-06-17,after_match_22,22,tournament,,France,p_final,0.1575
+after_match_22,2026-06-17,after_match_22,22,tournament,,France,p_winner,0.09
+after_match_22,2026-06-17,after_match_22,22,tournament,,Portugal,p_r32,0.8421
+after_match_22,2026-06-17,after_match_22,22,tournament,,Portugal,p_r16,0.5562
+after_match_22,2026-06-17,after_match_22,22,tournament,,Portugal,p_qf,0.3682
+after_match_22,2026-06-17,after_match_22,22,tournament,,Portugal,p_sf,0.2376
+after_match_22,2026-06-17,after_match_22,22,tournament,,Portugal,p_final,0.1377
+after_match_22,2026-06-17,after_match_22,22,tournament,,Portugal,p_winner,0.0803
+after_match_22,2026-06-17,after_match_22,22,tournament,,Brazil,p_r32,0.8536
+after_match_22,2026-06-17,after_match_22,22,tournament,,Brazil,p_r16,0.5512
+after_match_22,2026-06-17,after_match_22,22,tournament,,Brazil,p_qf,0.362
+after_match_22,2026-06-17,after_match_22,22,tournament,,Brazil,p_sf,0.2388
+after_match_22,2026-06-17,after_match_22,22,tournament,,Brazil,p_final,0.1356
+after_match_22,2026-06-17,after_match_22,22,tournament,,Brazil,p_winner,0.0795
+after_match_22,2026-06-17,after_match_22,22,tournament,,England,p_r32,0.9471
+after_match_22,2026-06-17,after_match_22,22,tournament,,England,p_r16,0.6698
+after_match_22,2026-06-17,after_match_22,22,tournament,,England,p_qf,0.4141
+after_match_22,2026-06-17,after_match_22,22,tournament,,England,p_sf,0.2552
+after_match_22,2026-06-17,after_match_22,22,tournament,,England,p_final,0.1484
+after_match_22,2026-06-17,after_match_22,22,tournament,,England,p_winner,0.0787
+after_match_22,2026-06-17,after_match_22,22,tournament,,Argentina,p_r32,0.9459
+after_match_22,2026-06-17,after_match_22,22,tournament,,Argentina,p_r16,0.63
+after_match_22,2026-06-17,after_match_22,22,tournament,,Argentina,p_qf,0.3775
+after_match_22,2026-06-17,after_match_22,22,tournament,,Argentina,p_sf,0.2029
+after_match_22,2026-06-17,after_match_22,22,tournament,,Argentina,p_final,0.107
+after_match_22,2026-06-17,after_match_22,22,tournament,,Argentina,p_winner,0.0532
+after_match_22,2026-06-17,after_match_22,22,tournament,,Germany,p_r32,0.97
+after_match_22,2026-06-17,after_match_22,22,tournament,,Germany,p_r16,0.5568
+after_match_22,2026-06-17,after_match_22,22,tournament,,Germany,p_qf,0.3176
+after_match_22,2026-06-17,after_match_22,22,tournament,,Germany,p_sf,0.1399
+after_match_22,2026-06-17,after_match_22,22,tournament,,Germany,p_final,0.0699
+after_match_22,2026-06-17,after_match_22,22,tournament,,Germany,p_winner,0.033
+after_match_22,2026-06-17,after_match_22,22,tournament,,Algeria,p_r32,0.4274
+after_match_22,2026-06-17,after_match_22,22,tournament,,Algeria,p_r16,0.2317
+after_match_22,2026-06-17,after_match_22,22,tournament,,Algeria,p_qf,0.116
+after_match_22,2026-06-17,after_match_22,22,tournament,,Algeria,p_sf,0.0672
+after_match_22,2026-06-17,after_match_22,22,tournament,,Algeria,p_final,0.0336
+after_match_22,2026-06-17,after_match_22,22,tournament,,Algeria,p_winner,0.0175
+after_match_22,2026-06-17,after_match_22,22,tournament,,Panama,p_r32,0.6832
+after_match_22,2026-06-17,after_match_22,22,tournament,,Panama,p_r16,0.325
+after_match_22,2026-06-17,after_match_22,22,tournament,,Panama,p_qf,0.1519
+after_match_22,2026-06-17,after_match_22,22,tournament,,Panama,p_sf,0.0754
+after_match_22,2026-06-17,after_match_22,22,tournament,,Panama,p_final,0.0351
+after_match_22,2026-06-17,after_match_22,22,tournament,,Panama,p_winner,0.0164
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ghana,p_r32,0.5518
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ghana,p_r16,0.2548
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ghana,p_qf,0.125
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ghana,p_sf,0.0648
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ghana,p_final,0.0347
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ghana,p_winner,0.016
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Korea,p_r32,0.7273
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Korea,p_r16,0.3816
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Korea,p_qf,0.1853
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Korea,p_sf,0.0821
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Korea,p_final,0.0355
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Korea,p_winner,0.0152
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Africa,p_r32,0.4782
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Africa,p_r16,0.2356
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Africa,p_qf,0.1246
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Africa,p_sf,0.0546
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Africa,p_final,0.0281
+after_match_22,2026-06-17,after_match_22,22,tournament,,South Africa,p_winner,0.0139
+after_match_22,2026-06-17,after_match_22,22,tournament,,Qatar,p_r32,0.4208
+after_match_22,2026-06-17,after_match_22,22,tournament,,Qatar,p_r16,0.1957
+after_match_22,2026-06-17,after_match_22,22,tournament,,Qatar,p_qf,0.1029
+after_match_22,2026-06-17,after_match_22,22,tournament,,Qatar,p_sf,0.0563
+after_match_22,2026-06-17,after_match_22,22,tournament,,Qatar,p_final,0.0271
+after_match_22,2026-06-17,after_match_22,22,tournament,,Qatar,p_winner,0.0138
+after_match_22,2026-06-17,after_match_22,22,tournament,,Croatia,p_r32,0.4298
+after_match_22,2026-06-17,after_match_22,22,tournament,,Croatia,p_r16,0.1961
+after_match_22,2026-06-17,after_match_22,22,tournament,,Croatia,p_qf,0.097
+after_match_22,2026-06-17,after_match_22,22,tournament,,Croatia,p_sf,0.0485
+after_match_22,2026-06-17,after_match_22,22,tournament,,Croatia,p_final,0.0285
+after_match_22,2026-06-17,after_match_22,22,tournament,,Croatia,p_winner,0.0138
+after_match_22,2026-06-17,after_match_22,22,tournament,,Saudi Arabia,p_r32,0.3537
+after_match_22,2026-06-17,after_match_22,22,tournament,,Saudi Arabia,p_r16,0.1518
+after_match_22,2026-06-17,after_match_22,22,tournament,,Saudi Arabia,p_qf,0.0818
+after_match_22,2026-06-17,after_match_22,22,tournament,,Saudi Arabia,p_sf,0.046
+after_match_22,2026-06-17,after_match_22,22,tournament,,Saudi Arabia,p_final,0.0239
+after_match_22,2026-06-17,after_match_22,22,tournament,,Saudi Arabia,p_winner,0.0132
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ivory Coast,p_r32,0.6717
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ivory Coast,p_r16,0.3078
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ivory Coast,p_qf,0.1459
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ivory Coast,p_sf,0.065
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ivory Coast,p_final,0.0272
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ivory Coast,p_winner,0.0132
+after_match_22,2026-06-17,after_match_22,22,tournament,,New Zealand,p_r32,0.8513
+after_match_22,2026-06-17,after_match_22,22,tournament,,New Zealand,p_r16,0.4444
+after_match_22,2026-06-17,after_match_22,22,tournament,,New Zealand,p_qf,0.2147
+after_match_22,2026-06-17,after_match_22,22,tournament,,New Zealand,p_sf,0.0921
+after_match_22,2026-06-17,after_match_22,22,tournament,,New Zealand,p_final,0.0339
+after_match_22,2026-06-17,after_match_22,22,tournament,,New Zealand,p_winner,0.013
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iran,p_r32,0.4594
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iran,p_r16,0.202
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iran,p_qf,0.0953
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iran,p_sf,0.05
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iran,p_final,0.0236
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iran,p_winner,0.0125
+after_match_22,2026-06-17,after_match_22,22,tournament,,Czechia,p_r32,0.7803
+after_match_22,2026-06-17,after_match_22,22,tournament,,Czechia,p_r16,0.3952
+after_match_22,2026-06-17,after_match_22,22,tournament,,Czechia,p_qf,0.1723
+after_match_22,2026-06-17,after_match_22,22,tournament,,Czechia,p_sf,0.0566
+after_match_22,2026-06-17,after_match_22,22,tournament,,Czechia,p_final,0.0288
+after_match_22,2026-06-17,after_match_22,22,tournament,,Czechia,p_winner,0.0124
+after_match_22,2026-06-17,after_match_22,22,tournament,,Colombia,p_r32,0.6496
+after_match_22,2026-06-17,after_match_22,22,tournament,,Colombia,p_r16,0.3226
+after_match_22,2026-06-17,after_match_22,22,tournament,,Colombia,p_qf,0.154
+after_match_22,2026-06-17,after_match_22,22,tournament,,Colombia,p_sf,0.0661
+after_match_22,2026-06-17,after_match_22,22,tournament,,Colombia,p_final,0.0279
+after_match_22,2026-06-17,after_match_22,22,tournament,,Colombia,p_winner,0.0123
+after_match_22,2026-06-17,after_match_22,22,tournament,,DR Congo,p_r32,0.7126
+after_match_22,2026-06-17,after_match_22,22,tournament,,DR Congo,p_r16,0.3121
+after_match_22,2026-06-17,after_match_22,22,tournament,,DR Congo,p_qf,0.1457
+after_match_22,2026-06-17,after_match_22,22,tournament,,DR Congo,p_sf,0.069
+after_match_22,2026-06-17,after_match_22,22,tournament,,DR Congo,p_final,0.0306
+after_match_22,2026-06-17,after_match_22,22,tournament,,DR Congo,p_winner,0.0122
+after_match_22,2026-06-17,after_match_22,22,tournament,,Scotland,p_r32,0.897
+after_match_22,2026-06-17,after_match_22,22,tournament,,Scotland,p_r16,0.4627
+after_match_22,2026-06-17,after_match_22,22,tournament,,Scotland,p_qf,0.2069
+after_match_22,2026-06-17,after_match_22,22,tournament,,Scotland,p_sf,0.0866
+after_match_22,2026-06-17,after_match_22,22,tournament,,Scotland,p_final,0.0358
+after_match_22,2026-06-17,after_match_22,22,tournament,,Scotland,p_winner,0.0119
+after_match_22,2026-06-17,after_match_22,22,tournament,,Netherlands,p_r32,0.7479
+after_match_22,2026-06-17,after_match_22,22,tournament,,Netherlands,p_r16,0.3306
+after_match_22,2026-06-17,after_match_22,22,tournament,,Netherlands,p_qf,0.1533
+after_match_22,2026-06-17,after_match_22,22,tournament,,Netherlands,p_sf,0.0715
+after_match_22,2026-06-17,after_match_22,22,tournament,,Netherlands,p_final,0.0301
+after_match_22,2026-06-17,after_match_22,22,tournament,,Netherlands,p_winner,0.0118
+after_match_22,2026-06-17,after_match_22,22,tournament,,Japan,p_r32,0.6571
+after_match_22,2026-06-17,after_match_22,22,tournament,,Japan,p_r16,0.2506
+after_match_22,2026-06-17,after_match_22,22,tournament,,Japan,p_qf,0.1133
+after_match_22,2026-06-17,after_match_22,22,tournament,,Japan,p_sf,0.0527
+after_match_22,2026-06-17,after_match_22,22,tournament,,Japan,p_final,0.0246
+after_match_22,2026-06-17,after_match_22,22,tournament,,Japan,p_winner,0.0115
+after_match_22,2026-06-17,after_match_22,22,tournament,,Bosnia and Herzegovina,p_r32,0.6971
+after_match_22,2026-06-17,after_match_22,22,tournament,,Bosnia and Herzegovina,p_r16,0.313
+after_match_22,2026-06-17,after_match_22,22,tournament,,Bosnia and Herzegovina,p_qf,0.1442
+after_match_22,2026-06-17,after_match_22,22,tournament,,Bosnia and Herzegovina,p_sf,0.0669
+after_match_22,2026-06-17,after_match_22,22,tournament,,Bosnia and Herzegovina,p_final,0.0269
+after_match_22,2026-06-17,after_match_22,22,tournament,,Bosnia and Herzegovina,p_winner,0.0115
+after_match_22,2026-06-17,after_match_22,22,tournament,,Australia,p_r32,0.7632
+after_match_22,2026-06-17,after_match_22,22,tournament,,Australia,p_r16,0.3735
+after_match_22,2026-06-17,after_match_22,22,tournament,,Australia,p_qf,0.1721
+after_match_22,2026-06-17,after_match_22,22,tournament,,Australia,p_sf,0.0727
+after_match_22,2026-06-17,after_match_22,22,tournament,,Australia,p_final,0.03
+after_match_22,2026-06-17,after_match_22,22,tournament,,Australia,p_winner,0.0115
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ecuador,p_r32,0.638
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ecuador,p_r16,0.2943
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ecuador,p_qf,0.1195
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ecuador,p_sf,0.0523
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ecuador,p_final,0.0268
+after_match_22,2026-06-17,after_match_22,22,tournament,,Ecuador,p_winner,0.0113
+after_match_22,2026-06-17,after_match_22,22,tournament,,Austria,p_r32,0.6842
+after_match_22,2026-06-17,after_match_22,22,tournament,,Austria,p_r16,0.3052
+after_match_22,2026-06-17,after_match_22,22,tournament,,Austria,p_qf,0.1346
+after_match_22,2026-06-17,after_match_22,22,tournament,,Austria,p_sf,0.0638
+after_match_22,2026-06-17,after_match_22,22,tournament,,Austria,p_final,0.03
+after_match_22,2026-06-17,after_match_22,22,tournament,,Austria,p_winner,0.0112
+after_match_22,2026-06-17,after_match_22,22,tournament,,Paraguay,p_r32,0.4019
+after_match_22,2026-06-17,after_match_22,22,tournament,,Paraguay,p_r16,0.2019
+after_match_22,2026-06-17,after_match_22,22,tournament,,Paraguay,p_qf,0.1007
+after_match_22,2026-06-17,after_match_22,22,tournament,,Paraguay,p_sf,0.0479
+after_match_22,2026-06-17,after_match_22,22,tournament,,Paraguay,p_final,0.0253
+after_match_22,2026-06-17,after_match_22,22,tournament,,Paraguay,p_winner,0.0111
+after_match_22,2026-06-17,after_match_22,22,tournament,,Tunisia,p_r32,0.7024
+after_match_22,2026-06-17,after_match_22,22,tournament,,Tunisia,p_r16,0.3683
+after_match_22,2026-06-17,after_match_22,22,tournament,,Tunisia,p_qf,0.1475
+after_match_22,2026-06-17,after_match_22,22,tournament,,Tunisia,p_sf,0.0499
+after_match_22,2026-06-17,after_match_22,22,tournament,,Tunisia,p_final,0.023
+after_match_22,2026-06-17,after_match_22,22,tournament,,Tunisia,p_winner,0.011
+after_match_22,2026-06-17,after_match_22,22,tournament,,Senegal,p_r32,0.4708
+after_match_22,2026-06-17,after_match_22,22,tournament,,Senegal,p_r16,0.1911
+after_match_22,2026-06-17,after_match_22,22,tournament,,Senegal,p_qf,0.0878
+after_match_22,2026-06-17,after_match_22,22,tournament,,Senegal,p_sf,0.0443
+after_match_22,2026-06-17,after_match_22,22,tournament,,Senegal,p_final,0.0234
+after_match_22,2026-06-17,after_match_22,22,tournament,,Senegal,p_winner,0.0109
+after_match_22,2026-06-17,after_match_22,22,tournament,,Morocco,p_r32,0.6849
+after_match_22,2026-06-17,after_match_22,22,tournament,,Morocco,p_r16,0.2868
+after_match_22,2026-06-17,after_match_22,22,tournament,,Morocco,p_qf,0.1432
+after_match_22,2026-06-17,after_match_22,22,tournament,,Morocco,p_sf,0.0715
+after_match_22,2026-06-17,after_match_22,22,tournament,,Morocco,p_final,0.0286
+after_match_22,2026-06-17,after_match_22,22,tournament,,Morocco,p_winner,0.0109
+after_match_22,2026-06-17,after_match_22,22,tournament,,Switzerland,p_r32,0.7787
+after_match_22,2026-06-17,after_match_22,22,tournament,,Switzerland,p_r16,0.373
+after_match_22,2026-06-17,after_match_22,22,tournament,,Switzerland,p_qf,0.1793
+after_match_22,2026-06-17,after_match_22,22,tournament,,Switzerland,p_sf,0.0727
+after_match_22,2026-06-17,after_match_22,22,tournament,,Switzerland,p_final,0.0281
+after_match_22,2026-06-17,after_match_22,22,tournament,,Switzerland,p_winner,0.0107
+after_match_22,2026-06-17,after_match_22,22,tournament,,Curaçao,p_r32,0.3678
+after_match_22,2026-06-17,after_match_22,22,tournament,,Curaçao,p_r16,0.1804
+after_match_22,2026-06-17,after_match_22,22,tournament,,Curaçao,p_qf,0.0828
+after_match_22,2026-06-17,after_match_22,22,tournament,,Curaçao,p_sf,0.042
+after_match_22,2026-06-17,after_match_22,22,tournament,,Curaçao,p_final,0.0187
+after_match_22,2026-06-17,after_match_22,22,tournament,,Curaçao,p_winner,0.0106
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uruguay,p_r32,0.7649
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uruguay,p_r16,0.3663
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uruguay,p_qf,0.1728
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uruguay,p_sf,0.0786
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uruguay,p_final,0.031
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uruguay,p_winner,0.0105
+after_match_22,2026-06-17,after_match_22,22,tournament,,Turkey,p_r32,0.7589
+after_match_22,2026-06-17,after_match_22,22,tournament,,Turkey,p_r16,0.3825
+after_match_22,2026-06-17,after_match_22,22,tournament,,Turkey,p_qf,0.1543
+after_match_22,2026-06-17,after_match_22,22,tournament,,Turkey,p_sf,0.0565
+after_match_22,2026-06-17,after_match_22,22,tournament,,Turkey,p_final,0.0249
+after_match_22,2026-06-17,after_match_22,22,tournament,,Turkey,p_winner,0.0104
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uzbekistan,p_r32,0.488
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uzbekistan,p_r16,0.2305
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uzbekistan,p_qf,0.1108
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uzbekistan,p_sf,0.0488
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uzbekistan,p_final,0.0249
+after_match_22,2026-06-17,after_match_22,22,tournament,,Uzbekistan,p_winner,0.0104
+after_match_22,2026-06-17,after_match_22,22,tournament,,Cape Verde,p_r32,0.6229
+after_match_22,2026-06-17,after_match_22,22,tournament,,Cape Verde,p_r16,0.2472
+after_match_22,2026-06-17,after_match_22,22,tournament,,Cape Verde,p_qf,0.1124
+after_match_22,2026-06-17,after_match_22,22,tournament,,Cape Verde,p_sf,0.0509
+after_match_22,2026-06-17,after_match_22,22,tournament,,Cape Verde,p_final,0.0206
+after_match_22,2026-06-17,after_match_22,22,tournament,,Cape Verde,p_winner,0.0102
+after_match_22,2026-06-17,after_match_22,22,tournament,,Jordan,p_r32,0.6083
+after_match_22,2026-06-17,after_match_22,22,tournament,,Jordan,p_r16,0.2838
+after_match_22,2026-06-17,after_match_22,22,tournament,,Jordan,p_qf,0.1153
+after_match_22,2026-06-17,after_match_22,22,tournament,,Jordan,p_sf,0.0495
+after_match_22,2026-06-17,after_match_22,22,tournament,,Jordan,p_final,0.022
+after_match_22,2026-06-17,after_match_22,22,tournament,,Jordan,p_winner,0.0101
+after_match_22,2026-06-17,after_match_22,22,tournament,,Sweden,p_r32,0.6872
+after_match_22,2026-06-17,after_match_22,22,tournament,,Sweden,p_r16,0.3264
+after_match_22,2026-06-17,after_match_22,22,tournament,,Sweden,p_qf,0.1464
+after_match_22,2026-06-17,after_match_22,22,tournament,,Sweden,p_sf,0.0585
+after_match_22,2026-06-17,after_match_22,22,tournament,,Sweden,p_final,0.0265
+after_match_22,2026-06-17,after_match_22,22,tournament,,Sweden,p_winner,0.0099
+after_match_22,2026-06-17,after_match_22,22,tournament,,Canada,p_r32,0.7394
+after_match_22,2026-06-17,after_match_22,22,tournament,,Canada,p_r16,0.32
+after_match_22,2026-06-17,after_match_22,22,tournament,,Canada,p_qf,0.1427
+after_match_22,2026-06-17,after_match_22,22,tournament,,Canada,p_sf,0.0604
+after_match_22,2026-06-17,after_match_22,22,tournament,,Canada,p_final,0.0227
+after_match_22,2026-06-17,after_match_22,22,tournament,,Canada,p_winner,0.0093
+after_match_22,2026-06-17,after_match_22,22,tournament,,Belgium,p_r32,0.6394
+after_match_22,2026-06-17,after_match_22,22,tournament,,Belgium,p_r16,0.2716
+after_match_22,2026-06-17,after_match_22,22,tournament,,Belgium,p_qf,0.1268
+after_match_22,2026-06-17,after_match_22,22,tournament,,Belgium,p_sf,0.0573
+after_match_22,2026-06-17,after_match_22,22,tournament,,Belgium,p_final,0.0241
+after_match_22,2026-06-17,after_match_22,22,tournament,,Belgium,p_winner,0.0091
+after_match_22,2026-06-17,after_match_22,22,tournament,,Egypt,p_r32,0.673
+after_match_22,2026-06-17,after_match_22,22,tournament,,Egypt,p_r16,0.2841
+after_match_22,2026-06-17,after_match_22,22,tournament,,Egypt,p_qf,0.1295
+after_match_22,2026-06-17,after_match_22,22,tournament,,Egypt,p_sf,0.056
+after_match_22,2026-06-17,after_match_22,22,tournament,,Egypt,p_final,0.0237
+after_match_22,2026-06-17,after_match_22,22,tournament,,Egypt,p_winner,0.0089
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iraq,p_r32,0.201
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iraq,p_r16,0.0927
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iraq,p_qf,0.053
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iraq,p_sf,0.0312
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iraq,p_final,0.016
+after_match_22,2026-06-17,after_match_22,22,tournament,,Iraq,p_winner,0.0087
+after_match_22,2026-06-17,after_match_22,22,tournament,,Norway,p_r32,0.9394
+after_match_22,2026-06-17,after_match_22,22,tournament,,Norway,p_r16,0.4062
+after_match_22,2026-06-17,after_match_22,22,tournament,,Norway,p_qf,0.1497
+after_match_22,2026-06-17,after_match_22,22,tournament,,Norway,p_sf,0.0632
+after_match_22,2026-06-17,after_match_22,22,tournament,,Norway,p_final,0.0232
+after_match_22,2026-06-17,after_match_22,22,tournament,,Norway,p_winner,0.0076
+after_match_22,2026-06-17,after_match_22,22,tournament,,Haiti,p_r32,0.1928
+after_match_22,2026-06-17,after_match_22,22,tournament,,Haiti,p_r16,0.0852
+after_match_22,2026-06-17,after_match_22,22,tournament,,Haiti,p_qf,0.0498
+after_match_22,2026-06-17,after_match_22,22,tournament,,Haiti,p_sf,0.0232
+after_match_22,2026-06-17,after_match_22,22,tournament,,Haiti,p_final,0.0134
+after_match_22,2026-06-17,after_match_22,22,tournament,,Haiti,p_winner,0.0066
+after_match_22,2026-06-17,after_match_22,22,tournament,,Mexico,p_r32,0.7602
+after_match_22,2026-06-17,after_match_22,22,tournament,,Mexico,p_r16,0.2741
+after_match_22,2026-06-17,after_match_22,22,tournament,,Mexico,p_qf,0.0731
+after_match_22,2026-06-17,after_match_22,22,tournament,,Mexico,p_sf,0.0189
+after_match_22,2026-06-17,after_match_22,22,tournament,,Mexico,p_final,0.0051
+after_match_22,2026-06-17,after_match_22,22,tournament,,Mexico,p_winner,0.0011
+after_match_22,2026-06-17,after_match_22,22,tournament,,United States,p_r32,0.8372
+after_match_22,2026-06-17,after_match_22,22,tournament,,United States,p_r16,0.2737
+after_match_22,2026-06-17,after_match_22,22,tournament,,United States,p_qf,0.0739
+after_match_22,2026-06-17,after_match_22,22,tournament,,United States,p_sf,0.0156
+after_match_22,2026-06-17,after_match_22,22,tournament,,United States,p_final,0.0044
+after_match_22,2026-06-17,after_match_22,22,tournament,,United States,p_winner,0.001
+after_match_22,2026-06-17,after_match_22,22,pair,,Spain,with_France,0.0108
+after_match_22,2026-06-17,after_match_22,22,pair,,Spain,with_England,0.0097
+after_match_22,2026-06-17,after_match_22,22,pair,,Spain,with_Brazil,0.0095
+after_match_22,2026-06-17,after_match_22,22,pair,,Spain,with_Argentina,0.0089
+after_match_22,2026-06-17,after_match_22,22,pair,,France,with_England,0.0088
+after_match_22,2026-06-17,after_match_22,22,pair,,Spain,with_Portugal,0.0082
+after_match_22,2026-06-17,after_match_22,22,pair,,France,with_Spain,0.0067
+after_match_22,2026-06-17,after_match_22,22,pair,,England,with_France,0.0066
+after_match_22,2026-06-17,after_match_22,22,pair,,Portugal,with_Spain,0.0066
+after_match_22,2026-06-17,after_match_22,22,pair,,England,with_Portugal,0.0065
+after_match_22,2026-06-17,after_match_22,22,pair,,France,with_Portugal,0.0061
+after_match_22,2026-06-17,after_match_22,22,pair,,Brazil,with_England,0.006
+after_match_22,2026-06-17,after_match_22,22,pair,,Portugal,with_France,0.0059
+after_match_22,2026-06-17,after_match_22,22,pair,,Spain,with_Germany,0.0058
+after_match_22,2026-06-17,after_match_22,22,pair,,Brazil,with_Spain,0.0056
+after_match_22,2026-06-17,after_match_22,22,pair,,Brazil,with_Portugal,0.0055
+after_match_22,2026-06-17,after_match_22,22,pair,,England,with_Brazil,0.0053
+after_match_22,2026-06-17,after_match_22,22,pair,,Brazil,with_Argentina,0.0051
+after_match_22,2026-06-17,after_match_22,22,pair,,France,with_Brazil,0.0051
+after_match_22,2026-06-17,after_match_22,22,pair,,Portugal,with_England,0.0048
+after_match_22,2026-06-17,after_match_22,22,group,A,Mexico,p_first,0.4358
+after_match_22,2026-06-17,after_match_22,22,group,A,Mexico,p_second,0.2665
+after_match_22,2026-06-17,after_match_22,22,group,A,Mexico,p_third,0.241
+after_match_22,2026-06-17,after_match_22,22,group,A,Mexico,p_fourth,0.0567
+after_match_22,2026-06-17,after_match_22,22,group,A,Mexico,p_top_two,0.7023
+after_match_22,2026-06-17,after_match_22,22,group,A,South Korea,p_first,0.3004
+after_match_22,2026-06-17,after_match_22,22,group,A,South Korea,p_second,0.2832
+after_match_22,2026-06-17,after_match_22,22,group,A,South Korea,p_third,0.278
+after_match_22,2026-06-17,after_match_22,22,group,A,South Korea,p_fourth,0.1384
+after_match_22,2026-06-17,after_match_22,22,group,A,South Korea,p_top_two,0.5836
+after_match_22,2026-06-17,after_match_22,22,group,A,Czechia,p_first,0.2216
+after_match_22,2026-06-17,after_match_22,22,group,A,Czechia,p_second,0.3267
+after_match_22,2026-06-17,after_match_22,22,group,A,Czechia,p_third,0.2688
+after_match_22,2026-06-17,after_match_22,22,group,A,Czechia,p_fourth,0.1829
+after_match_22,2026-06-17,after_match_22,22,group,A,Czechia,p_top_two,0.5483
+after_match_22,2026-06-17,after_match_22,22,group,A,South Africa,p_first,0.0422
+after_match_22,2026-06-17,after_match_22,22,group,A,South Africa,p_second,0.1236
+after_match_22,2026-06-17,after_match_22,22,group,A,South Africa,p_third,0.2122
+after_match_22,2026-06-17,after_match_22,22,group,A,South Africa,p_fourth,0.622
+after_match_22,2026-06-17,after_match_22,22,group,A,South Africa,p_top_two,0.1658
+after_match_22,2026-06-17,after_match_22,22,group,B,Switzerland,p_first,0.4135
+after_match_22,2026-06-17,after_match_22,22,group,B,Switzerland,p_second,0.2505
+after_match_22,2026-06-17,after_match_22,22,group,B,Switzerland,p_third,0.2229
+after_match_22,2026-06-17,after_match_22,22,group,B,Switzerland,p_fourth,0.1131
+after_match_22,2026-06-17,after_match_22,22,group,B,Switzerland,p_top_two,0.664
+after_match_22,2026-06-17,after_match_22,22,group,B,Bosnia and Herzegovina,p_first,0.271
+after_match_22,2026-06-17,after_match_22,22,group,B,Bosnia and Herzegovina,p_second,0.2813
+after_match_22,2026-06-17,after_match_22,22,group,B,Bosnia and Herzegovina,p_third,0.255
+after_match_22,2026-06-17,after_match_22,22,group,B,Bosnia and Herzegovina,p_fourth,0.1927
+after_match_22,2026-06-17,after_match_22,22,group,B,Bosnia and Herzegovina,p_top_two,0.5523
+after_match_22,2026-06-17,after_match_22,22,group,B,Canada,p_first,0.2325
+after_match_22,2026-06-17,after_match_22,22,group,B,Canada,p_second,0.2929
+after_match_22,2026-06-17,after_match_22,22,group,B,Canada,p_third,0.273
+after_match_22,2026-06-17,after_match_22,22,group,B,Canada,p_fourth,0.2016
+after_match_22,2026-06-17,after_match_22,22,group,B,Canada,p_top_two,0.5254
+after_match_22,2026-06-17,after_match_22,22,group,B,Qatar,p_first,0.083
+after_match_22,2026-06-17,after_match_22,22,group,B,Qatar,p_second,0.1753
+after_match_22,2026-06-17,after_match_22,22,group,B,Qatar,p_third,0.2491
+after_match_22,2026-06-17,after_match_22,22,group,B,Qatar,p_fourth,0.4926
+after_match_22,2026-06-17,after_match_22,22,group,B,Qatar,p_top_two,0.2583
+after_match_22,2026-06-17,after_match_22,22,group,C,Scotland,p_first,0.5628
+after_match_22,2026-06-17,after_match_22,22,group,C,Scotland,p_second,0.2611
+after_match_22,2026-06-17,after_match_22,22,group,C,Scotland,p_third,0.1667
+after_match_22,2026-06-17,after_match_22,22,group,C,Scotland,p_fourth,0.0094
+after_match_22,2026-06-17,after_match_22,22,group,C,Scotland,p_top_two,0.8239
+after_match_22,2026-06-17,after_match_22,22,group,C,Brazil,p_first,0.2802
+after_match_22,2026-06-17,after_match_22,22,group,C,Brazil,p_second,0.3997
+after_match_22,2026-06-17,after_match_22,22,group,C,Brazil,p_third,0.2653
+after_match_22,2026-06-17,after_match_22,22,group,C,Brazil,p_fourth,0.0548
+after_match_22,2026-06-17,after_match_22,22,group,C,Brazil,p_top_two,0.6799
+after_match_22,2026-06-17,after_match_22,22,group,C,Morocco,p_first,0.1511
+after_match_22,2026-06-17,after_match_22,22,group,C,Morocco,p_second,0.3071
+after_match_22,2026-06-17,after_match_22,22,group,C,Morocco,p_third,0.4162
+after_match_22,2026-06-17,after_match_22,22,group,C,Morocco,p_fourth,0.1256
+after_match_22,2026-06-17,after_match_22,22,group,C,Morocco,p_top_two,0.4582
+after_match_22,2026-06-17,after_match_22,22,group,C,Haiti,p_first,0.0059
+after_match_22,2026-06-17,after_match_22,22,group,C,Haiti,p_second,0.0321
+after_match_22,2026-06-17,after_match_22,22,group,C,Haiti,p_third,0.1518
+after_match_22,2026-06-17,after_match_22,22,group,C,Haiti,p_fourth,0.8102
+after_match_22,2026-06-17,after_match_22,22,group,C,Haiti,p_top_two,0.038
+after_match_22,2026-06-17,after_match_22,22,group,D,United States,p_first,0.424
+after_match_22,2026-06-17,after_match_22,22,group,D,United States,p_second,0.273
+after_match_22,2026-06-17,after_match_22,22,group,D,United States,p_third,0.2505
+after_match_22,2026-06-17,after_match_22,22,group,D,United States,p_fourth,0.0525
+after_match_22,2026-06-17,after_match_22,22,group,D,United States,p_top_two,0.697
+after_match_22,2026-06-17,after_match_22,22,group,D,Australia,p_first,0.423
+after_match_22,2026-06-17,after_match_22,22,group,D,Australia,p_second,0.2951
+after_match_22,2026-06-17,after_match_22,22,group,D,Australia,p_third,0.2149
+after_match_22,2026-06-17,after_match_22,22,group,D,Australia,p_fourth,0.067
+after_match_22,2026-06-17,after_match_22,22,group,D,Australia,p_top_two,0.7181
+after_match_22,2026-06-17,after_match_22,22,group,D,Turkey,p_first,0.1044
+after_match_22,2026-06-17,after_match_22,22,group,D,Turkey,p_second,0.2827
+after_match_22,2026-06-17,after_match_22,22,group,D,Turkey,p_third,0.3137
+after_match_22,2026-06-17,after_match_22,22,group,D,Turkey,p_fourth,0.2992
+after_match_22,2026-06-17,after_match_22,22,group,D,Turkey,p_top_two,0.3871
+after_match_22,2026-06-17,after_match_22,22,group,D,Paraguay,p_first,0.0486
+after_match_22,2026-06-17,after_match_22,22,group,D,Paraguay,p_second,0.1492
+after_match_22,2026-06-17,after_match_22,22,group,D,Paraguay,p_third,0.2209
+after_match_22,2026-06-17,after_match_22,22,group,D,Paraguay,p_fourth,0.5813
+after_match_22,2026-06-17,after_match_22,22,group,D,Paraguay,p_top_two,0.1978
+after_match_22,2026-06-17,after_match_22,22,group,E,Germany,p_first,0.7787
+after_match_22,2026-06-17,after_match_22,22,group,E,Germany,p_second,0.1493
+after_match_22,2026-06-17,after_match_22,22,group,E,Germany,p_third,0.0654
+after_match_22,2026-06-17,after_match_22,22,group,E,Germany,p_fourth,0.0066
+after_match_22,2026-06-17,after_match_22,22,group,E,Germany,p_top_two,0.928
+after_match_22,2026-06-17,after_match_22,22,group,E,Ivory Coast,p_first,0.1647
+after_match_22,2026-06-17,after_match_22,22,group,E,Ivory Coast,p_second,0.4052
+after_match_22,2026-06-17,after_match_22,22,group,E,Ivory Coast,p_third,0.3567
+after_match_22,2026-06-17,after_match_22,22,group,E,Ivory Coast,p_fourth,0.0734
+after_match_22,2026-06-17,after_match_22,22,group,E,Ivory Coast,p_top_two,0.5699
+after_match_22,2026-06-17,after_match_22,22,group,E,Ecuador,p_first,0.0409
+after_match_22,2026-06-17,after_match_22,22,group,E,Ecuador,p_second,0.2926
+after_match_22,2026-06-17,after_match_22,22,group,E,Ecuador,p_third,0.3491
+after_match_22,2026-06-17,after_match_22,22,group,E,Ecuador,p_fourth,0.3174
+after_match_22,2026-06-17,after_match_22,22,group,E,Ecuador,p_top_two,0.3335
+after_match_22,2026-06-17,after_match_22,22,group,E,Curaçao,p_first,0.0157
+after_match_22,2026-06-17,after_match_22,22,group,E,Curaçao,p_second,0.1529
+after_match_22,2026-06-17,after_match_22,22,group,E,Curaçao,p_third,0.2288
+after_match_22,2026-06-17,after_match_22,22,group,E,Curaçao,p_fourth,0.6026
+after_match_22,2026-06-17,after_match_22,22,group,E,Curaçao,p_top_two,0.1686
+after_match_22,2026-06-17,after_match_22,22,group,F,Sweden,p_first,0.4334
+after_match_22,2026-06-17,after_match_22,22,group,F,Sweden,p_second,0.2466
+after_match_22,2026-06-17,after_match_22,22,group,F,Sweden,p_third,0.1621
+after_match_22,2026-06-17,after_match_22,22,group,F,Sweden,p_fourth,0.1579
+after_match_22,2026-06-17,after_match_22,22,group,F,Sweden,p_top_two,0.68
+after_match_22,2026-06-17,after_match_22,22,group,F,Netherlands,p_first,0.2221
+after_match_22,2026-06-17,after_match_22,22,group,F,Netherlands,p_second,0.2759
+after_match_22,2026-06-17,after_match_22,22,group,F,Netherlands,p_third,0.2702
+after_match_22,2026-06-17,after_match_22,22,group,F,Netherlands,p_fourth,0.2318
+after_match_22,2026-06-17,after_match_22,22,group,F,Netherlands,p_top_two,0.498
+after_match_22,2026-06-17,after_match_22,22,group,F,Tunisia,p_first,0.1795
+after_match_22,2026-06-17,after_match_22,22,group,F,Tunisia,p_second,0.2077
+after_match_22,2026-06-17,after_match_22,22,group,F,Tunisia,p_third,0.284
+after_match_22,2026-06-17,after_match_22,22,group,F,Tunisia,p_fourth,0.3288
+after_match_22,2026-06-17,after_match_22,22,group,F,Tunisia,p_top_two,0.3872
+after_match_22,2026-06-17,after_match_22,22,group,F,Japan,p_first,0.165
+after_match_22,2026-06-17,after_match_22,22,group,F,Japan,p_second,0.2698
+after_match_22,2026-06-17,after_match_22,22,group,F,Japan,p_third,0.2837
+after_match_22,2026-06-17,after_match_22,22,group,F,Japan,p_fourth,0.2815
+after_match_22,2026-06-17,after_match_22,22,group,F,Japan,p_top_two,0.4348
+after_match_22,2026-06-17,after_match_22,22,group,G,New Zealand,p_first,0.5445
+after_match_22,2026-06-17,after_match_22,22,group,G,New Zealand,p_second,0.2471
+after_match_22,2026-06-17,after_match_22,22,group,G,New Zealand,p_third,0.1459
+after_match_22,2026-06-17,after_match_22,22,group,G,New Zealand,p_fourth,0.0625
+after_match_22,2026-06-17,after_match_22,22,group,G,New Zealand,p_top_two,0.7916
+after_match_22,2026-06-17,after_match_22,22,group,G,Egypt,p_first,0.2176
+after_match_22,2026-06-17,after_match_22,22,group,G,Egypt,p_second,0.2817
+after_match_22,2026-06-17,after_match_22,22,group,G,Egypt,p_third,0.2886
+after_match_22,2026-06-17,after_match_22,22,group,G,Egypt,p_fourth,0.2121
+after_match_22,2026-06-17,after_match_22,22,group,G,Egypt,p_top_two,0.4993
+after_match_22,2026-06-17,after_match_22,22,group,G,Belgium,p_first,0.1439
+after_match_22,2026-06-17,after_match_22,22,group,G,Belgium,p_second,0.2499
+after_match_22,2026-06-17,after_match_22,22,group,G,Belgium,p_third,0.3062
+after_match_22,2026-06-17,after_match_22,22,group,G,Belgium,p_fourth,0.3
+after_match_22,2026-06-17,after_match_22,22,group,G,Belgium,p_top_two,0.3938
+after_match_22,2026-06-17,after_match_22,22,group,G,Iran,p_first,0.094
+after_match_22,2026-06-17,after_match_22,22,group,G,Iran,p_second,0.2213
+after_match_22,2026-06-17,after_match_22,22,group,G,Iran,p_third,0.2593
+after_match_22,2026-06-17,after_match_22,22,group,G,Iran,p_fourth,0.4254
+after_match_22,2026-06-17,after_match_22,22,group,G,Iran,p_top_two,0.3153
+after_match_22,2026-06-17,after_match_22,22,group,H,Uruguay,p_first,0.4042
+after_match_22,2026-06-17,after_match_22,22,group,H,Uruguay,p_second,0.2802
+after_match_22,2026-06-17,after_match_22,22,group,H,Uruguay,p_third,0.2253
+after_match_22,2026-06-17,after_match_22,22,group,H,Uruguay,p_fourth,0.0903
+after_match_22,2026-06-17,after_match_22,22,group,H,Uruguay,p_top_two,0.6844
+after_match_22,2026-06-17,after_match_22,22,group,H,Spain,p_first,0.398
+after_match_22,2026-06-17,after_match_22,22,group,H,Spain,p_second,0.3127
+after_match_22,2026-06-17,after_match_22,22,group,H,Spain,p_third,0.1968
+after_match_22,2026-06-17,after_match_22,22,group,H,Spain,p_fourth,0.0925
+after_match_22,2026-06-17,after_match_22,22,group,H,Spain,p_top_two,0.7107
+after_match_22,2026-06-17,after_match_22,22,group,H,Cape Verde,p_first,0.1419
+after_match_22,2026-06-17,after_match_22,22,group,H,Cape Verde,p_second,0.2535
+after_match_22,2026-06-17,after_match_22,22,group,H,Cape Verde,p_third,0.3153
+after_match_22,2026-06-17,after_match_22,22,group,H,Cape Verde,p_fourth,0.2893
+after_match_22,2026-06-17,after_match_22,22,group,H,Cape Verde,p_top_two,0.3954
+after_match_22,2026-06-17,after_match_22,22,group,H,Saudi Arabia,p_first,0.0559
+after_match_22,2026-06-17,after_match_22,22,group,H,Saudi Arabia,p_second,0.1536
+after_match_22,2026-06-17,after_match_22,22,group,H,Saudi Arabia,p_third,0.2626
+after_match_22,2026-06-17,after_match_22,22,group,H,Saudi Arabia,p_fourth,0.5279
+after_match_22,2026-06-17,after_match_22,22,group,H,Saudi Arabia,p_top_two,0.2095
+after_match_22,2026-06-17,after_match_22,22,group,I,France,p_first,0.4942
+after_match_22,2026-06-17,after_match_22,22,group,I,France,p_second,0.4421
+after_match_22,2026-06-17,after_match_22,22,group,I,France,p_third,0.0594
+after_match_22,2026-06-17,after_match_22,22,group,I,France,p_fourth,0.0043
+after_match_22,2026-06-17,after_match_22,22,group,I,France,p_top_two,0.9363
+after_match_22,2026-06-17,after_match_22,22,group,I,Norway,p_first,0.4894
+after_match_22,2026-06-17,after_match_22,22,group,I,Norway,p_second,0.4149
+after_match_22,2026-06-17,after_match_22,22,group,I,Norway,p_third,0.0924
+after_match_22,2026-06-17,after_match_22,22,group,I,Norway,p_fourth,0.0033
+after_match_22,2026-06-17,after_match_22,22,group,I,Norway,p_top_two,0.9043
+after_match_22,2026-06-17,after_match_22,22,group,I,Senegal,p_first,0.0128
+after_match_22,2026-06-17,after_match_22,22,group,I,Senegal,p_second,0.1096
+after_match_22,2026-06-17,after_match_22,22,group,I,Senegal,p_third,0.5998
+after_match_22,2026-06-17,after_match_22,22,group,I,Senegal,p_fourth,0.2778
+after_match_22,2026-06-17,after_match_22,22,group,I,Senegal,p_top_two,0.1224
+after_match_22,2026-06-17,after_match_22,22,group,I,Iraq,p_first,0.0036
+after_match_22,2026-06-17,after_match_22,22,group,I,Iraq,p_second,0.0334
+after_match_22,2026-06-17,after_match_22,22,group,I,Iraq,p_third,0.2484
+after_match_22,2026-06-17,after_match_22,22,group,I,Iraq,p_fourth,0.7146
+after_match_22,2026-06-17,after_match_22,22,group,I,Iraq,p_top_two,0.037
+after_match_22,2026-06-17,after_match_22,22,group,J,Argentina,p_first,0.7803
+after_match_22,2026-06-17,after_match_22,22,group,J,Argentina,p_second,0.149
+after_match_22,2026-06-17,after_match_22,22,group,J,Argentina,p_third,0.0662
+after_match_22,2026-06-17,after_match_22,22,group,J,Argentina,p_fourth,0.0045
+after_match_22,2026-06-17,after_match_22,22,group,J,Argentina,p_top_two,0.9293
+after_match_22,2026-06-17,after_match_22,22,group,J,Austria,p_first,0.1486
+after_match_22,2026-06-17,after_match_22,22,group,J,Austria,p_second,0.4633
+after_match_22,2026-06-17,after_match_22,22,group,J,Austria,p_third,0.3055
+after_match_22,2026-06-17,after_match_22,22,group,J,Austria,p_fourth,0.0826
+after_match_22,2026-06-17,after_match_22,22,group,J,Austria,p_top_two,0.6119
+after_match_22,2026-06-17,after_match_22,22,group,J,Jordan,p_first,0.0602
+after_match_22,2026-06-17,after_match_22,22,group,J,Jordan,p_second,0.257
+after_match_22,2026-06-17,after_match_22,22,group,J,Jordan,p_third,0.4218
+after_match_22,2026-06-17,after_match_22,22,group,J,Jordan,p_fourth,0.261
+after_match_22,2026-06-17,after_match_22,22,group,J,Jordan,p_top_two,0.3172
+after_match_22,2026-06-17,after_match_22,22,group,J,Algeria,p_first,0.0109
+after_match_22,2026-06-17,after_match_22,22,group,J,Algeria,p_second,0.1307
+after_match_22,2026-06-17,after_match_22,22,group,J,Algeria,p_third,0.2065
+after_match_22,2026-06-17,after_match_22,22,group,J,Algeria,p_fourth,0.6519
+after_match_22,2026-06-17,after_match_22,22,group,J,Algeria,p_top_two,0.1416
+after_match_22,2026-06-17,after_match_22,22,group,K,Portugal,p_first,0.344
+after_match_22,2026-06-17,after_match_22,22,group,K,Portugal,p_second,0.3258
+after_match_22,2026-06-17,after_match_22,22,group,K,Portugal,p_third,0.2146
+after_match_22,2026-06-17,after_match_22,22,group,K,Portugal,p_fourth,0.1156
+after_match_22,2026-06-17,after_match_22,22,group,K,Portugal,p_top_two,0.6698
+after_match_22,2026-06-17,after_match_22,22,group,K,Colombia,p_first,0.2846
+after_match_22,2026-06-17,after_match_22,22,group,K,Colombia,p_second,0.1802
+after_match_22,2026-06-17,after_match_22,22,group,K,Colombia,p_third,0.2715
+after_match_22,2026-06-17,after_match_22,22,group,K,Colombia,p_fourth,0.2637
+after_match_22,2026-06-17,after_match_22,22,group,K,Colombia,p_top_two,0.4648
+after_match_22,2026-06-17,after_match_22,22,group,K,DR Congo,p_first,0.2186
+after_match_22,2026-06-17,after_match_22,22,group,K,DR Congo,p_second,0.3157
+after_match_22,2026-06-17,after_match_22,22,group,K,DR Congo,p_third,0.2655
+after_match_22,2026-06-17,after_match_22,22,group,K,DR Congo,p_fourth,0.2002
+after_match_22,2026-06-17,after_match_22,22,group,K,DR Congo,p_top_two,0.5343
+after_match_22,2026-06-17,after_match_22,22,group,K,Uzbekistan,p_first,0.1528
+after_match_22,2026-06-17,after_match_22,22,group,K,Uzbekistan,p_second,0.1783
+after_match_22,2026-06-17,after_match_22,22,group,K,Uzbekistan,p_third,0.2484
+after_match_22,2026-06-17,after_match_22,22,group,K,Uzbekistan,p_fourth,0.4205
+after_match_22,2026-06-17,after_match_22,22,group,K,Uzbekistan,p_top_two,0.3311
+after_match_22,2026-06-17,after_match_22,22,group,L,England,p_first,0.6551
+after_match_22,2026-06-17,after_match_22,22,group,L,England,p_second,0.2436
+after_match_22,2026-06-17,after_match_22,22,group,L,England,p_third,0.0819
+after_match_22,2026-06-17,after_match_22,22,group,L,England,p_fourth,0.0194
+after_match_22,2026-06-17,after_match_22,22,group,L,England,p_top_two,0.8987
+after_match_22,2026-06-17,after_match_22,22,group,L,Panama,p_first,0.1919
+after_match_22,2026-06-17,after_match_22,22,group,L,Panama,p_second,0.3057
+after_match_22,2026-06-17,after_match_22,22,group,L,Panama,p_third,0.2669
+after_match_22,2026-06-17,after_match_22,22,group,L,Panama,p_fourth,0.2355
+after_match_22,2026-06-17,after_match_22,22,group,L,Panama,p_top_two,0.4976
+after_match_22,2026-06-17,after_match_22,22,group,L,Ghana,p_first,0.119
+after_match_22,2026-06-17,after_match_22,22,group,L,Ghana,p_second,0.245
+after_match_22,2026-06-17,after_match_22,22,group,L,Ghana,p_third,0.3034
+after_match_22,2026-06-17,after_match_22,22,group,L,Ghana,p_fourth,0.3326
+after_match_22,2026-06-17,after_match_22,22,group,L,Ghana,p_top_two,0.364
+after_match_22,2026-06-17,after_match_22,22,group,L,Croatia,p_first,0.034
+after_match_22,2026-06-17,after_match_22,22,group,L,Croatia,p_second,0.2057
+after_match_22,2026-06-17,after_match_22,22,group,L,Croatia,p_third,0.3478
+after_match_22,2026-06-17,after_match_22,22,group,L,Croatia,p_fourth,0.4125
+after_match_22,2026-06-17,after_match_22,22,group,L,Croatia,p_top_two,0.2397

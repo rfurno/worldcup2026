@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-16 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-17 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -156,6 +156,48 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
 | Ehsan Hajsafi | Iran | Yellow card (yellow card 89′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-16 — Group(s) I, J
+
+### France 3–1 Senegal
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+### Iraq 1–4 Norway
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Zaid Tahseen | Iraq | Yellow card (yellow card 86′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Argentina 3–0 Algeria
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+### Austria 3–1 Jordan
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Marcel Sabitzer | Austria | Yellow card (yellow card 77′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-17 — Group(s) K, L
+
+### Portugal 1–1 DR Congo
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Bernardo Silva | Portugal | Yellow card (yellow card 13′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Nélson Semedo | Portugal | Yellow card (yellow card 88′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Tomás Araújo | Portugal | Yellow card (yellow card 90+2′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### England 4–2 Croatia
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
 
 ---
 
