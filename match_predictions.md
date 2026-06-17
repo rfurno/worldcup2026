@@ -22,6 +22,54 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 | Moderate | 11 | 54.5% | 54.5% |
 | Low | 11 | 45.5% | 45.5% |
 
+## June 18, 2026 — Match Predictions
+
+### Match 25: Czechia vs South Africa
+
+- Kickoff: 12:00 PM EDT | Mercedes-Benz Stadium
+- Group A
+- xG: 1.82 — 1.10
+- P(Czechia win): 47.9%
+- P(Draw): 27.8%
+- P(South Africa win): 24.3%
+- Predicted winner: **Czechia** (Low confidence)
+- Most likely score: 1-1 (11.2%)
+
+### Match 26: Switzerland vs Bosnia and Herzegovina
+
+- Kickoff: 3:00 PM EDT | SoFi Stadium
+- Group B
+- xG: 1.50 — 1.37
+- P(Switzerland win): 41.0%
+- P(Draw): 29.3%
+- P(Bosnia and Herzegovina win): 29.6%
+- Predicted winner: **Switzerland** (Low confidence)
+- Most likely score: 1-1 (12.1%)
+
+### Match 27: Canada vs Qatar
+
+- Kickoff: 6:00 PM EDT | BC Place
+- Group B
+- xG: 2.23 — 1.23
+- P(Canada win): 56.3%
+- P(Draw): 24.5%
+- P(Qatar win): 19.2%
+- Predicted winner: **Canada** (Moderate confidence)
+- Most likely score: 2-1 (9.7%)
+
+### Match 28: Mexico vs South Korea
+
+- Kickoff: 11:00 PM EDT | Estadio Akron
+- Group A
+- xG: 1.94 — 1.38
+- P(Mexico win): 49.1%
+- P(Draw): 26.6%
+- P(South Korea win): 24.3%
+- Predicted winner: **Mexico** (Low confidence)
+- Most likely score: 1-1 (10.2%)
+
+---
+
 ## June 17, 2026 — Match Predictions
 
 ### Match 21: Portugal vs DR Congo
@@ -318,60 +366,60 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 
 ### June 17, 2026
 
-| Match | Result | Model pick | Correct? |
-|-------|--------|------------|----------|
-| Portugal vs DR Congo | 1–1 | Portugal (58%) | ✗ |
-| England vs Croatia | 4–2 | England (56%) | ✓ |
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Portugal vs DR Congo | 1–1 | Portugal (58%) | 25.3% | ✗ |
+| England vs Croatia | 4–2 | England (56%) | 25.6% | ✓ |
 
 ### June 16, 2026
 
-| Match | Result | Model pick | Correct? |
-|-------|--------|------------|----------|
-| France vs Senegal | 3–1 | France (61%) | ✓ |
-| Iraq vs Norway | 1–4 | Iraq (58%) | ✗ |
-| Argentina vs Algeria | 3–0 | Argentina (57%) | ✓ |
-| Austria vs Jordan | 3–1 | Austria (50%) | ✓ |
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| France vs Senegal | 3–1 | France (61%) | 25.1% | ✓ |
+| Iraq vs Norway | 1–4 | Iraq (58%) | 26.2% | ✗ |
+| Argentina vs Algeria | 3–0 | Argentina (57%) | 26.5% | ✓ |
+| Austria vs Jordan | 3–1 | Austria (50%) | 28.9% | ✓ |
 
 ### June 15, 2026
 
-| Match | Result | Model pick | Correct? |
-|-------|--------|------------|----------|
-| Saudi Arabia vs Uruguay | 1–1 | Saudi Arabia (42%) | ✗ |
-| Spain vs Cape Verde | 0–0 | Spain (63%) | ✗ |
-| Iran vs New Zealand | 2–2 | Iran (58%) | ✗ |
-| Belgium vs Egypt | 1–1 | Belgium (49%) | ✗ |
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Saudi Arabia vs Uruguay | 1–1 | Saudi Arabia (42%) | 26.4% | ✗ |
+| Spain vs Cape Verde | 0–0 | Spain (63%) | 23.0% | ✗ |
+| Iran vs New Zealand | 2–2 | Iran (58%) | 25.3% | ✗ |
+| Belgium vs Egypt | 1–1 | Belgium (49%) | 27.3% | ✗ |
 
 ### June 14, 2026
 
-| Match | Result | Model pick | Correct? |
-|-------|--------|------------|----------|
-| Ivory Coast vs Ecuador | 1–0 | Ivory Coast (60%) | ✓ |
-| Germany vs Curaçao | 7–1 | Germany (55%) | ✓ |
-| Netherlands vs Japan | 2–2 | Netherlands (45%) | ✗ |
-| Sweden vs Tunisia | 5–1 | Sweden (53%) | ✓ |
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Ivory Coast vs Ecuador | 1–0 | Ivory Coast (60%) | 21.6% | ✓ |
+| Germany vs Curaçao | 7–1 | Germany (55%) | 22.8% | ✓ |
+| Netherlands vs Japan | 2–2 | Netherlands (45%) | 24.9% | ✗ |
+| Sweden vs Tunisia | 5–1 | Sweden (53%) | 23.4% | ✓ |
 
 ### June 13, 2026
 
-| Match | Result | Model pick | Correct? |
-|-------|--------|------------|----------|
-| Haiti vs Scotland | 0–1 | Haiti (53%) | ✗ |
-| Australia vs Turkey | 2–0 | Australia (51%) | ✓ |
-| Brazil vs Morocco | 1–1 | Brazil (53%) | ✗ |
-| Qatar vs Switzerland | 1–1 | Qatar (58%) | ✗ |
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Haiti vs Scotland | 0–1 | Haiti (53%) | 23.4% | ✗ |
+| Australia vs Turkey | 2–0 | Australia (51%) | 24.0% | ✓ |
+| Brazil vs Morocco | 1–1 | Brazil (53%) | 23.1% | ✗ |
+| Qatar vs Switzerland | 1–1 | Qatar (58%) | 22.1% | ✗ |
 
 ### June 12, 2026
 
-| Match | Result | Model pick | Correct? |
-|-------|--------|------------|----------|
-| Canada vs Bosnia and Herzegovina | 1–1 | Bosnia and Herzegovina (44%) | ✗ |
-| United States vs Paraguay | 4–1 | United States (57%) | ✓ |
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Canada vs Bosnia and Herzegovina | 1–1 | Bosnia and Herzegovina (44%) | 24.0% | ✗ |
+| United States vs Paraguay | 4–1 | United States (57%) | 22.0% | ✓ |
 
 ### June 11, 2026
 
-| Match | Result | Model pick | Correct? |
-|-------|--------|------------|----------|
-| Mexico vs South Africa | 2–0 | Mexico (47%) | ✓ |
-| South Korea vs Czechia | 2–1 | South Korea (60%) | ✓ |
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Mexico vs South Africa | 2–0 | Mexico (47%) | 22.9% | ✓ |
+| South Korea vs Czechia | 2–1 | South Korea (60%) | 21.5% | ✓ |
 
 ---
 

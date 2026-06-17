@@ -198,8 +198,8 @@ def update_match_predictions_md(
             day_results = results[results["date"].astype(str) == day]
             lines.append(f"### {_fmt_date_header(day)}")
             lines.append("")
-            lines.append("| Match | Result | Model pick | Correct? |")
-            lines.append("|-------|--------|------------|----------|")
+            lines.append("| Match | Result | Model pick | Draw % | Correct? |")
+            lines.append("|-------|--------|------------|--------|----------|")
             for _, row in day_results.sort_values("match_num").iterrows():
                 home, away = row["home"], row["away"]
                 score = f"{int(row['home_goals'])}–{int(row['away_goals'])}"
@@ -209,10 +209,12 @@ def update_match_predictions_md(
                 ]
                 if pred_row.empty:
                     pick = "—"
+                    draw_pct = "—"
                     correct = "—"
                 else:
                     pr = pred_row.iloc[-1]
                     pick = f"{pr['predicted_winner']} ({max(pr['p_home_win'], pr['p_draw'], pr['p_away_win']) * 100:.0f}%)"
+                    draw_pct = f"{float(pr['p_draw']) * 100:.1f}%"
                     actual = (
                         home
                         if int(row["home_goals"]) > int(row["away_goals"])
@@ -221,7 +223,9 @@ def update_match_predictions_md(
                         else "Draw"
                     )
                     correct = "✓" if pr["predicted_winner"] == actual else "✗"
-                lines.append(f"| {home} vs {away} | {score} | {pick} | {correct} |")
+                lines.append(
+                    f"| {home} vs {away} | {score} | {pick} | {draw_pct} | {correct} |"
+                )
             lines.append("")
 
     lines.extend(
