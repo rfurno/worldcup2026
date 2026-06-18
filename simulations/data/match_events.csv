@@ -65,3 +65,13 @@ date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
 2026-06-17,Portugal,Tomás Araújo,yellow_card,0.0,False,1,yellow card 90+2′,Wikipedia
 2026-06-17,Portugal,Bernardo Silva,yellow_card,0.0,False,1,yellow card 13′,Wikipedia
 2026-06-17,Portugal,Nélson Semedo,yellow_card,0.0,False,1,yellow card 88′,Wikipedia
+2026-06-17,Ghana,Caleb Yirenkyi,yellow_card,0.0,False,1,yellow card 16′,Wikipedia
+2026-06-17,Panama,Carlos Harvey,yellow_card,0.0,False,1,yellow card 90+9′,Wikipedia
+2026-06-17,Panama,César Blackman,yellow_card,0.0,False,1,yellow card 72′,Wikipedia
+2026-06-17,Uzbekistan,Abdukodir Khusanov,yellow_card,0.0,False,1,yellow card 34′,Wikipedia
+2026-06-17,Colombia,Johan Mojica,yellow_card,0.0,False,1,yellow card 7′,Wikipedia
+2026-06-18,South Africa,Teboho Mokoena,yellow_card,0.0,False,1,yellow card 33′,Wikipedia
+2026-06-18,South Africa,Thalente Mbatha,yellow_card,0.0,False,1,yellow card 40′,Wikipedia
+2026-06-18,Switzerland,Nico Elvedi,yellow_card,0.0,False,1,yellow card 65′,Wikipedia
+2026-06-18,Bosnia and Herzegovina,Amar Dedić,yellow_card,0.0,False,1,yellow card 59′,Wikipedia
+2026-06-18,Bosnia and Herzegovina,Tarik Muharemović,red_card,0.12,True,0,red card 80′,Wikipedia

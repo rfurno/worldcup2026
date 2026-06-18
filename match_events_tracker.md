@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-17 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-18 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -198,6 +198,38 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
 | — | — | _No events logged_ | — | — |
+
+### Ghana 1–0 Panama
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Caleb Yirenkyi | Ghana | Yellow card (yellow card 16′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Carlos Harvey | Panama | Yellow card (yellow card 90+9′) | On **1 yellow** — second triggers ban | Wikipedia |
+| César Blackman | Panama | Yellow card (yellow card 72′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Uzbekistan 1–3 Colombia
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Johan Mojica | Colombia | Yellow card (yellow card 7′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Abdukodir Khusanov | Uzbekistan | Yellow card (yellow card 34′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-18 — Group(s) A, B
+
+### Czechia 1–1 South Africa
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Teboho Mokoena | South Africa | Yellow card (yellow card 33′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Thalente Mbatha | South Africa | Yellow card (yellow card 40′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Switzerland 4–1 Bosnia and Herzegovina
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Tarik Muharemović | Bosnia and Herzegovina | Red card (red card 80′) | **Suspended** next match | Wikipedia |
+| Amar Dedić | Bosnia and Herzegovina | Yellow card (yellow card 59′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Nico Elvedi | Switzerland | Yellow card (yellow card 65′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 

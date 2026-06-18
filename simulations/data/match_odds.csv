@@ -27,3 +27,7 @@ date,match_num,home,away,p_home,p_draw,p_away,source
 2026-06-18,26,Switzerland,Bosnia and Herzegovina,0.480,0.260,0.260,market_estimate
 2026-06-18,27,Canada,Qatar,0.550,0.240,0.210,market_estimate
 2026-06-18,28,Mexico,South Korea,0.520,0.250,0.230,market_estimate
+2026-06-19,29,United States,Australia,0.601,0.217,0.182,draftkings
+2026-06-19,30,Scotland,Morocco,0.183,0.264,0.553,draftkings
+2026-06-19,31,Brazil,Haiti,0.871,0.087,0.042,draftkings
+2026-06-19,32,Turkey,Paraguay,0.470,0.283,0.247,draftkings
