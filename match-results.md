@@ -2,7 +2,7 @@
 
 Official results for completed group-stage matches.
 
-**Updated**: June 18, 2026 (auto-generated from `simulations/data/match_results.csv`)
+**Updated**: June 19, 2026 (auto-generated from `simulations/data/match_results.csv`)
 
 *Add results: `python -m wc2026_monte_carlo add-results ...`*
 
@@ -14,6 +14,8 @@ Official results for completed group-stage matches.
 |-------|------|------|-------|-------|-------|
 | 25 | Czechia | South Africa | 1–1 | A | Atlanta |
 | 26 | Switzerland | Bosnia and Herzegovina | 4–1 | B | Los Angeles |
+| 27 | Canada | Qatar | 6–0 | B | Vancouver |
+| 28 | Mexico | South Korea | 1–0 | A | Guadalajara |
 
 ## June 17, 2026 — Group(s) K, L
 

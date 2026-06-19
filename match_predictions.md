@@ -2,7 +2,7 @@
 
 Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (Elo + squad value + xG + recent form + club chemistry + injuries + match events + per-match odds blend + in-tournament form, anchored to betting odds).
 
-**Updated**: June 18, 2026 (auto-generated)
+**Updated**: June 19, 2026 (auto-generated)
 
 *Source: `simulations/data/match_predictions_log.csv` · Regenerate: `python -m wc2026_monte_carlo predict`*
 
@@ -10,63 +10,52 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 
 ## Prediction Performance
 
-- **Matches evaluated**: 26
-- **Winner accuracy**: 50.0%
-- **3-way accuracy**: 50.0%
-- **Mean Brier (3-way)**: 0.6249
+- **Matches evaluated**: 28
+- **Winner accuracy**: 53.6%
+- **3-way accuracy**: 53.6%
+- **Mean Brier (3-way)**: 0.6043
 
 ### By confidence tier
 
 | Tier | N | Winner accuracy | 3-way accuracy |
 |------|---|-----------------|----------------|
-| Moderate | 12 | 50.0% | 50.0% |
-| Low | 14 | 50.0% | 50.0% |
+| Moderate | 13 | 53.8% | 53.8% |
+| Low | 15 | 53.3% | 53.3% |
 
-## June 19, 2026 — Match Predictions
+## June 20, 2026 — Match Predictions
 
-### Match 29: United States vs Australia
+### Match 33: Netherlands vs Sweden
 
-- Kickoff: 3:00 PM EDT | Lumen Field
-- Group D
-- xG: 1.92 — 1.44
-- P(United States win): 50.8%
-- P(Draw): 25.5%
-- P(Australia win): 23.7%
-- Predicted winner: **United States** (Low confidence)
-- Most likely score: 1-1 (10.0%)
+- Kickoff: 1:00 PM EDT | NRG Stadium
+- Group F
+- xG: 1.61 — 1.29
+- P(Netherlands win): 46.8%
+- P(Draw): 28.4%
+- P(Sweden win): 24.8%
+- Predicted winner: **Netherlands** (Low confidence)
+- Most likely score: 1-1 (11.8%)
 
-### Match 30: Scotland vs Morocco
+### Match 34: Germany vs Ivory Coast
 
-- Kickoff: 6:00 PM EDT | Gillette Stadium
-- Group C
-- xG: 2.02 — 1.17
-- P(Scotland win): 41.5%
-- P(Draw): 26.6%
-- P(Morocco win): 31.9%
-- Predicted winner: **Scotland** (Low confidence)
-- Most likely score: 1-1 (10.2%)
+- Kickoff: 4:00 PM EDT | BMO Field
+- Group E
+- xG: 1.96 — 1.08
+- P(Germany win): 57.5%
+- P(Draw): 25.0%
+- P(Ivory Coast win): 17.5%
+- Predicted winner: **Germany** (Moderate confidence)
+- Most likely score: 1-1 (10.5%)
 
-### Match 31: Brazil vs Haiti
+### Match 35: Ecuador vs Curaçao
 
-- Kickoff: 8:30 PM EDT | Lincoln Financial Field
-- Group C
-- xG: 2.82 — 0.84
-- P(Brazil win): 79.8%
-- P(Draw): 14.1%
-- P(Haiti win): 6.1%
-- Predicted winner: **Brazil** (High confidence)
-- Most likely score: 2-0 (10.4%)
-
-### Match 32: Turkey vs Paraguay
-
-- Kickoff: 8:00 PM PDT | Levi's Stadium
-- Group D
-- xG: 1.64 — 1.39
-- P(Turkey win): 42.7%
-- P(Draw): 29.4%
-- P(Paraguay win): 27.9%
-- Predicted winner: **Turkey** (Low confidence)
-- Most likely score: 1-1 (11.5%)
+- Kickoff: 8:00 PM EDT | Arrowhead Stadium
+- Group E
+- xG: 1.58 — 1.26
+- P(Ecuador win): 57.3%
+- P(Draw): 23.4%
+- P(Curaçao win): 19.3%
+- Predicted winner: **Ecuador** (Moderate confidence)
+- Most likely score: 1-1 (12.1%)
 
 ---
 
@@ -78,6 +67,8 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 |-------|--------|------------|--------|----------|
 | Czechia vs South Africa | 1–1 | Czechia (48%) | 27.8% | ✗ |
 | Switzerland vs Bosnia and Herzegovina | 4–1 | Switzerland (41%) | 29.3% | ✓ |
+| Canada vs Qatar | 6–0 | Canada (56%) | 24.5% | ✓ |
+| Mexico vs South Korea | 1–0 | Mexico (49%) | 26.6% | ✓ |
 
 ### June 17, 2026
 

@@ -306,6 +306,38 @@ FIXTURES_BY_DATE: dict[str, list[dict]] = {
             "neutral": True,
         },
     ],
+    "2026-06-20": [
+        {
+            "home": "Netherlands",
+            "away": "Sweden",
+            "venue": "Houston",
+            "kickoff": "1:00 PM EDT",
+            "stadium": "NRG Stadium",
+            "group": "F",
+            "match": 33,
+            "neutral": True,
+        },
+        {
+            "home": "Germany",
+            "away": "Ivory Coast",
+            "venue": "Toronto",
+            "kickoff": "4:00 PM EDT",
+            "stadium": "BMO Field",
+            "group": "E",
+            "match": 34,
+            "neutral": True,
+        },
+        {
+            "home": "Ecuador",
+            "away": "Curaçao",
+            "venue": "Kansas City",
+            "kickoff": "8:00 PM EDT",
+            "stadium": "Arrowhead Stadium",
+            "group": "E",
+            "match": 35,
+            "neutral": True,
+        },
+    ],
     "2026-06-13": [
         {
             "home": "Qatar",

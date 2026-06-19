@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-18 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-19 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -230,6 +230,22 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Tarik Muharemović | Bosnia and Herzegovina | Red card (red card 80′) | **Suspended** next match | Wikipedia |
 | Amar Dedić | Bosnia and Herzegovina | Yellow card (yellow card 59′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Nico Elvedi | Switzerland | Yellow card (yellow card 65′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Canada 6–0 Qatar
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Derek Cornelius | Canada | Yellow card (yellow card 9′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Assim Madibo | Qatar | Red card (red card 51′) | **Suspended** next match | Wikipedia |
+| Homam Ahmed | Qatar | Red card (red card 33′) | **Suspended** next match | Wikipedia |
+| Ahmed Fathy | Qatar | Yellow card (yellow card 62′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Mexico 1–0 South Korea
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Lee Kang-in | South Korea | Yellow card (yellow card 4′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Paik Seung-ho | South Korea | Yellow card (yellow card 58′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 
