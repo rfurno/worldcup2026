@@ -34,3 +34,12 @@ date,match_num,home,away,p_home,p_draw,p_away,source
 2026-06-20,33,Netherlands,Sweden,0.561,0.243,0.196,draftkings
 2026-06-20,34,Germany,Ivory Coast,0.624,0.209,0.167,draftkings
 2026-06-20,35,Ecuador,Curaçao,0.868,0.091,0.041,draftkings
+2026-06-21,36,Tunisia,Japan,0.240,0.260,0.500,market_estimate
+2026-06-21,37,Spain,Saudi Arabia,0.700,0.200,0.100,market_estimate
+2026-06-21,38,Belgium,Iran,0.550,0.250,0.200,market_estimate
+2026-06-21,39,Uruguay,Cape Verde,0.480,0.270,0.250,market_estimate
+2026-06-21,40,New Zealand,Egypt,0.340,0.280,0.380,market_estimate
+2026-06-22,41,Argentina,Austria,0.580,0.240,0.180,market_estimate
+2026-06-22,42,France,Iraq,0.680,0.200,0.120,market_estimate
+2026-06-22,43,Norway,Senegal,0.520,0.260,0.220,market_estimate
+2026-06-22,44,Jordan,Algeria,0.360,0.280,0.360,market_estimate

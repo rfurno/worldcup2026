@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-19 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-20 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -246,6 +246,53 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 |--------|------|-------|-------------------|--------|
 | Lee Kang-in | South Korea | Yellow card (yellow card 4′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Paik Seung-ho | South Korea | Yellow card (yellow card 58′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-19 — Group(s) C, D
+
+### United States 2–0 Australia
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Alessandro Circati | Australia | Yellow card (yellow card 32′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Jacob Italiano | Australia | Yellow card (yellow card 89′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Jordan Bos | Australia | Yellow card (yellow card 16′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Antonee Robinson | United States | Yellow card (yellow card 56′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Chris Richards | United States | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Folarin Balogun | United States | Yellow card (yellow card 89′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Scotland 0–1 Morocco
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Issa Diop | Morocco | Yellow card (yellow card 23′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Brazil 3–0 Haiti
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Douglas Santos | Brazil | Yellow card (yellow card 65′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Carlens Arcus | Haiti | Yellow card (yellow card 4′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Danley Jean Jacques | Haiti | Yellow card (yellow card 72′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Frantzdy Pierrot | Haiti | Yellow card (yellow card 45+4′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Turkey 0–1 Paraguay
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Miguel Almirón | Paraguay | Red card (red card 45+3′) | **Suspended** next match | Wikipedia |
+| Matías Galarza | Paraguay | Yellow card (yellow card 4′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Eren Elmalı | Turkey | Yellow card (yellow card 71′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Vincenzo Montella | Turkey | Yellow card (yellow card 63′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-20 — Group(s) F
+
+### Netherlands 5–1 Sweden
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Gabriel Gudmundsson | Sweden | Yellow card (yellow card 53′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Lucas Bergvall | Sweden | Yellow card (yellow card 80′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Yasin Ayari | Sweden | Yellow card (yellow card 75′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 

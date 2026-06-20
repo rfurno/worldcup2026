@@ -2,7 +2,7 @@
 
 Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (Elo + squad value + xG + recent form + club chemistry + injuries + match events + per-match odds blend + in-tournament form, anchored to betting odds).
 
-**Updated**: June 19, 2026 (auto-generated)
+**Updated**: June 20, 2026 (auto-generated)
 
 *Source: `simulations/data/match_predictions_log.csv` · Regenerate: `python -m wc2026_monte_carlo predict`*
 
@@ -10,56 +10,94 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 
 ## Prediction Performance
 
-- **Matches evaluated**: 28
-- **Winner accuracy**: 53.6%
-- **3-way accuracy**: 53.6%
-- **Mean Brier (3-way)**: 0.6043
+- **Matches evaluated**: 33
+- **Winner accuracy**: 54.5%
+- **3-way accuracy**: 54.5%
+- **Mean Brier (3-way)**: 0.5839
 
 ### By confidence tier
 
 | Tier | N | Winner accuracy | 3-way accuracy |
 |------|---|-----------------|----------------|
+| High | 1 | 100.0% | 100.0% |
 | Moderate | 13 | 53.8% | 53.8% |
-| Low | 15 | 53.3% | 53.3% |
+| Low | 19 | 52.6% | 52.6% |
 
-## June 20, 2026 — Match Predictions
+## June 21, 2026 — Match Predictions
 
-### Match 33: Netherlands vs Sweden
+### Match 36: Tunisia vs Japan
 
-- Kickoff: 1:00 PM EDT | NRG Stadium
+- Kickoff: 12:00 AM EDT | Estadio BBVA
 - Group F
-- xG: 1.61 — 1.29
-- P(Netherlands win): 46.8%
-- P(Draw): 28.4%
-- P(Sweden win): 24.8%
-- Predicted winner: **Netherlands** (Low confidence)
-- Most likely score: 1-1 (11.8%)
+- xG: 1.84 — 1.09
+- P(Tunisia win): 42.0%
+- P(Draw): 27.7%
+- P(Japan win): 30.3%
+- Predicted winner: **Tunisia** (Low confidence)
+- Most likely score: 1-1 (11.2%)
 
-### Match 34: Germany vs Ivory Coast
+### Match 37: Spain vs Saudi Arabia
 
-- Kickoff: 4:00 PM EDT | BMO Field
-- Group E
-- xG: 1.96 — 1.08
-- P(Germany win): 57.5%
-- P(Draw): 25.0%
-- P(Ivory Coast win): 17.5%
-- Predicted winner: **Germany** (Moderate confidence)
-- Most likely score: 1-1 (10.5%)
+- Kickoff: 12:00 PM EDT | Mercedes-Benz Stadium
+- Group H
+- xG: 2.30 — 0.94
+- P(Spain win): 66.7%
+- P(Draw): 22.0%
+- P(Saudi Arabia win): 11.3%
+- Predicted winner: **Spain** (Moderate confidence)
+- Most likely score: 2-0 (10.6%)
 
-### Match 35: Ecuador vs Curaçao
+### Match 38: Belgium vs Iran
 
-- Kickoff: 8:00 PM EDT | Arrowhead Stadium
-- Group E
-- xG: 1.58 — 1.26
-- P(Ecuador win): 57.3%
-- P(Draw): 23.4%
-- P(Curaçao win): 19.3%
-- Predicted winner: **Ecuador** (Moderate confidence)
-- Most likely score: 1-1 (12.1%)
+- Kickoff: 3:00 PM PDT | SoFi Stadium
+- Group G
+- xG: 1.60 — 1.29
+- P(Belgium win): 46.1%
+- P(Draw): 28.7%
+- P(Iran win): 25.2%
+- Predicted winner: **Belgium** (Low confidence)
+- Most likely score: 1-1 (11.9%)
+
+### Match 39: Uruguay vs Cape Verde
+
+- Kickoff: 6:00 PM EDT | Hard Rock Stadium
+- Group H
+- xG: 1.92 — 1.08
+- P(Uruguay win): 51.8%
+- P(Draw): 27.5%
+- P(Cape Verde win): 20.8%
+- Predicted winner: **Uruguay** (Low confidence)
+- Most likely score: 1-1 (10.8%)
+
+### Match 40: New Zealand vs Egypt
+
+- Kickoff: 9:00 PM PDT | BC Place
+- Group G
+- xG: 1.62 — 1.27
+- P(New Zealand win): 39.4%
+- P(Draw): 29.7%
+- P(Egypt win): 30.9%
+- Predicted winner: **New Zealand** (Low confidence)
+- Most likely score: 1-1 (11.9%)
 
 ---
 
 ## Completed Results
+
+### June 20, 2026
+
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Netherlands vs Sweden | 5–1 | Netherlands (47%) | 28.4% | ✓ |
+
+### June 19, 2026
+
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| United States vs Australia | 2–0 | United States (51%) | 25.5% | ✓ |
+| Scotland vs Morocco | 0–1 | Scotland (41%) | 26.6% | ✗ |
+| Brazil vs Haiti | 3–0 | Brazil (80%) | 14.1% | ✓ |
+| Turkey vs Paraguay | 0–1 | Turkey (43%) | 29.4% | ✗ |
 
 ### June 18, 2026
 
