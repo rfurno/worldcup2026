@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-20 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-21 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -284,7 +284,7 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Eren Elmalı | Turkey | Yellow card (yellow card 71′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Vincenzo Montella | Turkey | Yellow card (yellow card 63′) | On **1 yellow** — second triggers ban | Wikipedia |
 
-## 2026-06-20 — Group(s) F
+## 2026-06-20 — Group(s) E, F
 
 ### Netherlands 5–1 Sweden
 
@@ -293,6 +293,32 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Gabriel Gudmundsson | Sweden | Yellow card (yellow card 53′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Lucas Bergvall | Sweden | Yellow card (yellow card 80′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Yasin Ayari | Sweden | Yellow card (yellow card 75′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Germany 2–1 Ivory Coast
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+### Ecuador 0–0 Curaçao
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+## 2026-06-21 — Group(s) F, H
+
+### Tunisia 0–4 Japan
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+### Spain 4–0 Saudi Arabia
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Mohamed Kanno | Saudi Arabia | Yellow card (yellow card 60′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 

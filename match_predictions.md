@@ -2,7 +2,7 @@
 
 Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (Elo + squad value + xG + recent form + club chemistry + injuries + match events + per-match odds blend + in-tournament form, anchored to betting odds).
 
-**Updated**: June 20, 2026 (auto-generated)
+**Updated**: June 21, 2026 (auto-generated)
 
 *Source: `simulations/data/match_predictions_log.csv` · Regenerate: `python -m wc2026_monte_carlo predict`*
 
@@ -10,85 +10,83 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 
 ## Prediction Performance
 
-- **Matches evaluated**: 33
-- **Winner accuracy**: 54.5%
-- **3-way accuracy**: 54.5%
-- **Mean Brier (3-way)**: 0.5839
+- **Matches evaluated**: 37
+- **Winner accuracy**: 54.1%
+- **3-way accuracy**: 54.1%
+- **Mean Brier (3-way)**: 0.5774
 
 ### By confidence tier
 
 | Tier | N | Winner accuracy | 3-way accuracy |
 |------|---|-----------------|----------------|
 | High | 1 | 100.0% | 100.0% |
-| Moderate | 13 | 53.8% | 53.8% |
-| Low | 19 | 52.6% | 52.6% |
+| Moderate | 16 | 56.2% | 56.2% |
+| Low | 20 | 50.0% | 50.0% |
 
-## June 21, 2026 — Match Predictions
+## June 22, 2026 — Match Predictions
 
-### Match 36: Tunisia vs Japan
+### Match 41: Argentina vs Austria
 
-- Kickoff: 12:00 AM EDT | Estadio BBVA
-- Group F
-- xG: 1.84 — 1.09
-- P(Tunisia win): 42.0%
-- P(Draw): 27.7%
-- P(Japan win): 30.3%
-- Predicted winner: **Tunisia** (Low confidence)
-- Most likely score: 1-1 (11.2%)
-
-### Match 37: Spain vs Saudi Arabia
-
-- Kickoff: 12:00 PM EDT | Mercedes-Benz Stadium
-- Group H
-- xG: 2.30 — 0.94
-- P(Spain win): 66.7%
-- P(Draw): 22.0%
-- P(Saudi Arabia win): 11.3%
-- Predicted winner: **Spain** (Moderate confidence)
+- Kickoff: 1:00 PM EDT | AT&T Stadium
+- Group J
+- xG: 2.33 — 0.93
+- P(Argentina win): 63.1%
+- P(Draw): 23.1%
+- P(Austria win): 13.8%
+- Predicted winner: **Argentina** (Moderate confidence)
 - Most likely score: 2-0 (10.6%)
 
-### Match 38: Belgium vs Iran
+### Match 42: France vs Iraq
 
-- Kickoff: 3:00 PM PDT | SoFi Stadium
-- Group G
-- xG: 1.60 — 1.29
-- P(Belgium win): 46.1%
-- P(Draw): 28.7%
-- P(Iran win): 25.2%
-- Predicted winner: **Belgium** (Low confidence)
-- Most likely score: 1-1 (11.9%)
+- Kickoff: 5:00 PM EDT | Lincoln Financial Field
+- Group I
+- xG: 2.30 — 0.92
+- P(France win): 66.4%
+- P(Draw): 21.9%
+- P(Iraq win): 11.8%
+- Predicted winner: **France** (Moderate confidence)
+- Most likely score: 2-0 (10.8%)
 
-### Match 39: Uruguay vs Cape Verde
+### Match 43: Norway vs Senegal
 
-- Kickoff: 6:00 PM EDT | Hard Rock Stadium
-- Group H
-- xG: 1.92 — 1.08
-- P(Uruguay win): 51.8%
-- P(Draw): 27.5%
-- P(Cape Verde win): 20.8%
-- Predicted winner: **Uruguay** (Low confidence)
-- Most likely score: 1-1 (10.8%)
+- Kickoff: 8:00 PM EDT | MetLife Stadium
+- Group I
+- xG: 1.79 — 1.12
+- P(Norway win): 50.7%
+- P(Draw): 28.0%
+- P(Senegal win): 21.3%
+- Predicted winner: **Norway** (Low confidence)
+- Most likely score: 1-1 (11.3%)
 
-### Match 40: New Zealand vs Egypt
+### Match 44: Jordan vs Algeria
 
-- Kickoff: 9:00 PM PDT | BC Place
-- Group G
-- xG: 1.62 — 1.27
-- P(New Zealand win): 39.4%
-- P(Draw): 29.7%
-- P(Egypt win): 30.9%
-- Predicted winner: **New Zealand** (Low confidence)
-- Most likely score: 1-1 (11.9%)
+- Kickoff: 11:00 PM PDT | Levi's Stadium
+- Group J
+- xG: 1.84 — 1.07
+- P(Jordan win): 46.5%
+- P(Draw): 28.4%
+- P(Algeria win): 25.2%
+- Predicted winner: **Jordan** (Low confidence)
+- Most likely score: 1-1 (11.2%)
 
 ---
 
 ## Completed Results
+
+### June 21, 2026
+
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Tunisia vs Japan | 0–4 | Tunisia (39%) | 28.4% | ✗ |
+| Spain vs Saudi Arabia | 4–0 | Spain (66%) | 22.2% | ✓ |
 
 ### June 20, 2026
 
 | Match | Result | Model pick | Draw % | Correct? |
 |-------|--------|------------|--------|----------|
 | Netherlands vs Sweden | 5–1 | Netherlands (47%) | 28.4% | ✓ |
+| Germany vs Ivory Coast | 2–1 | Germany (57%) | 25.0% | ✓ |
+| Ecuador vs Curaçao | 0–0 | Ecuador (57%) | 23.4% | ✗ |
 
 ### June 19, 2026
 

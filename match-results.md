@@ -2,17 +2,26 @@
 
 Official results for completed group-stage matches.
 
-**Updated**: June 20, 2026 (auto-generated from `simulations/data/match_results.csv`)
+**Updated**: June 21, 2026 (auto-generated from `simulations/data/match_results.csv`)
 
 *Add results: `python -m wc2026_monte_carlo add-results ...`*
 
 ---
 
-## June 20, 2026 — Group(s) F
+## June 21, 2026 — Group(s) F, H
+
+| Match | Home | Away | Score | Group | Venue |
+|-------|------|------|-------|-------|-------|
+| 36 | Tunisia | Japan | 0–4 | F | Monterrey |
+| 37 | Spain | Saudi Arabia | 4–0 | H | Atlanta |
+
+## June 20, 2026 — Group(s) E, F
 
 | Match | Home | Away | Score | Group | Venue |
 |-------|------|------|-------|-------|-------|
 | 33 | Netherlands | Sweden | 5–1 | F | Houston |
+| 34 | Germany | Ivory Coast | 2–1 | E | Toronto |
+| 35 | Ecuador | Curaçao | 0–0 | E | Kansas City |
 
 ## June 19, 2026 — Group(s) C, D
 

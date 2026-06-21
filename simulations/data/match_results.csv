@@ -32,3 +32,7 @@ date,match_num,group,home,away,home_goals,away_goals,venue,stadium,neutral
 2026-06-19,31,C,Brazil,Haiti,3,0,Philadelphia,Lincoln Financial Field,True
 2026-06-19,32,D,Turkey,Paraguay,0,1,San Francisco,Levi's Stadium,True
 2026-06-20,33,F,Netherlands,Sweden,5,1,Houston,NRG Stadium,True
+2026-06-20,34,E,Germany,Ivory Coast,2,1,Toronto,BMO Field,True
+2026-06-20,35,E,Ecuador,Curaçao,0,0,Kansas City,Arrowhead Stadium,True
+2026-06-21,36,F,Tunisia,Japan,0,4,Monterrey,Estadio BBVA,True
+2026-06-21,37,H,Spain,Saudi Arabia,4,0,Atlanta,Mercedes-Benz Stadium,True
