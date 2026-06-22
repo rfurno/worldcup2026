@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-21 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-22 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -306,7 +306,7 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 |--------|------|-------|-------------------|--------|
 | — | — | _No events logged_ | — | — |
 
-## 2026-06-21 — Group(s) F, H
+## 2026-06-21 — Group(s) F, G, H
 
 ### Tunisia 0–4 Japan
 
@@ -319,6 +319,31 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
 | Mohamed Kanno | Saudi Arabia | Yellow card (yellow card 60′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Belgium 0–0 Iran
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Nathan Ngoy | Belgium | Red card (red card 66′) | **Suspended** next match | Wikipedia |
+| Romelu Lukaku | Belgium | Yellow card (yellow card 3′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Saeid Ezatolahi | Iran | Yellow card (yellow card 33′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Uruguay 2–2 Cape Verde
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Diney | Cape Verde | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Sidny Lopes Cabral | Cape Verde | Yellow card (yellow card 5′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Mathías Olivera | Uruguay | Yellow card (yellow card 58′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Rodrigo Bentancur | Uruguay | Yellow card (yellow card 20′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### New Zealand 1–3 Egypt
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Mohanad Lasheen | Egypt | Yellow card (yellow card 17′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Callum McCowatt | New Zealand | Yellow card (yellow card 34′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Sarpreet Singh | New Zealand | Yellow card (yellow card 20′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 

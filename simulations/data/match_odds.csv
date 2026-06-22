@@ -43,3 +43,7 @@ date,match_num,home,away,p_home,p_draw,p_away,source
 2026-06-22,42,France,Iraq,0.680,0.200,0.120,market_estimate
 2026-06-22,43,Norway,Senegal,0.520,0.260,0.220,market_estimate
 2026-06-22,44,Jordan,Algeria,0.360,0.280,0.360,market_estimate
+2026-06-23,45,Portugal,Uzbekistan,0.620,0.220,0.160,market_estimate
+2026-06-23,46,England,Ghana,0.600,0.230,0.170,market_estimate
+2026-06-23,47,Panama,Croatia,0.280,0.270,0.450,market_estimate
+2026-06-23,48,Colombia,DR Congo,0.540,0.250,0.210,market_estimate

@@ -100,3 +100,13 @@ date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
 2026-06-20,Sweden,Gabriel Gudmundsson,yellow_card,0.0,False,1,yellow card 53′,Wikipedia
 2026-06-20,Sweden,Lucas Bergvall,yellow_card,0.0,False,1,yellow card 80′,Wikipedia
 2026-06-21,Saudi Arabia,Mohamed Kanno,yellow_card,0.0,False,1,yellow card 60′,Wikipedia
+2026-06-21,Belgium,Nathan Ngoy,red_card,0.12,True,0,red card 66′,Wikipedia
+2026-06-21,Belgium,Romelu Lukaku,yellow_card,0.0,False,1,yellow card 3′,Wikipedia
+2026-06-21,Iran,Saeid Ezatolahi,yellow_card,0.0,False,1,yellow card 33′,Wikipedia
+2026-06-21,Uruguay,Mathías Olivera,yellow_card,0.0,False,1,yellow card 58′,Wikipedia
+2026-06-21,Uruguay,Rodrigo Bentancur,yellow_card,0.0,False,1,yellow card 20′,Wikipedia
+2026-06-21,Cape Verde,Diney,yellow_card,0.0,False,1,yellow card 90+3′,Wikipedia
+2026-06-21,Cape Verde,Sidny Lopes Cabral,yellow_card,0.0,False,1,yellow card 5′,Wikipedia
+2026-06-21,New Zealand,Sarpreet Singh,yellow_card,0.0,False,1,yellow card 20′,Wikipedia
+2026-06-21,New Zealand,Callum McCowatt,yellow_card,0.0,False,1,yellow card 34′,Wikipedia
+2026-06-21,Egypt,Mohanad Lasheen,yellow_card,0.0,False,1,yellow card 17′,Wikipedia
