@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-22 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-23 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -344,6 +344,36 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Mohanad Lasheen | Egypt | Yellow card (yellow card 17′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Callum McCowatt | New Zealand | Yellow card (yellow card 34′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Sarpreet Singh | New Zealand | Yellow card (yellow card 20′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-22 — Group(s) I, J
+
+### Argentina 2–0 Austria
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Facundo Medina | Argentina | Yellow card (yellow card 76′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Leandro Paredes | Argentina | Yellow card (yellow card 90+2′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Konrad Laimer | Austria | Yellow card (yellow card 76′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Stefan Posch | Austria | Yellow card (yellow card 41′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### France 3–0 Iraq
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Amir Al-Ammari | Iraq | Yellow card (yellow card 6′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Norway 3–2 Senegal
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+### Jordan 1–2 Algeria
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Ramiz Zerrouki | Algeria | Yellow card (yellow card 44′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Husam Abu Dahab | Jordan | Yellow card (yellow card 64′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 

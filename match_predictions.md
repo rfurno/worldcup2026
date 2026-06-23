@@ -2,7 +2,7 @@
 
 Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (Elo + squad value + xG + recent form + club chemistry + injuries + match events + per-match odds blend + in-tournament form, anchored to betting odds).
 
-**Updated**: June 22, 2026 (auto-generated)
+**Updated**: June 23, 2026 (auto-generated)
 
 *Source: `simulations/data/match_predictions_log.csv` · Regenerate: `python -m wc2026_monte_carlo predict`*
 
@@ -10,68 +10,99 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 
 ## Prediction Performance
 
-- **Matches evaluated**: 40
-- **Winner accuracy**: 50.0%
-- **3-way accuracy**: 50.0%
-- **Mean Brier (3-way)**: 0.5918
+- **Matches evaluated**: 44
+- **Winner accuracy**: 52.3%
+- **3-way accuracy**: 52.3%
+- **Mean Brier (3-way)**: 0.5760
 
 ### By confidence tier
 
 | Tier | N | Winner accuracy | 3-way accuracy |
 |------|---|-----------------|----------------|
 | High | 1 | 100.0% | 100.0% |
-| Moderate | 16 | 56.2% | 56.2% |
-| Low | 23 | 43.5% | 43.5% |
+| Moderate | 18 | 61.1% | 61.1% |
+| Low | 25 | 44.0% | 44.0% |
 
-## June 23, 2026 — Match Predictions
+## June 24, 2026 — Match Predictions
 
-### Match 45: Portugal vs Uzbekistan
+### Match 49: Bosnia and Herzegovina vs Qatar
 
-- Kickoff: 12:00 PM CDT | NRG Stadium
-- Group K
-- xG: 2.23 — 0.94
-- P(Portugal win): 63.0%
-- P(Draw): 23.2%
-- P(Uzbekistan win): 13.8%
-- Predicted winner: **Portugal** (Moderate confidence)
-- Most likely score: 2-0 (10.6%)
+- Kickoff: 12:00 PM PDT | Lumen Field
+- Group B
+- xG: 2.04 — 1.01
+- P(Bosnia and Herzegovina win): 52.5%
+- P(Draw): 26.8%
+- P(Qatar win): 20.7%
+- Predicted winner: **Bosnia and Herzegovina** (Low confidence)
+- Most likely score: 2-1 (10.3%)
 
-### Match 46: England vs Ghana
+### Match 50: Switzerland vs Canada
 
-- Kickoff: 4:00 PM EDT | Gillette Stadium
-- Group L
-- xG: 1.90 — 1.13
-- P(England win): 55.0%
-- P(Draw): 26.2%
-- P(Ghana win): 18.8%
-- Predicted winner: **England** (Low confidence)
-- Most likely score: 1-1 (10.8%)
+- Kickoff: 12:00 PM PDT | BC Place
+- Group B
+- xG: 1.45 — 1.33
+- P(Switzerland win): 37.2%
+- P(Draw): 30.1%
+- P(Canada win): 32.7%
+- Predicted winner: **Switzerland** (Low confidence)
+- Most likely score: 1-1 (12.4%)
 
-### Match 47: Panama vs Croatia
+### Match 51: Morocco vs Haiti
 
-- Kickoff: 7:00 PM EDT | BMO Field
-- Group L
-- xG: 1.50 — 1.35
-- P(Panama win): 34.3%
-- P(Draw): 29.8%
-- P(Croatia win): 35.9%
-- Predicted winner: **Croatia** (Low confidence)
-- Most likely score: 1-1 (12.3%)
+- Kickoff: 6:00 PM EDT | Mercedes-Benz Stadium
+- Group C
+- xG: 2.00 — 1.00
+- P(Morocco win): 60.0%
+- P(Draw): 25.0%
+- P(Haiti win): 14.9%
+- Predicted winner: **Morocco** (Moderate confidence)
+- Most likely score: 1-1 (10.4%)
 
-### Match 48: Colombia vs DR Congo
+### Match 52: Scotland vs Brazil
 
-- Kickoff: 8:00 PM PDT | Estadio Akron
-- Group K
-- xG: 1.75 — 1.14
-- P(Colombia win): 50.3%
-- P(Draw): 28.0%
-- P(DR Congo win): 21.7%
-- Predicted winner: **Colombia** (Low confidence)
-- Most likely score: 1-1 (11.5%)
+- Kickoff: 6:00 PM EDT | Hard Rock Stadium
+- Group C
+- xG: 1.33 — 1.59
+- P(Scotland win): 26.6%
+- P(Draw): 29.0%
+- P(Brazil win): 44.4%
+- Predicted winner: **Brazil** (Low confidence)
+- Most likely score: 1-1 (11.7%)
+
+### Match 53: Czechia vs Mexico
+
+- Kickoff: 8:00 PM CDT | Estadio Azteca
+- Group A
+- xG: 1.85 — 1.08
+- P(Czechia win): 45.1%
+- P(Draw): 28.3%
+- P(Mexico win): 26.6%
+- Predicted winner: **Czechia** (Low confidence)
+- Most likely score: 1-1 (11.1%)
+
+### Match 54: South Africa vs South Korea
+
+- Kickoff: 8:00 PM CDT | Estadio BBVA
+- Group A
+- xG: 1.82 — 1.12
+- P(South Africa win): 45.5%
+- P(Draw): 28.5%
+- P(South Korea win): 26.0%
+- Predicted winner: **South Africa** (Low confidence)
+- Most likely score: 1-1 (11.2%)
 
 ---
 
 ## Completed Results
+
+### June 22, 2026
+
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Argentina vs Austria | 2–0 | Argentina (64%) | 22.4% | ✓ |
+| France vs Iraq | 3–0 | France (66%) | 22.3% | ✓ |
+| Norway vs Senegal | 3–2 | Norway (50%) | 28.1% | ✓ |
+| Jordan vs Algeria | 1–2 | Jordan (50%) | 27.1% | ✗ |
 
 ### June 21, 2026
 

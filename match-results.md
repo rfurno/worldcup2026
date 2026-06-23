@@ -2,11 +2,20 @@
 
 Official results for completed group-stage matches.
 
-**Updated**: June 22, 2026 (auto-generated from `simulations/data/match_results.csv`)
+**Updated**: June 23, 2026 (auto-generated from `simulations/data/match_results.csv`)
 
 *Add results: `python -m wc2026_monte_carlo add-results ...`*
 
 ---
+
+## June 22, 2026 — Group(s) I, J
+
+| Match | Home | Away | Score | Group | Venue |
+|-------|------|------|-------|-------|-------|
+| 41 | Argentina | Austria | 2–0 | J | Dallas |
+| 42 | France | Iraq | 3–0 | I | Philadelphia |
+| 43 | Norway | Senegal | 3–2 | I | New York |
+| 44 | Jordan | Algeria | 1–2 | J | San Francisco |
 
 ## June 21, 2026 — Group(s) F, G, H
 
