@@ -122,7 +122,7 @@ def run_add_results(
     Record match result(s) and refresh the full post-match pipeline:
 
     1. Append to match_results.csv (skipped when *results* is empty)
-    2. Scrape Wikipedia cards + merge match_events_supplement.csv
+    2. Scrape Wikipedia + sports media injuries + merge match_events_supplement.csv
     3. Regenerate match_events_tracker.md
     4. Re-simulate tournament, snapshot, evaluate predictions
     5. Update match-results.md and match_predictions.md

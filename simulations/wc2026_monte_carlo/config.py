@@ -88,6 +88,11 @@ class SimulationConfig:
     rho_floor: float = -0.25
     match_odds_blend: float = 0.35
     tournament_form_blend: float = 0.30
+    use_dynamic_tournament_form_blend: bool = True
+    tournament_form_blend_base: float = 0.10
+    tournament_form_blend_per_match: float = 0.10
+    tournament_form_blend_cap: float = 0.50
+    use_wc_recent_form: bool = True
     intl_xg_blend: float = 0.40
     md1_draw_factor: float = 1.08
     ensemble_external_weight: float = 0.12

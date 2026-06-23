@@ -31,10 +31,19 @@ class SimulationSummary:
 
 
 class MonteCarloEngine:
-    def __init__(self, config: SimulationConfig, refresh_external: bool = False):
+    def __init__(
+        self,
+        config: SimulationConfig,
+        refresh_external: bool = False,
+        results_before_date: str | None = None,
+    ):
         self.config = config
         self.refresh_external = refresh_external
-        features = build_team_features(refresh_external=refresh_external, config=config)
+        features = build_team_features(
+            refresh_external=refresh_external,
+            config=config,
+            results_before_date=results_before_date,
+        )
         self.strength_model = TeamStrengthModel(
             config, features=features, refresh_external=False
         )

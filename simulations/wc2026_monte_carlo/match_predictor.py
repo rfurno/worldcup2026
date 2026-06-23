@@ -83,9 +83,21 @@ def _apply_md1_draw_bump(
 
 
 class MatchPredictor:
-    def __init__(self, config: SimulationConfig | None = None):
+    def __init__(
+        self,
+        config: SimulationConfig | None = None,
+        *,
+        results_before_date: str | None = None,
+        tournament_form_blend_override: float | None = None,
+        use_model_cache: bool = True,
+    ):
         self.config = config or SimulationConfig(verbose=False)
-        _, self.model, _ = build_calibrated_models(self.config)
+        _, self.model, _ = build_calibrated_models(
+            self.config,
+            results_before_date=results_before_date,
+            tournament_form_blend_override=tournament_form_blend_override,
+            use_cache=use_model_cache,
+        )
 
     def predict(
         self,

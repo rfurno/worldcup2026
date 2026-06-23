@@ -117,3 +117,13 @@ date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
 2026-06-22,Iraq,Amir Al-Ammari,yellow_card,0.0,False,1,yellow card 6′,Wikipedia
 2026-06-22,Jordan,Husam Abu Dahab,yellow_card,0.0,False,1,yellow card 64′,Wikipedia
 2026-06-22,Algeria,Ramiz Zerrouki,yellow_card,0.0,False,1,yellow card 44′,Wikipedia
+2026-06-21,Saudi Arabia,Salem Al-Dawsari,yellow_card,0.0,False,1,yellow card 30′,Wikipedia
+2026-06-21,Egypt,Hossam Abdelmaguid,injury_monitor,0.08,False,0,concussion substitution 90+9′,Wikipedia
+2026-06-22,Iraq,Aymen Hussein,injury_monitor,0.04,False,0,early starter substitution 26′,Wikipedia
+2026-06-22,Norway,Julian Ryerson,injury_monitor,0.04,False,0,early starter substitution 13′,Wikipedia
+2026-06-19,Australia,Harry Souttar,yellow_card,0.0,False,1,yellow card 89′,Wikipedia
+2026-06-19,United States,Christian Pulisic,injury_out,0.1,True,0,calf; Christian Pulisic (calf) out of USMNT's World Cup clash with Australia,ESPN
+2026-06-19,United States,Christian Pulisic,injury_monitor,0.05,False,0,Pulisic out injured for US against Australia,Reuters
+2026-06-19,Scotland,Andy Robertson,yellow_card,0.0,False,1,yellow card 65′,Wikipedia
+2026-06-19,Brazil,Raphinha,injury_monitor,0.05,False,0,Brazil keep faith with injured Raphinha after latest hamstring setback,Reuters
+2026-06-19,Brazil,Raphinha,injury_out,0.1,True,0,"Brazil provide injury update on Raphinha, will miss game vs Scotland at 2026 World Cup",bolavip.com

@@ -15,6 +15,7 @@ from .config import (
     BETTING_ODDS_PATH,
     DEFAULT_ELO_PATH,
     DEFAULT_HISTORICAL_MATCHES_PATH,
+    DEFAULT_MATCH_RESULTS_PATH,
     DEFAULT_SQUAD_VALUES_PATH,
     DEFAULT_XG_FORM_PATH,
     ELO_RATINGS_URL,
@@ -28,7 +29,8 @@ from .config import (
 from .club_chemistry import build_club_chemistry_features
 from .config import SimulationConfig
 from .fbref_xg_loader import build_intl_xg_features
-from .form_and_h2h import compute_recent_form
+from .form_and_h2h import canonical_team, compute_recent_form
+from .group_results import load_completed_group_matches
 from .match_availability import build_availability_features
 from .tournament_data import all_teams
 
@@ -251,9 +253,45 @@ def fetch_historical_matches(
         )
 
 
+def augment_history_with_wc_results(
+    historical: pd.DataFrame,
+    *,
+    results_path: Path = DEFAULT_MATCH_RESULTS_PATH,
+    before_date: str | None = None,
+) -> pd.DataFrame:
+    """Append completed World Cup 2026 group results for recent-form signals."""
+    wc = load_completed_group_matches(results_path)
+    if wc.empty:
+        return historical
+    if before_date is not None:
+        wc = wc[wc["date"].astype(str) < before_date]
+    if wc.empty:
+        return historical
+
+    wc_rows = pd.DataFrame(
+        {
+            "date": pd.to_datetime(wc["date"], errors="coerce"),
+            "home_team": wc["home"].map(canonical_team),
+            "away_team": wc["away"].map(canonical_team),
+            "home_score": wc["home_goals"].astype(int),
+            "away_score": wc["away_goals"].astype(int),
+        }
+    ).dropna(subset=["date"])
+
+    if historical.empty:
+        return wc_rows.sort_values("date")
+
+    return (
+        pd.concat([historical, wc_rows], ignore_index=True)
+        .sort_values("date")
+        .reset_index(drop=True)
+    )
+
+
 def build_team_features(
     refresh_external: bool = False,
     config: SimulationConfig | None = None,
+    results_before_date: str | None = None,
 ) -> pd.DataFrame:
     """
     Merge all data sources into a single team feature table.
@@ -261,6 +299,12 @@ def build_team_features(
     teams = pd.DataFrame({"team": all_teams()})
 
     historical = fetch_historical_matches()
+    cfg = config or SimulationConfig(verbose=False)
+    if cfg.use_wc_recent_form:
+        historical = augment_history_with_wc_results(
+            historical,
+            before_date=results_before_date,
+        )
     if refresh_external:
         elo = fetch_elo_ratings()
         if not historical.empty:
@@ -282,7 +326,6 @@ def build_team_features(
         player_tracker_text=_read_text(PLAYER_TRACKER_KEY_PATH),
     )
     availability = build_availability_features()
-    cfg = config or SimulationConfig(verbose=False)
     intl_xg = build_intl_xg_features() if cfg.use_intl_xg else None
 
     features = teams.merge(elo, on="team", how="left")

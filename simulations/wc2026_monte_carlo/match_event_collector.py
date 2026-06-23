@@ -17,6 +17,7 @@ from .config import (
     MATCH_EVENTS_TRACKER_PATH,
 )
 from .group_results import load_completed_group_matches
+from .injury_media_collector import collect_media_injuries_for_match, should_replace_event
 from .tournament_data import GROUPS
 
 WIKI_GROUP_URL = "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_{group}"
@@ -38,6 +39,17 @@ EVENT_COLUMNS = [
 
 _USER_AGENT = "wc2026-event-collector/1.0 (research; contact: local)"
 
+_INJURY_KEYWORDS = re.compile(
+    r"\b(?:injur(?:y|ies|ed)|hamstring|concussion|muscle strain|strained|"
+    r"knock|torn|rupture|cramp|sprain|fracture|dislocat\w*)\b",
+    re.IGNORECASE,
+)
+_INJURY_OUT_KEYWORDS = re.compile(
+    r"\b(?:ruled out|will miss|out for|unable to|sidelined|miss(?:es)?\s+the\s+next)\b",
+    re.IGNORECASE,
+)
+_EARLY_INJURY_SUB_MAX_MINUTE = 30
+
 
 def _fetch_wiki_group_page(group: str, timeout: int = 25) -> str:
     url = WIKI_GROUP_URL.format(group=group)
@@ -46,38 +58,185 @@ def _fetch_wiki_group_page(group: str, timeout: int = 25) -> str:
     return response.text
 
 
-def _parse_lineup_table(table_html: str) -> list[dict[str, str | bool]]:
-    cards: list[dict[str, str | bool]] = []
-    for match in re.finditer(
-        r'title="([^"]+)"[^>]*>[^<]+</a></td>\s*<td>(.*?)</td>',
-        table_html,
-        re.DOTALL,
-    ):
-        name = unescape(match.group(1))
-        if " (" in name:
-            name = name.split(" (")[0]
-        cell = match.group(2)
-        minute_match = re.search(r"(\d+(?:\+\d+)?)'", cell)
-        minute = minute_match.group(1) if minute_match else ""
-        if "Yellow_card" in cell:
-            cards.append(
+def _normalize_player_name(name: str) -> str:
+    name = unescape(name).strip()
+    if " (" in name:
+        name = name.split(" (")[0]
+    return name
+
+
+def _sub_off_minute(row_html: str) -> str:
+    match = re.search(
+        r"Sub_off\.svg.*?>(\d+(?:\+\d+)?)'</span>",
+        row_html,
+        re.DOTALL | re.IGNORECASE,
+    )
+    return match.group(1) if match else ""
+
+
+def _is_concussion_sub(row_html: str) -> bool:
+    return bool(
+        re.search(
+            r"concussion|>con\.<|title=\"Substituted off due to concussion\"",
+            row_html,
+            re.IGNORECASE,
+        )
+    )
+
+
+def _is_starter_row(row_html: str) -> bool:
+    return "<b>" in row_html
+
+
+def _parse_lineup_table(table_html: str) -> list[dict[str, str | bool | float]]:
+    """Parse cards and injury signals from a single team's lineup table."""
+    events: list[dict[str, str | bool | float]] = []
+    for row in re.finditer(r"<tr[^>]*>(.*?)</tr>", table_html, re.DOTALL):
+        row_html = row.group(1)
+        name_match = re.search(r'title="([^"]+)"[^>]*>[^<]+</a>', row_html)
+        if not name_match:
+            continue
+        name = _normalize_player_name(name_match.group(1))
+
+        for cell in re.finditer(
+            r"<td>(.*?)</td>",
+            row_html,
+            re.DOTALL,
+        ):
+            cell_html = cell.group(1)
+            minute_match = re.search(r"(\d+(?:\+\d+)?)'", cell_html)
+            minute = minute_match.group(1) if minute_match else ""
+            if "Yellow_card" in cell_html:
+                events.append(
+                    {
+                        "player": name,
+                        "event_type": "yellow_card",
+                        "minute": minute,
+                        "misses_next_match": False,
+                    }
+                )
+            elif "Red_card" in cell_html:
+                events.append(
+                    {
+                        "player": name,
+                        "event_type": "red_card",
+                        "minute": minute,
+                        "misses_next_match": True,
+                    }
+                )
+
+        if "Sub_off" in row_html and _is_concussion_sub(row_html):
+            minute = _sub_off_minute(row_html)
+            events.append(
                 {
                     "player": name,
-                    "event_type": "yellow_card",
+                    "event_type": "injury_monitor",
                     "minute": minute,
                     "misses_next_match": False,
+                    "severity": 0.08,
+                    "notes_hint": "concussion substitution",
                 }
             )
-        elif "Red_card" in cell:
-            cards.append(
+        elif (
+            "Sub_off" in row_html
+            and _is_starter_row(row_html)
+            and not _is_concussion_sub(row_html)
+            and "Yellow_card" not in row_html
+            and "Red_card" not in row_html
+        ):
+            minute = _sub_off_minute(row_html)
+            if minute:
+                base_minute = int(minute.split("+")[0])
+                if base_minute < _EARLY_INJURY_SUB_MAX_MINUTE:
+                    events.append(
+                        {
+                            "player": name,
+                            "event_type": "injury_monitor",
+                            "minute": minute,
+                            "misses_next_match": False,
+                            "severity": 0.04,
+                            "notes_hint": "early starter substitution",
+                        }
+                    )
+
+        if re.search(r"Injury_icon", row_html, re.IGNORECASE):
+            events.append(
                 {
                     "player": name,
-                    "event_type": "red_card",
-                    "minute": minute,
-                    "misses_next_match": True,
+                    "event_type": "injury_monitor",
+                    "minute": _sub_off_minute(row_html),
+                    "misses_next_match": False,
+                    "severity": 0.06,
+                    "notes_hint": "injury icon in lineup",
                 }
             )
-    return cards
+
+    return events
+
+
+def _strip_tables(html: str) -> str:
+    return re.sub(r"<table[^>]*>.*?</table>", " ", html, flags=re.DOTALL)
+
+
+def _player_team_map(team_tables: list[tuple[str, str]]) -> dict[str, str]:
+    mapping: dict[str, str] = {}
+    for team, table_html in team_tables:
+        for row in re.finditer(r"<tr[^>]*>(.*?)</tr>", table_html, re.DOTALL):
+            name_match = re.search(r'title="([^"]+)"', row.group(1))
+            if name_match:
+                mapping[_normalize_player_name(name_match.group(1))] = team
+    return mapping
+
+
+def parse_wiki_match_injuries_from_prose(
+    chunk: str,
+    player_teams: dict[str, str],
+) -> list[dict]:
+    """Extract injury mentions from match-report paragraphs on a group page."""
+    if not chunk or not player_teams:
+        return []
+
+    events: list[dict] = []
+    seen: set[tuple[str, str]] = set()
+    prose = _strip_tables(chunk)
+
+    for para in re.finditer(r"<p[^>]*>(.*?)</p>", prose, re.DOTALL):
+        paragraph = para.group(1)
+        if not _INJURY_KEYWORDS.search(paragraph):
+            continue
+
+        plain = unescape(re.sub(r"<[^>]+>", " ", paragraph))
+        plain = re.sub(r"\s+", " ", plain).strip()
+        event_type = (
+            "injury_out"
+            if _INJURY_OUT_KEYWORDS.search(plain)
+            else "injury_monitor"
+        )
+        severity = 0.10 if event_type == "injury_out" else 0.05
+
+        for link in re.finditer(r'title="([^"]+)"', paragraph):
+            player = _normalize_player_name(link.group(1))
+            team = player_teams.get(player)
+            if not team:
+                continue
+            key = (player, event_type)
+            if key in seen:
+                continue
+            seen.add(key)
+            events.append(
+                {
+                    "team": team,
+                    "player": player,
+                    "event_type": event_type,
+                    "severity": severity,
+                    "misses_next_match": event_type == "injury_out",
+                    "yellow_count": 0,
+                    "notes": plain[:160],
+                    "source": "Wikipedia",
+                }
+            )
+
+    return events
 
 
 def _score_variants(home_goals: int | None, away_goals: int | None) -> list[str]:
@@ -150,18 +309,11 @@ def _team_from_lineup_block(table_html: str) -> str | None:
     return name or None
 
 
-def parse_wiki_match_cards(
-    html: str,
+def _lineup_team_tables(
+    chunk: str,
     home: str,
     away: str,
-    home_goals: int | None = None,
-    away_goals: int | None = None,
-) -> list[dict]:
-    """Extract discipline events from a Wikipedia group-page match section."""
-    chunk = _extract_match_chunk(html, home, away, home_goals, away_goals)
-    if not chunk:
-        return []
-
+) -> list[tuple[str, str]]:
     tables = [
         match.group(1)
         for match in re.finditer(r"<table[^>]*>(.*?)</table>", chunk, re.DOTALL)
@@ -181,29 +333,81 @@ def parse_wiki_match_cards(
             team_tables.append((header_team, table_html))
 
     if len(team_tables) < 2:
-        # Validated match section: Wikipedia lists home lineup before away
         team_tables = [(home, lineup_tables[0]), (away, lineup_tables[1])]
+    return team_tables
+
+
+def _lineup_event_to_row(team: str, event: dict) -> dict:
+    etype = str(event["event_type"])
+    if etype in {"injury_monitor", "injury_out"}:
+        notes_hint = str(event.get("notes_hint", "injury signal"))
+        minute = str(event.get("minute", "") or "")
+        notes = notes_hint
+        if minute:
+            notes += f" {minute}′"
+        return {
+            "team": team,
+            "player": event["player"],
+            "event_type": etype,
+            "severity": float(event.get("severity", 0.05)),
+            "misses_next_match": bool(event.get("misses_next_match", False)),
+            "yellow_count": 0,
+            "notes": notes,
+            "source": "Wikipedia",
+        }
+
+    severity = 0.12 if etype == "red_card" else 0.0
+    notes = etype.replace("_", " ")
+    minute = str(event.get("minute", "") or "")
+    if minute:
+        notes += f" {minute}′"
+    return {
+        "team": team,
+        "player": event["player"],
+        "event_type": etype,
+        "severity": severity,
+        "misses_next_match": bool(event.get("misses_next_match", False)),
+        "yellow_count": 1 if etype == "yellow_card" else 0,
+        "notes": notes,
+        "source": "Wikipedia",
+    }
+
+
+def parse_wiki_match_events(
+    html: str,
+    home: str,
+    away: str,
+    home_goals: int | None = None,
+    away_goals: int | None = None,
+) -> list[dict]:
+    """Extract cards and injury signals from a Wikipedia group-page match section."""
+    chunk = _extract_match_chunk(html, home, away, home_goals, away_goals)
+    if not chunk:
+        return []
+
+    team_tables = _lineup_team_tables(chunk, home, away)
+    if not team_tables:
+        return []
 
     events: list[dict] = []
     for team, table_html in team_tables:
-        for card in _parse_lineup_table(table_html):
-            severity = 0.12 if card["event_type"] == "red_card" else 0.0
-            notes = f"{card['event_type'].replace('_', ' ')}"
-            if card["minute"]:
-                notes += f" {card['minute']}′"
-            events.append(
-                {
-                    "team": team,
-                    "player": card["player"],
-                    "event_type": card["event_type"],
-                    "severity": severity,
-                    "misses_next_match": card["misses_next_match"],
-                    "yellow_count": 1 if card["event_type"] == "yellow_card" else 0,
-                    "notes": notes,
-                    "source": "Wikipedia",
-                }
-            )
+        for lineup_event in _parse_lineup_table(table_html):
+            events.append(_lineup_event_to_row(team, lineup_event))
+
+    player_teams = _player_team_map(team_tables)
+    events.extend(parse_wiki_match_injuries_from_prose(chunk, player_teams))
     return events
+
+
+def parse_wiki_match_cards(
+    html: str,
+    home: str,
+    away: str,
+    home_goals: int | None = None,
+    away_goals: int | None = None,
+) -> list[dict]:
+    """Backward-compatible alias for card and injury event extraction."""
+    return parse_wiki_match_events(html, home, away, home_goals, away_goals)
 
 
 def load_supplement_events(path: Path | str = SUPPLEMENT_PATH) -> pd.DataFrame:
@@ -270,7 +474,12 @@ def collect_events_for_new_results(
     force_dates: list[str] | None = None,
 ) -> int:
     """
-    Scrape Wikipedia for cards and merge curated supplements for unscanned dates.
+    Scrape Wikipedia for cards, injuries, and merge curated supplements.
+
+    Injury capture uses Wikipedia lineup markers (concussion subs, early starter
+    exits, injury icons), match-report prose, and sports media outlets (ESPN,
+    AP, BBC, Guardian, FOX, CBS, Yahoo, USA Today, NYT Athletic, etc. via
+    Google News RSS plus direct Guardian/ESPN feeds).
 
     Returns number of new event rows appended.
     """
@@ -312,16 +521,32 @@ def collect_events_for_new_results(
 
         try:
             html = _fetch_wiki_group_page(group)
-            cards = parse_wiki_match_cards(
+            wiki_events = parse_wiki_match_events(
                 html,
                 home,
                 away,
                 home_goals=int(match["home_goals"]),
                 away_goals=int(match["away_goals"]),
             )
-            new_rows.extend(_cards_to_rows(match_date, cards))
+            new_rows.extend(_cards_to_rows(match_date, wiki_events))
         except Exception as exc:
-            print(f"  Warning: could not fetch Wikipedia cards for {home} vs {away}: {exc}")
+            print(
+                f"  Warning: could not fetch Wikipedia events for {home} vs {away}: {exc}"
+            )
+
+        try:
+            media_injuries = collect_media_injuries_for_match(home, away, match_date)
+            new_rows.extend(_cards_to_rows(match_date, media_injuries))
+            if media_injuries:
+                sources = sorted({e["source"] for e in media_injuries})
+                print(
+                    f"  Media injuries for {home} vs {away}: "
+                    f"{len(media_injuries)} from {', '.join(sources)}"
+                )
+        except Exception as exc:
+            print(
+                f"  Warning: could not fetch media injuries for {home} vs {away}: {exc}"
+            )
 
         if not supplements.empty:
             supp = supplements[
@@ -341,8 +566,7 @@ def collect_events_for_new_results(
             }
         )
 
-    deduped: list[dict] = []
-    seen = set(existing_keys)
+    batch_by_key: dict[tuple, dict] = {}
     for row in new_rows:
         for col in EVENT_COLUMNS:
             if col not in row or pd.isna(row.get(col)):
@@ -356,11 +580,20 @@ def collect_events_for_new_results(
                     row[col] = ""
                 elif col == "source":
                     row[col] = "curated"
+        normalized = {col: row[col] for col in EVENT_COLUMNS}
+        key = _event_key(normalized)
+        prev = batch_by_key.get(key)
+        if prev is None or should_replace_event(prev, normalized):
+            batch_by_key[key] = normalized
+
+    deduped: list[dict] = []
+    seen = set(existing_keys)
+    for row in batch_by_key.values():
         key = _event_key(row)
         if key in seen:
             continue
         seen.add(key)
-        deduped.append({col: row[col] for col in EVENT_COLUMNS})
+        deduped.append(row)
 
     if not deduped:
         return 0
@@ -458,7 +691,9 @@ def regenerate_events_tracker(
             "",
             "Structured data: `simulations/data/match_events.csv`",
             "Supplements (form/injuries): `simulations/data/match_events_supplement.csv`",
-            "Collected automatically by `python -m wc2026_monte_carlo add-results`.",
+            "Collected automatically by `python -m wc2026_monte_carlo add-results` "
+            "(Wikipedia cards/injuries + ESPN, AP, BBC, Guardian, FOX, CBS, Yahoo, "
+            "USA Today, NYT Athletic, and other outlets via media search).",
             "Manual re-scrape: `python -m wc2026_monte_carlo.match_event_collector --force-date YYYY-MM-DD`",
             "Parser: `match_availability` → merged into team features for `predict`.",
         ]
@@ -494,6 +729,8 @@ def _format_impact(row: pd.Series) -> str:
         return "On **1 yellow** — second triggers ban"
     if str(row["event_type"]) == "injury_monitor":
         return "Monitor fitness"
+    if str(row["event_type"]) == "injury_out":
+        return "**Likely out** next match"
     if str(row["event_type"]) == "form_boost":
         return "**Form boost**"
     if str(row["event_type"]) == "form_concern":

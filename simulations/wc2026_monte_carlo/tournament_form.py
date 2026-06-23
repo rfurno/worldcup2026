@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from .config import DEFAULT_MATCH_RESULTS_PATH
+from .config import DEFAULT_MATCH_RESULTS_PATH, SimulationConfig
 from .form_and_h2h import canonical_team
 from .group_results import load_completed_group_matches
 from .tournament_data import all_teams
@@ -78,6 +78,46 @@ def estimate_tournament_strengths(
     if std and not np.isnan(std) and std > 0:
         strengths = strengths / std
     return strengths
+
+
+def avg_matches_played_per_team(
+    results: pd.DataFrame | None = None,
+    results_path: Path | str = DEFAULT_MATCH_RESULTS_PATH,
+) -> float:
+    """Mean number of completed group matches per team in *results*."""
+    df = results if results is not None else load_completed_group_matches(results_path)
+    if df.empty:
+        return 0.0
+    counts: dict[str, int] = {}
+    for _, row in df.iterrows():
+        home, away = str(row["home"]), str(row["away"])
+        counts[home] = counts.get(home, 0) + 1
+        counts[away] = counts.get(away, 0) + 1
+    if not counts:
+        return 0.0
+    return float(sum(counts.values()) / len(counts))
+
+
+def resolve_tournament_form_blend(
+    config: SimulationConfig,
+    results: pd.DataFrame | None = None,
+    *,
+    override: float | None = None,
+    results_path: Path | str = DEFAULT_MATCH_RESULTS_PATH,
+) -> float:
+    """
+    Tournament-form weight: ramps with matches played when dynamic mode is on.
+
+    w = min(cap, base + per_match * avg_games_played)
+    """
+    if override is not None:
+        return float(np.clip(override, 0.0, 1.0))
+    if not config.use_dynamic_tournament_form_blend:
+        return float(np.clip(config.tournament_form_blend, 0.0, 1.0))
+
+    avg_played = avg_matches_played_per_team(results=results, results_path=results_path)
+    weight = config.tournament_form_blend_base + config.tournament_form_blend_per_match * avg_played
+    return float(np.clip(weight, 0.0, config.tournament_form_blend_cap))
 
 
 def blend_tournament_form(

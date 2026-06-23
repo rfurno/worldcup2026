@@ -254,8 +254,11 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
 | Alessandro Circati | Australia | Yellow card (yellow card 32′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Harry Souttar | Australia | Yellow card (yellow card 89′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Jacob Italiano | Australia | Yellow card (yellow card 89′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Jordan Bos | Australia | Yellow card (yellow card 16′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Christian Pulisic | United States | Injury monitor — Pulisic out injured for US against Australia | Monitor fitness | Reuters |
+| Christian Pulisic | United States | Injury out — calf; Christian Pulisic (calf) out of USMNT's World Cup clash with Australia | **Suspended** next match | ESPN |
 | Antonee Robinson | United States | Yellow card (yellow card 56′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Chris Richards | United States | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Folarin Balogun | United States | Yellow card (yellow card 89′) | On **1 yellow** — second triggers ban | Wikipedia |
@@ -265,11 +268,14 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
 | Issa Diop | Morocco | Yellow card (yellow card 23′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Andy Robertson | Scotland | Yellow card (yellow card 65′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ### Brazil 3–0 Haiti
 
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
+| Raphinha | Brazil | Injury monitor — Brazil keep faith with injured Raphinha after latest hamstring setback | Monitor fitness | Reuters |
+| Raphinha | Brazil | Injury out — Brazil provide injury update on Raphinha, will miss game vs Scotland at 2026 World Cup | **Suspended** next match | bolavip.com |
 | Douglas Santos | Brazil | Yellow card (yellow card 65′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Carlens Arcus | Haiti | Yellow card (yellow card 4′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Danley Jean Jacques | Haiti | Yellow card (yellow card 72′) | On **1 yellow** — second triggers ban | Wikipedia |
@@ -319,6 +325,7 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
 | Mohamed Kanno | Saudi Arabia | Yellow card (yellow card 60′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Salem Al-Dawsari | Saudi Arabia | Yellow card (yellow card 30′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ### Belgium 0–0 Iran
 
@@ -341,6 +348,7 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
+| Hossam Abdelmaguid | Egypt | Injury monitor — concussion substitution 90+9′ | Monitor fitness | Wikipedia |
 | Mohanad Lasheen | Egypt | Yellow card (yellow card 17′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Callum McCowatt | New Zealand | Yellow card (yellow card 34′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Sarpreet Singh | New Zealand | Yellow card (yellow card 20′) | On **1 yellow** — second triggers ban | Wikipedia |
@@ -360,13 +368,14 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
+| Aymen Hussein | Iraq | Injury monitor — early starter substitution 26′ | Monitor fitness | Wikipedia |
 | Amir Al-Ammari | Iraq | Yellow card (yellow card 6′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ### Norway 3–2 Senegal
 
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
-| — | — | _No events logged_ | — | — |
+| Julian Ryerson | Norway | Injury monitor — early starter substitution 13′ | Monitor fitness | Wikipedia |
 
 ### Jordan 1–2 Algeria
 
@@ -381,6 +390,6 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 
 Structured data: `simulations/data/match_events.csv`
 Supplements (form/injuries): `simulations/data/match_events_supplement.csv`
-Collected automatically by `python -m wc2026_monte_carlo add-results`.
+Collected automatically by `python -m wc2026_monte_carlo add-results` (Wikipedia cards/injuries + ESPN, AP, BBC, Guardian, FOX, CBS, Yahoo, USA Today, NYT Athletic, and other outlets via media search).
 Manual re-scrape: `python -m wc2026_monte_carlo.match_event_collector --force-date YYYY-MM-DD`
 Parser: `match_availability` → merged into team features for `predict`.
