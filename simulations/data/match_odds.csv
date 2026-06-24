@@ -51,5 +51,5 @@ date,match_num,home,away,p_home,p_draw,p_away,source
 2026-06-24,50,Switzerland,Canada,0.380,0.270,0.350,market_estimate
 2026-06-24,51,Morocco,Haiti,0.650,0.220,0.130,market_estimate
 2026-06-24,52,Scotland,Brazil,0.220,0.260,0.520,market_estimate
-2026-06-24,53,Czechia,Mexico,0.320,0.280,0.400,market_estimate
+2026-06-24,53,Mexico,Czechia,0.400,0.280,0.320,market_estimate
 2026-06-24,54,South Africa,South Korea,0.360,0.280,0.360,market_estimate

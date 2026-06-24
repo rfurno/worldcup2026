@@ -20,7 +20,7 @@ from .tournament_simulator import rank_group
 
 # Neutral-site fixtures within each group: (home_idx, away_idx) tuples
 GROUP_NEUTRAL_FIXTURES: dict[str, set[tuple[int, int]]] = {
-    "A": {(2, 3), (3, 1), (3, 0), (1, 2)},
+    "A": {(2, 3), (3, 1), (1, 2)},
 }
 
 

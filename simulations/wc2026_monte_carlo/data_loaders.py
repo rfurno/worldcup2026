@@ -325,7 +325,15 @@ def build_team_features(
     chemistry = build_club_chemistry_features(
         player_tracker_text=_read_text(PLAYER_TRACKER_KEY_PATH),
     )
-    availability = build_availability_features()
+    results_for_avail = load_completed_group_matches()
+    if results_before_date:
+        results_for_avail = results_for_avail[
+            results_for_avail["date"].astype(str) <= results_before_date
+        ]
+    availability = build_availability_features(
+        as_of_date=results_before_date,
+        results=results_for_avail,
+    )
     intl_xg = build_intl_xg_features() if cfg.use_intl_xg else None
 
     features = teams.merge(elo, on="team", how="left")

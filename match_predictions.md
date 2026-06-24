@@ -29,67 +29,67 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 
 - Kickoff: 12:00 PM PDT | Lumen Field
 - Group B
-- xG: 1.88 — 1.08
-- P(Bosnia and Herzegovina win): 49.1%
-- P(Draw): 28.1%
-- P(Qatar win): 22.9%
+- xG: 1.80 — 1.13
+- P(Bosnia and Herzegovina win): 47.1%
+- P(Draw): 28.7%
+- P(Qatar win): 24.2%
 - Predicted winner: **Bosnia and Herzegovina** (Low confidence)
-- Most likely score: 1-1 (11.1%)
+- Most likely score: 1-1 (11.2%)
 
 ### Match 50: Switzerland vs Canada
 
 - Kickoff: 12:00 PM PDT | BC Place
 - Group B
-- xG: 1.53 — 1.25
-- P(Switzerland win): 39.5%
-- P(Draw): 29.9%
-- P(Canada win): 30.6%
+- xG: 1.47 — 1.30
+- P(Switzerland win): 37.9%
+- P(Draw): 30.1%
+- P(Canada win): 32.0%
 - Predicted winner: **Switzerland** (Low confidence)
-- Most likely score: 1-1 (12.4%)
+- Most likely score: 1-1 (12.5%)
 
 ### Match 51: Morocco vs Haiti
 
 - Kickoff: 6:00 PM EDT | Mercedes-Benz Stadium
 - Group C
-- xG: 2.03 — 0.99
-- P(Morocco win): 60.6%
-- P(Draw): 24.8%
-- P(Haiti win): 14.6%
+- xG: 2.01 — 1.00
+- P(Morocco win): 60.2%
+- P(Draw): 24.9%
+- P(Haiti win): 14.9%
 - Predicted winner: **Morocco** (Moderate confidence)
-- Most likely score: 2-0 (10.4%)
+- Most likely score: 2-1 (10.4%)
 
 ### Match 52: Scotland vs Brazil
 
 - Kickoff: 6:00 PM EDT | Hard Rock Stadium
 - Group C
-- xG: 1.29 — 1.63
-- P(Scotland win): 25.5%
-- P(Draw): 28.9%
-- P(Brazil win): 45.6%
+- xG: 1.27 — 1.65
+- P(Scotland win): 25.1%
+- P(Draw): 28.8%
+- P(Brazil win): 46.1%
 - Predicted winner: **Brazil** (Low confidence)
-- Most likely score: 1-1 (11.6%)
+- Most likely score: 1-1 (11.5%)
 
-### Match 53: Czechia vs Mexico
+### Match 53: Mexico vs Czechia
 
 - Kickoff: 8:00 PM CDT | Estadio Azteca
 - Group A
-- xG: 1.84 — 1.09
-- P(Czechia win): 44.8%
-- P(Draw): 28.4%
-- P(Mexico win): 26.8%
-- Predicted winner: **Czechia** (Low confidence)
-- Most likely score: 1-1 (11.2%)
+- xG: 2.40 — 1.12
+- P(Mexico win): 55.0%
+- P(Draw): 24.5%
+- P(Czechia win): 20.5%
+- Predicted winner: **Mexico** (Low confidence)
+- Most likely score: 2-1 (9.8%)
 
 ### Match 54: South Africa vs South Korea
 
 - Kickoff: 8:00 PM CDT | Estadio BBVA
 - Group A
-- xG: 1.70 — 1.20
-- P(South Africa win): 42.4%
-- P(Draw): 29.3%
-- P(South Korea win): 28.3%
+- xG: 1.62 — 1.26
+- P(South Africa win): 40.2%
+- P(Draw): 29.7%
+- P(South Korea win): 30.0%
 - Predicted winner: **South Africa** (Low confidence)
-- Most likely score: 1-1 (11.7%)
+- Most likely score: 1-1 (11.9%)
 
 ---
 

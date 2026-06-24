@@ -121,9 +121,15 @@ class TeamStrengthModel:
             home_shift += cfg.host_bonus
 
         venue_name = venue or TEAM_HOME_VENUES.get(home)
+        if away in HOST_NATIONS and venue_name == TEAM_HOME_VENUES.get(away):
+            # Host nation listed as away but playing in their home market
+            away_shift += cfg.host_bonus
+
         if venue_name and venue_name in VENUE_COORDINATES:
             vlat, vlon = VENUE_COORDINATES[venue_name]
             for team, sign in ((away, -1.0),):
+                if team in HOST_NATIONS and venue_name == TEAM_HOME_VENUES.get(team):
+                    continue
                 origin = TEAM_HOME_VENUES.get(team)
                 if origin and origin in VENUE_COORDINATES:
                     olat, olon = VENUE_COORDINATES[origin]

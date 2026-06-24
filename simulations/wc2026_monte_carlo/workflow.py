@@ -68,7 +68,7 @@ def run_predict(
         raise ValueError(f"No fixtures scheduled for {target.isoformat()}")
 
     cfg = config or SimulationConfig(verbose=False)
-    predictor = MatchPredictor(cfg)
+    predictor = MatchPredictor(cfg, results_before_date=target.isoformat())
 
     print(f"# Match Predictions — {target.strftime('%B %d, %Y')}\n")
     predictions = []

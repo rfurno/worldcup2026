@@ -516,14 +516,14 @@ FIXTURES_BY_DATE: dict[str, list[dict]] = {
             "neutral": True,
         },
         {
-            "home": "Czechia",
-            "away": "Mexico",
+            "home": "Mexico",
+            "away": "Czechia",
             "venue": "Mexico City",
             "kickoff": "8:00 PM CDT",
             "stadium": "Estadio Azteca",
             "group": "A",
             "match": 53,
-            "neutral": True,
+            "neutral": False,
         },
         {
             "home": "South Africa",

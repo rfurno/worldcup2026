@@ -92,6 +92,7 @@ class MatchPredictor:
         use_model_cache: bool = True,
     ):
         self.config = config or SimulationConfig(verbose=False)
+        self.results_before_date = results_before_date
         _, self.model, _ = build_calibrated_models(
             self.config,
             results_before_date=results_before_date,

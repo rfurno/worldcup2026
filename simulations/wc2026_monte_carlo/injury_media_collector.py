@@ -45,6 +45,12 @@ _RECOVERY_KEYWORDS = re.compile(
     r"back in training|fit again|shrugs off|available for|starts? after)\b",
     re.IGNORECASE,
 )
+_RECOVERY_CLEAR_KEYWORDS = re.compile(
+    r"\b(?:returns? to (?:training|practice|action)|back in training|"
+    r"available|fit again|cleared to play|passed fitness|recovered|"
+    r"back in (?:the )?lineup|named in (?:squad|lineup)|starts? (?:against|vs))\b",
+    re.IGNORECASE,
+)
 _PREMATCH_KEYWORDS = re.compile(
     r"\b(?:lineups?|team news|starts? for|starting lineup|confirmed lineups?|"
     r"prediction|preview|how to watch|kick[- ]?off time)\b",
@@ -298,6 +304,48 @@ def _google_news_queries(home: str, away: str, match_date: str) -> list[str]:
     ]
 
 
+def _google_recovery_queries(home: str, away: str, match_date: str) -> list[str]:
+    start, end = _date_window(match_date, days_after=5)
+    return [
+        f"{home} World Cup available returns training after:{start} before:{end}",
+        f"{away} World Cup available returns training after:{start} before:{end}",
+        f"{home} {away} World Cup cleared to play after:{start} before:{end}",
+    ]
+
+
+def parse_recovery_headline(
+    headline: str,
+    players: dict[str, str],
+    *,
+    home: str = "",
+    away: str = "",
+    default_source: str = "Google News",
+) -> dict | None:
+    title, source = _split_headline_source(headline)
+    source = source or default_source
+    if home and away and _mentions_wrong_opponent(title, home, away):
+        return None
+    if not _RECOVERY_CLEAR_KEYWORDS.search(title):
+        return None
+    if _is_injury_out(title):
+        return None
+
+    player = _match_player(title, players)
+    if not player:
+        return None
+
+    return {
+        "team": players[player],
+        "player": player,
+        "event_type": "injury_clear",
+        "severity": 0.0,
+        "misses_next_match": False,
+        "yellow_count": 0,
+        "notes": title[:160],
+        "source": source,
+    }
+
+
 def _fetch_google_news(query: str) -> list[dict]:
     url = GOOGLE_NEWS_RSS.format(query=quote_plus(query))
     return _parse_rss_items(_fetch_text(url))
@@ -430,6 +478,67 @@ def collect_media_injuries_for_match(
         add_headline(headline, default_source="ESPN")
 
     return list(candidates.values())
+
+
+def collect_media_recovery_for_match(
+    home: str,
+    away: str,
+    match_date: str,
+    *,
+    squad_path: Path | str = DEFAULT_SQUAD_CLUBS_PATH,
+    sleep_s: float = 0.25,
+) -> list[dict]:
+    """Collect injury clearance signals from sports media headlines."""
+    players = load_squad_players(home, away, squad_path)
+    if not players:
+        return []
+
+    clears: dict[tuple, dict] = {}
+    seen_headlines: set[str] = set()
+
+    def add_headline(headline: str, default_source: str = "Google News") -> None:
+        norm = headline.strip().lower()
+        if not norm or norm in seen_headlines:
+            return
+        seen_headlines.add(norm)
+        event = parse_recovery_headline(
+            headline,
+            players,
+            home=home,
+            away=away,
+            default_source=default_source,
+        )
+        if not event:
+            return
+        key = (event["team"], event["player"])
+        existing = clears.get(key)
+        if existing is None or _source_priority(event["source"]) > _source_priority(
+            existing["source"]
+        ):
+            clears[key] = event
+
+    for query in _google_recovery_queries(home, away, match_date):
+        try:
+            for item in _fetch_google_news(query):
+                add_headline(item["headline"])
+        except Exception:
+            pass
+        time.sleep(sleep_s)
+
+    for item in _fetch_guardian_items():
+        if not _item_matches_fixture(item, home, away, match_date, window_days=5):
+            continue
+        add_headline(item["headline"], default_source="The Guardian")
+
+    for item in _fetch_espn_items():
+        if not _item_matches_fixture(item, home, away, match_date, window_days=5):
+            continue
+        headline = item["headline"]
+        if item.get("source"):
+            headline = f"{headline} - {item['source']}"
+        add_headline(headline, default_source="ESPN")
+
+    return list(clears.values())
 
 
 def should_replace_event(existing: dict, candidate: dict) -> bool:

@@ -17,7 +17,11 @@ from .config import (
     MATCH_EVENTS_TRACKER_PATH,
 )
 from .group_results import load_completed_group_matches
-from .injury_media_collector import collect_media_injuries_for_match, should_replace_event
+from .injury_media_collector import (
+    collect_media_injuries_for_match,
+    collect_media_recovery_for_match,
+    should_replace_event,
+)
 from .tournament_data import GROUPS
 
 WIKI_GROUP_URL = "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_{group}"
@@ -548,6 +552,17 @@ def collect_events_for_new_results(
                 f"  Warning: could not fetch media injuries for {home} vs {away}: {exc}"
             )
 
+        try:
+            recoveries = collect_media_recovery_for_match(home, away, match_date)
+            new_rows.extend(_cards_to_rows(match_date, recoveries))
+            if recoveries:
+                players = ", ".join(sorted({e["player"] for e in recoveries}))
+                print(f"  Media recovery for {home} vs {away}: {players}")
+        except Exception as exc:
+            print(
+                f"  Warning: could not fetch media recovery for {home} vs {away}: {exc}"
+            )
+
         if not supplements.empty:
             supp = supplements[
                 (supplements["date"].astype(str) == match_date)
@@ -711,6 +726,7 @@ def _format_event_label(row: pd.Series) -> str:
         "red_card": "Red card",
         "injury_monitor": "Injury monitor",
         "injury_out": "Injury out",
+        "injury_clear": "Injury cleared",
         "form_boost": "Form boost",
         "form_concern": "Form concern",
         "team_discipline": "Team discipline",
@@ -731,6 +747,8 @@ def _format_impact(row: pd.Series) -> str:
         return "Monitor fitness"
     if str(row["event_type"]) == "injury_out":
         return "**Likely out** next match"
+    if str(row["event_type"]) == "injury_clear":
+        return "Cleared / available"
     if str(row["event_type"]) == "form_boost":
         return "**Form boost**"
     if str(row["event_type"]) == "form_concern":
