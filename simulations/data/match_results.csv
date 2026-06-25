@@ -43,3 +43,11 @@ date,match_num,group,home,away,home_goals,away_goals,venue,stadium,neutral
 2026-06-22,42,I,France,Iraq,3,0,Philadelphia,Lincoln Financial Field,True
 2026-06-22,43,I,Norway,Senegal,3,2,New York,MetLife Stadium,True
 2026-06-22,44,J,Jordan,Algeria,1,2,San Francisco,Levi's Stadium,True
+2026-06-23,45,K,Portugal,Uzbekistan,5,0,Houston,NRG Stadium,True
+2026-06-23,46,L,England,Ghana,0,0,Boston,Gillette Stadium,True
+2026-06-23,47,L,Panama,Croatia,0,1,Toronto,BMO Field,True
+2026-06-23,48,K,Colombia,DR Congo,1,0,Guadalajara,Estadio Akron,True
+2026-06-24,49,B,Bosnia and Herzegovina,Qatar,3,1,Seattle,Lumen Field,True
+2026-06-24,50,B,Switzerland,Canada,2,1,Vancouver,BC Place,True
+2026-06-24,51,C,Morocco,Haiti,4,2,Atlanta,Mercedes-Benz Stadium,True
+2026-06-24,52,C,Scotland,Brazil,0,3,Miami,Hard Rock Stadium,True

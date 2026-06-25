@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-23 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-24 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -383,6 +383,77 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 |--------|------|-------|-------------------|--------|
 | Ramiz Zerrouki | Algeria | Yellow card (yellow card 44′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Husam Abu Dahab | Jordan | Yellow card (yellow card 64′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-23 — Group(s) K, L
+
+### Portugal 5–0 Uzbekistan
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Cristiano Ronaldo | Portugal | Injury cleared — Portugal's Coach Won't Say If Cristiano Ronaldo Will Start Against Uzbekistan | Cleared / available | FOX Sports |
+| Cristiano Ronaldo | Portugal | Injury monitor — Cristiano Ronaldo injured: Will Portugal star be fit for FIFA World Cup? | Monitor fitness | MSN |
+| Renato Veiga | Portugal | Yellow card (yellow card 68′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Odiljon Hamrobekov | Uzbekistan | Yellow card (yellow card 14′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### England 0–0 Ghana
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Bukayo Saka | England | Injury monitor — Bukayo Saka Injury Update: Is Saka Playing Today vs. Ghana in World Cup? | Monitor fitness | PrizePicks |
+| Declan Rice | England | Injury monitor — Declan Rice sparks England injury fears after limping with bandaged leg after Ghana draw | Monitor fitness | Yahoo Sports |
+| Harry Kane | England | Injury monitor — Will Harry Kane play for England tonight? Latest World Cup injury news | Monitor fitness | MSN |
+| Declan Rice | England | Injury out — Declan Rice sparks England injury fears after limping out of Boston | **Suspended** next match | FourFourTwo |
+| Declan Rice | England | Yellow card (yellow card 41′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Iñaki Williams | Ghana | Yellow card (yellow card 60′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Panama 0–1 Croatia
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Luka Modric | Croatia | Injury out — Croatia knock Panama out of World Cup on Modrics 200th appearance | **Suspended** next match | MyJoyOnline |
+| Petar Sučić | Croatia | Yellow card (yellow card 90+2′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Yoel Bárcenas | Panama | Yellow card (yellow card 61′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Colombia 1–0 DR Congo
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Jefferson Lerma | Colombia | Yellow card (yellow card 90+4′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Jhon Lucumí | Colombia | Yellow card (yellow card 56′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Charles Pickel | DR Congo | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-24 — Group(s) B, C
+
+### Bosnia and Herzegovina 3–1 Qatar
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Edin Dzeko | Bosnia and Herzegovina | Injury monitor — 2026 Fifa World Cup: Bosnia and Herzegovina vs Qatar - Edin Dzeko throws bottle after being substituted | Monitor fitness | BBC |
+| Ermin Mahmić | Bosnia and Herzegovina | Yellow card (yellow card 82′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Ahmed Fathy | Qatar | Yellow card (yellow card 78′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Switzerland 2–1 Canada
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Alphonso Davies | Canada | Injury monitor — Alphonso Davies injury update: Will he play for Canada vs Switzerland at the World Cup? | Monitor fitness | Diario AS |
+| Cyle Larin | Canada | Yellow card (yellow card 32′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Liam Millar | Canada | Yellow card (yellow card 87′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Granit Xhaka | Switzerland | Yellow card (yellow card 32′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Morocco 4–2 Haiti
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+### Scotland 0–3 Brazil
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Raphinha | Brazil | Injury monitor — Rayan replaces injured Raphinha for Brazil against Scotland | Monitor fitness | Reuters |
+| Vinicius Junior | Brazil | Injury monitor — The real ace of the Samba Corps, Neymar Junior, returns from injury.Neymar is expected to return to | Monitor fitness | 매일경제 |
+| Raphinha | Brazil | Injury out — FIFA World Cup 2026: Raphinha shares emotional message after injury rules him out of Scotland clash | **Suspended** next match | Mid-day |
 
 ---
 

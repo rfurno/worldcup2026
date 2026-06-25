@@ -2,11 +2,29 @@
 
 Official results for completed group-stage matches.
 
-**Updated**: June 23, 2026 (auto-generated from `simulations/data/match_results.csv`)
+**Updated**: June 24, 2026 (auto-generated from `simulations/data/match_results.csv`)
 
 *Add results: `python -m wc2026_monte_carlo add-results ...`*
 
 ---
+
+## June 24, 2026 — Group(s) B, C
+
+| Match | Home | Away | Score | Group | Venue |
+|-------|------|------|-------|-------|-------|
+| 49 | Bosnia and Herzegovina | Qatar | 3–1 | B | Seattle |
+| 50 | Switzerland | Canada | 2–1 | B | Vancouver |
+| 51 | Morocco | Haiti | 4–2 | C | Atlanta |
+| 52 | Scotland | Brazil | 0–3 | C | Miami |
+
+## June 23, 2026 — Group(s) K, L
+
+| Match | Home | Away | Score | Group | Venue |
+|-------|------|------|-------|-------|-------|
+| 45 | Portugal | Uzbekistan | 5–0 | K | Houston |
+| 46 | England | Ghana | 0–0 | L | Boston |
+| 47 | Panama | Croatia | 0–1 | L | Toronto |
+| 48 | Colombia | DR Congo | 1–0 | K | Guadalajara |
 
 ## June 22, 2026 — Group(s) I, J
 
