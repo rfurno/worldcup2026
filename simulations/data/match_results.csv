@@ -51,3 +51,5 @@ date,match_num,group,home,away,home_goals,away_goals,venue,stadium,neutral
 2026-06-24,50,B,Switzerland,Canada,2,1,Vancouver,BC Place,True
 2026-06-24,51,C,Morocco,Haiti,4,2,Atlanta,Mercedes-Benz Stadium,True
 2026-06-24,52,C,Scotland,Brazil,0,3,Miami,Hard Rock Stadium,True
+2026-06-24,53,A,Mexico,Czechia,3,0,Mexico City,Estadio Azteca,False
+2026-06-24,54,A,South Africa,South Korea,1,0,Monterrey,Estadio BBVA,True

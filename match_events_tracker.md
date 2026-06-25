@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-24 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-25 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -422,7 +422,7 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Jhon Lucumí | Colombia | Yellow card (yellow card 56′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Charles Pickel | DR Congo | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
 
-## 2026-06-24 — Group(s) B, C
+## 2026-06-24 — Group(s) A, B, C
 
 ### Bosnia and Herzegovina 3–1 Qatar
 
@@ -454,6 +454,22 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Raphinha | Brazil | Injury monitor — Rayan replaces injured Raphinha for Brazil against Scotland | Monitor fitness | Reuters |
 | Vinicius Junior | Brazil | Injury monitor — The real ace of the Samba Corps, Neymar Junior, returns from injury.Neymar is expected to return to | Monitor fitness | 매일경제 |
 | Raphinha | Brazil | Injury out — FIFA World Cup 2026: Raphinha shares emotional message after injury rules him out of Scotland clash | **Suspended** next match | Mid-day |
+
+### Mexico 3–0 Czechia
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Tomas Soucek | Czechia | Injury monitor — West Ham midfielder Tomas Soucek suffers injury during World Cup loss | Monitor fitness | BBC |
+
+### South Africa 1–0 South Korea
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Thapelo Maseko | South Africa | Injury monitor — In the 63rd minute, Thapelo Maseko received the ball on the right before shooting left-footed low into the right corner of the net from twelve yards out. South  | Monitor fitness | Wikipedia |
+| Aubrey Modiba | South Africa | Yellow card (yellow card 72′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Kim Min-jae | South Korea | Injury monitor — South Korea's Kim Min-jae Withdrawn with Calf Injury | Monitor fitness | 조선일보 |
+| Son Heung-min | South Korea | Injury monitor — South Africa 0-0 South Korea: Son Heung-min subbed in for 2nd half | Monitor fitness | VnExpress International |
+| Cho Gue-sung | South Korea | Yellow card (yellow card 78′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 

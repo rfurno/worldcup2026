@@ -153,3 +153,9 @@ date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
 2026-06-24,Brazil,Raphinha,injury_monitor,0.05,False,0,Rayan replaces injured Raphinha for Brazil against Scotland,Reuters
 2026-06-24,Brazil,Raphinha,injury_out,0.1,True,0,FIFA World Cup 2026: Raphinha shares emotional message after injury rules him out of Scotland clash,Mid-day
 2026-06-24,Brazil,Vinicius Junior,injury_monitor,0.05,False,0,"The real ace of the Samba Corps, Neymar Junior, returns from injury.Neymar is expected to return to",매일경제
+2026-06-24,Czechia,Tomas Soucek,injury_monitor,0.05,False,0,West Ham midfielder Tomas Soucek suffers injury during World Cup loss,BBC
+2026-06-24,South Africa,Aubrey Modiba,yellow_card,0.0,False,1,yellow card 72′,Wikipedia
+2026-06-24,South Korea,Cho Gue-sung,yellow_card,0.0,False,1,yellow card 78′,Wikipedia
+2026-06-24,South Africa,Thapelo Maseko,injury_monitor,0.05,False,0,"In the 63rd minute, Thapelo Maseko received the ball on the right before shooting left-footed low into the right corner of the net from twelve yards out. South ",Wikipedia
+2026-06-24,South Korea,Kim Min-jae,injury_monitor,0.05,False,0,South Korea's Kim Min-jae Withdrawn with Calf Injury,조선일보
+2026-06-24,South Korea,Son Heung-min,injury_monitor,0.05,False,0,South Africa 0-0 South Korea: Son Heung-min subbed in for 2nd half,VnExpress International
