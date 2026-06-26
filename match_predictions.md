@@ -2,7 +2,7 @@
 
 Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (Elo + squad value + xG + recent form + club chemistry + injuries + match events + per-match odds blend + in-tournament form, anchored to betting odds).
 
-**Updated**: June 25, 2026 (auto-generated)
+**Updated**: June 26, 2026 (auto-generated)
 
 *Source: `simulations/data/match_predictions_log.csv` · Regenerate: `python -m wc2026_monte_carlo predict`*
 
@@ -10,10 +10,10 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 
 ## Prediction Performance
 
-- **Matches evaluated**: 54
-- **Winner accuracy**: 59.3%
-- **3-way accuracy**: 59.3%
-- **Mean Brier (3-way)**: 0.5510
+- **Matches evaluated**: 60
+- **Winner accuracy**: 55.0%
+- **3-way accuracy**: 55.0%
+- **Mean Brier (3-way)**: 0.5686
 
 ### By confidence tier
 
@@ -21,79 +21,90 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 |------|---|-----------------|----------------|
 | High | 1 | 100.0% | 100.0% |
 | Moderate | 21 | 66.7% | 66.7% |
-| Low | 32 | 53.1% | 53.1% |
+| Low | 38 | 47.4% | 47.4% |
 
-## June 26, 2026 — Match Predictions
+## June 27, 2026 — Match Predictions
 
-### Match 61: Senegal vs Iraq
+### Match 67: Panama vs England
 
-- Kickoff: 3:00 PM EDT | BMO Field
-- Group I
-- xG: 2.10 — 0.97
-- P(Senegal win): 60.3%
-- P(Draw): 25.4%
-- P(Iraq win): 14.3%
-- Predicted winner: **Senegal** (Moderate confidence)
-- Most likely score: 2-0 (10.6%)
-
-### Match 62: Norway vs France
-
-- Kickoff: 3:00 PM EDT | Gillette Stadium
-- Group I
-- xG: 1.13 — 1.83
-- P(Norway win): 20.8%
-- P(Draw): 28.8%
-- P(France win): 50.4%
-- Predicted winner: **France** (Low confidence)
-- Most likely score: 1-1 (11.0%)
-
-### Match 63: Uruguay vs Spain
-
-- Kickoff: 6:00 PM CDT | Estadio Akron
-- Group H
-- xG: 1.39 — 1.54
-- P(Uruguay win): 31.4%
+- Kickoff: 5:00 PM EDT | MetLife Stadium
+- Group L
+- xG: 1.29 — 1.60
+- P(Panama win): 27.9%
 - P(Draw): 30.7%
-- P(Spain win): 37.9%
-- Predicted winner: **Spain** (Low confidence)
+- P(England win): 41.5%
+- Predicted winner: **England** (Low confidence)
 - Most likely score: 1-1 (11.7%)
 
-### Match 64: Cape Verde vs Saudi Arabia
+### Match 68: Croatia vs Ghana
 
-- Kickoff: 7:00 PM CDT | NRG Stadium
-- Group H
-- xG: 1.97 — 1.04
-- P(Cape Verde win): 55.8%
-- P(Draw): 27.1%
-- P(Saudi Arabia win): 17.2%
-- Predicted winner: **Cape Verde** (Moderate confidence)
-- Most likely score: 2-1 (10.4%)
+- Kickoff: 5:00 PM EDT | Lincoln Financial Field
+- Group L
+- xG: 1.85 — 1.12
+- P(Croatia win): 51.1%
+- P(Draw): 28.5%
+- P(Ghana win): 20.4%
+- Predicted winner: **Croatia** (Low confidence)
+- Most likely score: 1-1 (11.0%)
 
-### Match 65: Egypt vs Iran
+### Match 69: Algeria vs Austria
 
-- Kickoff: 8:00 PM PDT | Lumen Field
-- Group G
-- xG: 1.62 — 1.29
-- P(Egypt win): 42.0%
-- P(Draw): 30.5%
-- P(Iran win): 27.5%
-- Predicted winner: **Egypt** (Low confidence)
+- Kickoff: 9:00 PM CDT | Arrowhead Stadium
+- Group J
+- xG: 1.55 — 1.30
+- P(Algeria win): 40.0%
+- P(Draw): 31.1%
+- P(Austria win): 28.9%
+- Predicted winner: **Algeria** (Low confidence)
+- Most likely score: 1-1 (12.1%)
+
+### Match 70: Jordan vs Argentina
+
+- Kickoff: 9:00 PM CDT | AT&T Stadium
+- Group J
+- xG: 1.40 — 1.53
+- P(Jordan win): 31.8%
+- P(Draw): 30.8%
+- P(Argentina win): 37.4%
+- Predicted winner: **Argentina** (Low confidence)
 - Most likely score: 1-1 (11.8%)
 
-### Match 66: New Zealand vs Belgium
+### Match 71: Colombia vs Portugal
 
-- Kickoff: 8:00 PM PDT | BC Place
-- Group G
-- xG: 1.74 — 1.19
-- P(New Zealand win): 47.1%
+- Kickoff: 7:30 PM EDT | Hard Rock Stadium
+- Group K
+- xG: 1.42 — 1.49
+- P(Colombia win): 32.9%
+- P(Draw): 30.9%
+- P(Portugal win): 36.2%
+- Predicted winner: **Portugal** (Low confidence)
+- Most likely score: 1-1 (11.9%)
+
+### Match 72: DR Congo vs Uzbekistan
+
+- Kickoff: 7:30 PM EDT | Mercedes-Benz Stadium
+- Group K
+- xG: 1.75 — 1.12
+- P(DR Congo win): 48.7%
 - P(Draw): 29.6%
-- P(Belgium win): 23.2%
-- Predicted winner: **New Zealand** (Low confidence)
-- Most likely score: 1-1 (11.5%)
+- P(Uzbekistan win): 21.7%
+- Predicted winner: **DR Congo** (Low confidence)
+- Most likely score: 1-1 (11.6%)
 
 ---
 
 ## Completed Results
+
+### June 25, 2026
+
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Turkey vs United States | 3–2 | Turkey (41%) | 29.8% | ✓ |
+| Paraguay vs Australia | 0–0 | Paraguay (44%) | 30.2% | ✗ |
+| Curaçao vs Ivory Coast | 0–2 | Curaçao (42%) | 30.7% | ✗ |
+| Ecuador vs Germany | 2–1 | Draw (34%) | 31.5% | ✗ |
+| Japan vs Sweden | 1–1 | Japan (49%) | 29.3% | ✗ |
+| Tunisia vs Netherlands | 1–3 | Tunisia (45%) | 30.4% | ✗ |
 
 ### June 24, 2026
 

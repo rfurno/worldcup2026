@@ -53,3 +53,9 @@ date,match_num,group,home,away,home_goals,away_goals,venue,stadium,neutral
 2026-06-24,52,C,Scotland,Brazil,0,3,Miami,Hard Rock Stadium,True
 2026-06-24,53,A,Mexico,Czechia,3,0,Mexico City,Estadio Azteca,False
 2026-06-24,54,A,South Africa,South Korea,1,0,Monterrey,Estadio BBVA,True
+2026-06-25,55,D,Turkey,United States,3,2,Los Angeles,SoFi Stadium,True
+2026-06-25,56,D,Paraguay,Australia,0,0,San Francisco,Levi's Stadium,True
+2026-06-25,57,E,Curaçao,Ivory Coast,0,2,Philadelphia,Lincoln Financial Field,True
+2026-06-25,58,E,Ecuador,Germany,2,1,New York,MetLife Stadium,True
+2026-06-25,59,F,Japan,Sweden,1,1,Dallas,AT&T Stadium,True
+2026-06-25,60,F,Tunisia,Netherlands,1,3,Kansas City,Arrowhead Stadium,True

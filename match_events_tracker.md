@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-25 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-26 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -470,6 +470,55 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Kim Min-jae | South Korea | Injury monitor — South Korea's Kim Min-jae Withdrawn with Calf Injury | Monitor fitness | 조선일보 |
 | Son Heung-min | South Korea | Injury monitor — South Africa 0-0 South Korea: Son Heung-min subbed in for 2nd half | Monitor fitness | VnExpress International |
 | Cho Gue-sung | South Korea | Yellow card (yellow card 78′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-25 — Group(s) D, E, F
+
+### Turkey 3–2 United States
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Christian Pulisic | United States | Injury cleared — Christian Pulisic back in training with full team ahead of USMNT’s World Cup group finale - The Athletic | Cleared / available | NYT Athletic |
+| Christian Pulisic | United States | Injury monitor — Will Christian Pulisic play today? Injury update for USMNT star | Monitor fitness | USA Today |
+| Sebastian Berhalter | United States | Yellow card (yellow card 19′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Paraguay 0–0 Australia
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Jackson Irvine | Australia | Yellow card (yellow card 46′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Diego Gómez | Paraguay | Yellow card (yellow card 77′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Curaçao 0–2 Ivory Coast
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+### Ecuador 2–1 Germany
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Alan Franco | Ecuador | Yellow card (yellow card 50′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Gonzalo Plata | Ecuador | Yellow card (yellow card 89′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Piero Hincapié | Ecuador | Yellow card (yellow card 43′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Jonathan Tah | Germany | Injury monitor — Jonathan Tah sends a message to the injured Nico Schlotterbeck | Monitor fitness | Bavarian Football Works |
+| Aleksandar Pavlović | Germany | Yellow card (yellow card 44′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Japan 1–1 Sweden
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Wataru Endo | Japan | Injury out — Wataru Endo Out of FIFA World Cup Due to Injury | **Suspended** next match | The News Mill |
+| Shōgo Taniguchi | Japan | Yellow card (yellow card 77′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Alexander Isak | Sweden | Injury monitor — Sweden’s Isak Hien helped off field with injury vs. Japan | Monitor fitness | Field Level Media |
+| Isak Hien | Sweden | Yellow card (yellow card 32′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Viktor Gyökeres | Sweden | Yellow card (yellow card 84′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Tunisia 1–3 Netherlands
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
 
 ---
 

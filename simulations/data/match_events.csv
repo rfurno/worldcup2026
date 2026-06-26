@@ -159,3 +159,18 @@ date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
 2026-06-24,South Africa,Thapelo Maseko,injury_monitor,0.05,False,0,"In the 63rd minute, Thapelo Maseko received the ball on the right before shooting left-footed low into the right corner of the net from twelve yards out. South ",Wikipedia
 2026-06-24,South Korea,Kim Min-jae,injury_monitor,0.05,False,0,South Korea's Kim Min-jae Withdrawn with Calf Injury,조선일보
 2026-06-24,South Korea,Son Heung-min,injury_monitor,0.05,False,0,South Africa 0-0 South Korea: Son Heung-min subbed in for 2nd half,VnExpress International
+2026-06-25,United States,Sebastian Berhalter,yellow_card,0.0,False,1,yellow card 19′,Wikipedia
+2026-06-25,United States,Christian Pulisic,injury_monitor,0.05,False,0,Will Christian Pulisic play today? Injury update for USMNT star,USA Today
+2026-06-25,United States,Christian Pulisic,injury_clear,0.0,False,0,Christian Pulisic back in training with full team ahead of USMNT’s World Cup group finale - The Athletic,NYT Athletic
+2026-06-25,Paraguay,Diego Gómez,yellow_card,0.0,False,1,yellow card 77′,Wikipedia
+2026-06-25,Australia,Jackson Irvine,yellow_card,0.0,False,1,yellow card 46′,Wikipedia
+2026-06-25,Ecuador,Alan Franco,yellow_card,0.0,False,1,yellow card 50′,Wikipedia
+2026-06-25,Ecuador,Piero Hincapié,yellow_card,0.0,False,1,yellow card 43′,Wikipedia
+2026-06-25,Ecuador,Gonzalo Plata,yellow_card,0.0,False,1,yellow card 89′,Wikipedia
+2026-06-25,Germany,Aleksandar Pavlović,yellow_card,0.0,False,1,yellow card 44′,Wikipedia
+2026-06-25,Germany,Jonathan Tah,injury_monitor,0.05,False,0,Jonathan Tah sends a message to the injured Nico Schlotterbeck,Bavarian Football Works
+2026-06-25,Japan,Shōgo Taniguchi,yellow_card,0.0,False,1,yellow card 77′,Wikipedia
+2026-06-25,Sweden,Isak Hien,yellow_card,0.0,False,1,yellow card 32′,Wikipedia
+2026-06-25,Sweden,Viktor Gyökeres,yellow_card,0.0,False,1,yellow card 84′,Wikipedia
+2026-06-25,Sweden,Alexander Isak,injury_monitor,0.05,False,0,Sweden’s Isak Hien helped off field with injury vs. Japan,Field Level Media
+2026-06-25,Japan,Wataru Endo,injury_out,0.1,True,0,Wataru Endo Out of FIFA World Cup Due to Injury,The News Mill

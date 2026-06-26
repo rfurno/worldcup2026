@@ -2,11 +2,22 @@
 
 Official results for completed group-stage matches.
 
-**Updated**: June 25, 2026 (auto-generated from `simulations/data/match_results.csv`)
+**Updated**: June 26, 2026 (auto-generated from `simulations/data/match_results.csv`)
 
 *Add results: `python -m wc2026_monte_carlo add-results ...`*
 
 ---
+
+## June 25, 2026 — Group(s) D, E, F
+
+| Match | Home | Away | Score | Group | Venue |
+|-------|------|------|-------|-------|-------|
+| 55 | Turkey | United States | 3–2 | D | Los Angeles |
+| 56 | Paraguay | Australia | 0–0 | D | San Francisco |
+| 57 | Curaçao | Ivory Coast | 0–2 | E | Philadelphia |
+| 58 | Ecuador | Germany | 2–1 | E | New York |
+| 59 | Japan | Sweden | 1–1 | F | Dallas |
+| 60 | Tunisia | Netherlands | 1–3 | F | Kansas City |
 
 ## June 24, 2026 — Group(s) A, B, C
 
