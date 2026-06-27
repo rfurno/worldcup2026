@@ -144,8 +144,11 @@ class MatchPredictor:
                     home, away, match_date=match_date, match_num=match_num
                 )
                 if market is not None:
+                    odds_blend = self.config.match_odds_blend
+                    if match_num is not None and int(match_num) >= 73:
+                        odds_blend = self.config.knockout_match_odds_blend
                     model_probs = blend_match_probabilities(
-                        model_probs, market, self.config.match_odds_blend
+                        model_probs, market, odds_blend
                     )
 
             if self.config.use_external_ensemble:

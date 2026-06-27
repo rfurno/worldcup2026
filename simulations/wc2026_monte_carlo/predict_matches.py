@@ -722,6 +722,18 @@ FIXTURES_BY_DATE: dict[str, list[dict]] = {
             "neutral": True,
         },
     ],
+    "2026-06-28": [
+        {
+            "home": "South Africa",
+            "away": "Canada",
+            "venue": "Los Angeles",
+            "kickoff": "3:00 PM PDT",
+            "stadium": "SoFi Stadium",
+            "group": "R32",
+            "match": 73,
+            "neutral": True,
+        },
+    ],
     "2026-06-13": [
         {
             "home": "Qatar",

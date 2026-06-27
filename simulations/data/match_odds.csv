@@ -53,3 +53,4 @@ date,match_num,home,away,p_home,p_draw,p_away,source
 2026-06-24,52,Scotland,Brazil,0.220,0.260,0.520,market_estimate
 2026-06-24,53,Mexico,Czechia,0.400,0.280,0.320,market_estimate
 2026-06-24,54,South Africa,South Korea,0.360,0.280,0.360,market_estimate
+2026-06-28,73,South Africa,Canada,0.186,0.264,0.550,consensus_7books

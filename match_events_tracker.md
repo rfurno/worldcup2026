@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-26 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-27 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -519,6 +519,70 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Player | Team | Event | Next-match impact | Source |
 |--------|------|-------|-------------------|--------|
 | — | — | _No events logged_ | — | — |
+
+## 2026-06-26 — Group(s) G, H, I
+
+### Senegal 5–0 Iraq
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Ahmed Qasem | Iraq | Injury monitor — early starter substitution 16′ | Monitor fitness | Wikipedia |
+| Mohanad Ali | Iraq | Injury out — William Saliba out of Norway vs France due to injury | **Suspended** next match | Metro.co.uk |
+| Rebin Sulaka | Iraq | Red card (red card 13′) | **Suspended** next match | Wikipedia |
+| Amir Al-Ammari | Iraq | Yellow card (yellow card 75′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Merchas Doski | Iraq | Yellow card (yellow card 90′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Abdoulaye Seck | Senegal | Yellow card (yellow card 18′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Pape Gueye | Senegal | Yellow card (yellow card 81′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Norway 1–4 France
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Aurélien Tchouaméni | France | Yellow card (yellow card 74′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Erling Haaland | Norway | Injury monitor — World Cup while you were sleeping: Haaland dropped, France win, James injury scare | Monitor fitness | South China Morning Post |
+| Patrick Berg | Norway | Yellow card (yellow card 10′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Uruguay 0–1 Spain
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Federico Valverde | Spain | Injury monitor — Uruguay captain Federico Valverde subbed off early in the second half | Monitor fitness | FOX Sports |
+| Álex Baena | Spain | Yellow card (yellow card 46′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Darwin Nunez | Uruguay | Injury monitor — Darwin Nunez watches on as Man Utd star suffers horror World Cup injury | Monitor fitness | Liverpool.com |
+| Agustín Canobbio | Uruguay | Red card (red card 90+4′) | **Suspended** next match | Wikipedia |
+| Guillermo Varela | Uruguay | Yellow card (yellow card 58′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Juan Manuel Sanabria | Uruguay | Yellow card (yellow card 54′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Nicolás de la Cruz | Uruguay | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Cape Verde 0–0 Saudi Arabia
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Wagner Pina | Cape Verde | Yellow card (yellow card 8′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Firas Al-Buraikan | Saudi Arabia | Yellow card (yellow card 90+3′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Nasser Al-Dawsari | Saudi Arabia | Yellow card (yellow card 67′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Saud Abdulhamid | Saudi Arabia | Yellow card (yellow card 4′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Egypt 1–1 Iran
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Mohamed Abdelmonem | Egypt | Injury monitor — early starter substitution 14′ | Monitor fitness | Wikipedia |
+| Mohamed Salah | Egypt | Injury monitor — Socceroos to meet Mo Salah’s Egypt in World Cup last 32 with star player under injury cloud | Monitor fitness | The Guardian |
+| Mahmoud Saber | Egypt | Yellow card (yellow card 19′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Mohanad Lasheen | Egypt | Yellow card (yellow card 90+2′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Yasser Ibrahim | Egypt | Yellow card (yellow card 41′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Ali Nemati | Iran | Yellow card (yellow card 43′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Hossein Kanaanizadegan | Iran | Yellow card (yellow card 18′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Saeid Ezatolahi | Iran | Yellow card (yellow card 79′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Shojae Khalilzadeh | Iran | Yellow card (yellow card 90+4′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### New Zealand 1–5 Belgium
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Elijah Just | New Zealand | Yellow card (yellow card 56′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Marko Stamenić | New Zealand | Yellow card (yellow card 46′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 

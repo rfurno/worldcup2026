@@ -59,3 +59,9 @@ date,match_num,group,home,away,home_goals,away_goals,venue,stadium,neutral
 2026-06-25,58,E,Ecuador,Germany,2,1,New York,MetLife Stadium,True
 2026-06-25,59,F,Japan,Sweden,1,1,Dallas,AT&T Stadium,True
 2026-06-25,60,F,Tunisia,Netherlands,1,3,Kansas City,Arrowhead Stadium,True
+2026-06-26,61,I,Senegal,Iraq,5,0,Toronto,BMO Field,True
+2026-06-26,62,I,Norway,France,1,4,Boston,Gillette Stadium,True
+2026-06-26,63,H,Uruguay,Spain,0,1,Guadalajara,Estadio Akron,True
+2026-06-26,64,H,Cape Verde,Saudi Arabia,0,0,Houston,NRG Stadium,True
+2026-06-26,65,G,Egypt,Iran,1,1,Seattle,Lumen Field,True
+2026-06-26,66,G,New Zealand,Belgium,1,5,Vancouver,BC Place,True

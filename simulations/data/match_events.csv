@@ -174,3 +174,35 @@ date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
 2026-06-25,Sweden,Viktor Gyökeres,yellow_card,0.0,False,1,yellow card 84′,Wikipedia
 2026-06-25,Sweden,Alexander Isak,injury_monitor,0.05,False,0,Sweden’s Isak Hien helped off field with injury vs. Japan,Field Level Media
 2026-06-25,Japan,Wataru Endo,injury_out,0.1,True,0,Wataru Endo Out of FIFA World Cup Due to Injury,The News Mill
+2026-06-26,Senegal,Abdoulaye Seck,yellow_card,0.0,False,1,yellow card 18′,Wikipedia
+2026-06-26,Senegal,Pape Gueye,yellow_card,0.0,False,1,yellow card 81′,Wikipedia
+2026-06-26,Iraq,Rebin Sulaka,red_card,0.12,True,0,red card 13′,Wikipedia
+2026-06-26,Iraq,Merchas Doski,yellow_card,0.0,False,1,yellow card 90′,Wikipedia
+2026-06-26,Iraq,Ahmed Qasem,injury_monitor,0.04,False,0,early starter substitution 16′,Wikipedia
+2026-06-26,Iraq,Amir Al-Ammari,yellow_card,0.0,False,1,yellow card 75′,Wikipedia
+2026-06-26,Iraq,Mohanad Ali,injury_out,0.1,True,0,William Saliba out of Norway vs France due to injury,Metro.co.uk
+2026-06-26,Norway,Patrick Berg,yellow_card,0.0,False,1,yellow card 10′,Wikipedia
+2026-06-26,France,Aurélien Tchouaméni,yellow_card,0.0,False,1,yellow card 74′,Wikipedia
+2026-06-26,Norway,Erling Haaland,injury_monitor,0.05,False,0,"World Cup while you were sleeping: Haaland dropped, France win, James injury scare",South China Morning Post
+2026-06-26,Uruguay,Guillermo Varela,yellow_card,0.0,False,1,yellow card 58′,Wikipedia
+2026-06-26,Uruguay,Juan Manuel Sanabria,yellow_card,0.0,False,1,yellow card 54′,Wikipedia
+2026-06-26,Uruguay,Agustín Canobbio,red_card,0.12,True,0,red card 90+4′,Wikipedia
+2026-06-26,Uruguay,Nicolás de la Cruz,yellow_card,0.0,False,1,yellow card 90+3′,Wikipedia
+2026-06-26,Spain,Álex Baena,yellow_card,0.0,False,1,yellow card 46′,Wikipedia
+2026-06-26,Uruguay,Darwin Nunez,injury_monitor,0.05,False,0,Darwin Nunez watches on as Man Utd star suffers horror World Cup injury,Liverpool.com
+2026-06-26,Spain,Federico Valverde,injury_monitor,0.05,False,0,Uruguay captain Federico Valverde subbed off early in the second half,FOX Sports
+2026-06-26,Cape Verde,Wagner Pina,yellow_card,0.0,False,1,yellow card 8′,Wikipedia
+2026-06-26,Saudi Arabia,Saud Abdulhamid,yellow_card,0.0,False,1,yellow card 4′,Wikipedia
+2026-06-26,Saudi Arabia,Nasser Al-Dawsari,yellow_card,0.0,False,1,yellow card 67′,Wikipedia
+2026-06-26,Saudi Arabia,Firas Al-Buraikan,yellow_card,0.0,False,1,yellow card 90+3′,Wikipedia
+2026-06-26,Egypt,Mohamed Abdelmonem,injury_monitor,0.04,False,0,early starter substitution 14′,Wikipedia
+2026-06-26,Egypt,Mahmoud Saber,yellow_card,0.0,False,1,yellow card 19′,Wikipedia
+2026-06-26,Egypt,Mohanad Lasheen,yellow_card,0.0,False,1,yellow card 90+2′,Wikipedia
+2026-06-26,Egypt,Yasser Ibrahim,yellow_card,0.0,False,1,yellow card 41′,Wikipedia
+2026-06-26,Iran,Hossein Kanaanizadegan,yellow_card,0.0,False,1,yellow card 18′,Wikipedia
+2026-06-26,Iran,Shojae Khalilzadeh,yellow_card,0.0,False,1,yellow card 90+4′,Wikipedia
+2026-06-26,Iran,Ali Nemati,yellow_card,0.0,False,1,yellow card 43′,Wikipedia
+2026-06-26,Iran,Saeid Ezatolahi,yellow_card,0.0,False,1,yellow card 79′,Wikipedia
+2026-06-26,Egypt,Mohamed Salah,injury_monitor,0.05,False,0,Socceroos to meet Mo Salah’s Egypt in World Cup last 32 with star player under injury cloud,The Guardian
+2026-06-26,New Zealand,Marko Stamenić,yellow_card,0.0,False,1,yellow card 46′,Wikipedia
+2026-06-26,New Zealand,Elijah Just,yellow_card,0.0,False,1,yellow card 56′,Wikipedia

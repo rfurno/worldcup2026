@@ -87,6 +87,7 @@ class SimulationConfig:
     estimate_rho_from_history: bool = True
     rho_floor: float = -0.25
     match_odds_blend: float = 0.35
+    knockout_match_odds_blend: float = 0.60
     tournament_form_blend: float = 0.30
     use_dynamic_tournament_form_blend: bool = True
     tournament_form_blend_base: float = 0.10
