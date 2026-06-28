@@ -111,6 +111,7 @@ class MatchPredictor:
         match_date: str | None = None,
         match_num: int | None = None,
         matchday: int = 1,
+        knockout: bool = False,
     ) -> MatchPrediction:
         saved_ha = self.config.home_advantage
         if neutral:
@@ -132,7 +133,7 @@ class MatchPredictor:
             draw = float(np.trace(matrix).sum())
             away_win = float(np.triu(matrix, 1).sum())
 
-            if self.config.use_md1_draw_bump and matchday == 1:
+            if self.config.use_md1_draw_bump and matchday == 1 and not knockout:
                 home_win, draw, away_win = _apply_md1_draw_bump(
                     home_win, draw, away_win, self.config.md1_draw_factor
                 )

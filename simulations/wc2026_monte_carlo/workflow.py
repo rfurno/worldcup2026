@@ -76,6 +76,7 @@ def run_predict(
     for fixture in fixtures:
         row = {**fixture, "date": target.isoformat()}
         enriched.append(row)
+        knockout = row.get("knockout") or row.get("group") == "R32"
         pred = predictor.predict(
             row["home"],
             row["away"],
@@ -83,7 +84,8 @@ def run_predict(
             neutral=row.get("neutral", False),
             match_date=target.isoformat(),
             match_num=row.get("match"),
-            matchday=1,
+            matchday=3 if knockout else 1,
+            knockout=knockout,
         )
         predictions.append(pred)
         print(format_prediction(row, pred))

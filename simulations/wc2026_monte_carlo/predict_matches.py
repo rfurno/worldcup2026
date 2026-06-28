@@ -732,6 +732,42 @@ FIXTURES_BY_DATE: dict[str, list[dict]] = {
             "group": "R32",
             "match": 73,
             "neutral": True,
+            "knockout": True,
+        },
+    ],
+    "2026-06-29": [
+        {
+            "home": "Brazil",
+            "away": "Japan",
+            "venue": "Houston",
+            "kickoff": "1:00 PM CDT",
+            "stadium": "NRG Stadium",
+            "group": "R32",
+            "match": 76,
+            "neutral": True,
+            "knockout": True,
+        },
+        {
+            "home": "Germany",
+            "away": "Paraguay",
+            "venue": "Boston",
+            "kickoff": "4:30 PM EDT",
+            "stadium": "Gillette Stadium",
+            "group": "R32",
+            "match": 74,
+            "neutral": True,
+            "knockout": True,
+        },
+        {
+            "home": "Netherlands",
+            "away": "Morocco",
+            "venue": "Guadalajara",
+            "kickoff": "9:00 PM CDT",
+            "stadium": "Estadio BBVA",
+            "group": "R32",
+            "match": 75,
+            "neutral": True,
+            "knockout": True,
         },
     ],
     "2026-06-13": [
@@ -784,16 +820,39 @@ def fixtures_for(target: date) -> list[dict]:
 
 
 def format_prediction(fixture: dict, pred) -> str:
+    knockout = fixture.get("knockout") or fixture.get("group") == "R32"
+    stage = "Round of 32" if knockout else f"Group {fixture['group']}"
+    draw_label = "Draw at 90 min" if knockout else "Draw"
+    if knockout and pred.predicted_winner == "Draw":
+        outcome_line = (
+            f"- Predicted 90-min result: **Draw** ({pred.confidence} confidence; "
+            "extra time, not penalties)"
+        )
+    elif knockout:
+        outcome_line = (
+            f"- Predicted 90-min winner: **{pred.predicted_winner}** "
+            f"({pred.confidence} confidence)"
+        )
+    else:
+        outcome_line = (
+            f"- Predicted winner: **{pred.predicted_winner}** "
+            f"({pred.confidence} confidence)"
+        )
+
     lines = [
         f"### Match {fixture['match']}: {pred.home} vs {pred.away}",
         "",
         f"- Kickoff: {fixture['kickoff']} | {fixture['stadium']}",
-        f"- Group {fixture['group']}",
+        f"- {stage}" + (" · regular time (90 min)" if knockout else ""),
         f"- xG: {pred.expected_home_goals:.2f} — {pred.expected_away_goals:.2f}",
-        f"- P({pred.home} win): {pred.home_win_prob * 100:.1f}%",
-        f"- P(Draw): {pred.draw_prob * 100:.1f}%",
-        f"- P({pred.away} win): {pred.away_win_prob * 100:.1f}%",
-        f"- Predicted winner: **{pred.predicted_winner}** ({pred.confidence} confidence)",
+        f"- P({pred.home} win at 90 min): {pred.home_win_prob * 100:.1f}%"
+        if knockout
+        else f"- P({pred.home} win): {pred.home_win_prob * 100:.1f}%",
+        f"- P({draw_label}): {pred.draw_prob * 100:.1f}%",
+        f"- P({pred.away} win at 90 min): {pred.away_win_prob * 100:.1f}%"
+        if knockout
+        else f"- P({pred.away} win): {pred.away_win_prob * 100:.1f}%",
+        outcome_line,
         f"- Most likely score: {pred.most_likely_scorelines[0][0]} ({pred.most_likely_scorelines[0][1] * 100:.1f}%)",
     ]
     return "\n".join(lines)

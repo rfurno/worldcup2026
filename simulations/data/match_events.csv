@@ -206,3 +206,27 @@ date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
 2026-06-26,Egypt,Mohamed Salah,injury_monitor,0.05,False,0,Socceroos to meet Mo Salah’s Egypt in World Cup last 32 with star player under injury cloud,The Guardian
 2026-06-26,New Zealand,Marko Stamenić,yellow_card,0.0,False,1,yellow card 46′,Wikipedia
 2026-06-26,New Zealand,Elijah Just,yellow_card,0.0,False,1,yellow card 56′,Wikipedia
+2026-06-27,Panama,Andrés Andrade,yellow_card,0.0,False,1,yellow card 83′,Wikipedia
+2026-06-27,Panama,José Fajardo,yellow_card,0.0,False,1,yellow card 53′,Wikipedia
+2026-06-27,England,Jarell Quansah,yellow_card,0.0,False,1,yellow card 60′,Wikipedia
+2026-06-27,England,Declan Rice,injury_monitor,0.05,False,0,Declan Rice Injury Update: Will England Star Play Against Panama?,Athlon Sports
+2026-06-27,England,Declan Rice,injury_out,0.1,True,0,Is Declan Rice injured? England star misses out against Panama after limping out of last game,FourFourTwo
+2026-06-27,England,Jude Bellingham,injury_monitor,0.05,False,0,Jude Bellingham has put England on his back - but rest must step up fast if World Cup dream is to be realised: Winners and losers as Thomas Tuchel's team again ,Goal.com
+2026-06-27,Croatia,Ivan Perišić,yellow_card,0.0,False,1,yellow card 68′,Wikipedia
+2026-06-27,Ghana,Kojo Peprah Oppong,yellow_card,0.0,False,1,yellow card 90+4′,Wikipedia
+2026-06-27,Ghana,Inaki Williams,injury_monitor,0.05,False,0,Spain’s Nico Williams hits out at ‘completely unnecessary’ Uruguay tackle that injured him,The Guardian
+2026-06-27,Austria,Marko Arnautović,yellow_card,0.0,False,1,yellow card 11′,Wikipedia
+2026-06-27,Austria,David Alaba,injury_monitor,0.05,False,0,Austria have minor injury concerns for captain David Alaba and forward Christoph Baumgartner,The News Mill
+2026-06-27,Algeria,Youcef Atal,injury_monitor,0.05,False,0,"Hien, World Cup ended prematurely: Atalanta trembles over the injury of their defender",Quotidiano Sportivo
+2026-06-27,Jordan,Yazan Al-Arab,yellow_card,0.0,False,1,yellow card 64′,Wikipedia
+2026-06-27,Jordan,Mohannad Abu Taha,yellow_card,0.0,False,1,yellow card 17′,Wikipedia
+2026-06-27,Jordan,Mohammad Abu Zrayq,yellow_card,0.0,False,1,yellow card 90+4′,Wikipedia
+2026-06-27,Argentina,Lionel Messi,injury_monitor,0.05,False,0,Is Lionel Messi really injured? Lionel Scaloni’s decision to bench Argentina captain vs Jordan sparks concern | Hindustan Times,Hindustan Times
+2026-06-27,Argentina,Giovani Lo Celso,injury_monitor,0.05,False,0,Who is Giovani Lo Celso? Argentina star scores first-ever FIFA World Cup goal after missing 2022 through injury,Business Upturn
+2026-06-27,Colombia,Gustavo Puerta,yellow_card,0.0,False,1,yellow card 86′,Wikipedia
+2026-06-27,Portugal,Cristiano Ronaldo,injury_monitor,0.05,False,0,Will Cristiano Ronaldo be playing today against Colombia? Latest injury update on Portugal captain,The Times of India
+2026-06-27,DR Congo,Samuel Moutoussamy,yellow_card,0.0,False,1,yellow card 62′,Wikipedia
+2026-06-27,DR Congo,Noah Sadiki,yellow_card,0.0,False,1,yellow card 21′,Wikipedia
+2026-06-27,DR Congo,Nathanaël Mbuku,yellow_card,0.0,False,1,yellow card 45+4′,Wikipedia
+2026-06-27,Uzbekistan,Abdukodir Khusanov,yellow_card,0.0,False,1,yellow card 43′,Wikipedia
+2026-06-27,Uzbekistan,Sherzod Nasrullaev,yellow_card,0.0,False,1,yellow card 47′,Wikipedia

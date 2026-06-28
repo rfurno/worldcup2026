@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-27 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-28 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -583,6 +583,62 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 |--------|------|-------|-------------------|--------|
 | Elijah Just | New Zealand | Yellow card (yellow card 56′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Marko Stamenić | New Zealand | Yellow card (yellow card 46′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-27 — Group(s) J, K, L
+
+### Panama 0–2 England
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Declan Rice | England | Injury monitor — Declan Rice Injury Update: Will England Star Play Against Panama? | Monitor fitness | Athlon Sports |
+| Jude Bellingham | England | Injury monitor — Jude Bellingham has put England on his back - but rest must step up fast if World Cup dream is to be realised: Winners and losers as Thomas Tuchel's team again  | Monitor fitness | Goal.com |
+| Declan Rice | England | Injury out — Is Declan Rice injured? England star misses out against Panama after limping out of last game | **Suspended** next match | FourFourTwo |
+| Jarell Quansah | England | Yellow card (yellow card 60′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Andrés Andrade | Panama | Yellow card (yellow card 83′) | On **1 yellow** — second triggers ban | Wikipedia |
+| José Fajardo | Panama | Yellow card (yellow card 53′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Croatia 2–1 Ghana
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Ivan Perišić | Croatia | Yellow card (yellow card 68′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Inaki Williams | Ghana | Injury monitor — Spain’s Nico Williams hits out at ‘completely unnecessary’ Uruguay tackle that injured him | Monitor fitness | The Guardian |
+| Kojo Peprah Oppong | Ghana | Yellow card (yellow card 90+4′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Algeria 3–3 Austria
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Youcef Atal | Algeria | Injury monitor — Hien, World Cup ended prematurely: Atalanta trembles over the injury of their defender | Monitor fitness | Quotidiano Sportivo |
+| David Alaba | Austria | Injury monitor — Austria have minor injury concerns for captain David Alaba and forward Christoph Baumgartner | Monitor fitness | The News Mill |
+| Marko Arnautović | Austria | Yellow card (yellow card 11′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Jordan 1–3 Argentina
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Giovani Lo Celso | Argentina | Injury monitor — Who is Giovani Lo Celso? Argentina star scores first-ever FIFA World Cup goal after missing 2022 through injury | Monitor fitness | Business Upturn |
+| Lionel Messi | Argentina | Injury monitor — Is Lionel Messi really injured? Lionel Scaloni’s decision to bench Argentina captain vs Jordan sparks concern | Hindustan Times | Monitor fitness | Hindustan Times |
+| Mohammad Abu Zrayq | Jordan | Yellow card (yellow card 90+4′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Mohannad Abu Taha | Jordan | Yellow card (yellow card 17′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Yazan Al-Arab | Jordan | Yellow card (yellow card 64′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+### Colombia 0–0 Portugal
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Gustavo Puerta | Colombia | Yellow card (yellow card 86′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Cristiano Ronaldo | Portugal | Injury monitor — Will Cristiano Ronaldo be playing today against Colombia? Latest injury update on Portugal captain | Monitor fitness | The Times of India |
+
+### DR Congo 3–1 Uzbekistan
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Nathanaël Mbuku | DR Congo | Yellow card (yellow card 45+4′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Noah Sadiki | DR Congo | Yellow card (yellow card 21′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Samuel Moutoussamy | DR Congo | Yellow card (yellow card 62′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Abdukodir Khusanov | Uzbekistan | Yellow card (yellow card 43′) | On **1 yellow** — second triggers ban | Wikipedia |
+| Sherzod Nasrullaev | Uzbekistan | Yellow card (yellow card 47′) | On **1 yellow** — second triggers ban | Wikipedia |
 
 ---
 
