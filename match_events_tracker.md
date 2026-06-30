@@ -3,7 +3,7 @@
 Post-match discipline, suspensions, injuries, and form signals that may affect **future** predictions.
 FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows across matches = 1-match ban**; yellows reset after group stage.
 
-**Updated**: 2026-06-28 (auto-generated from `simulations/data/match_events.csv`)
+**Updated**: 2026-06-30 (auto-generated from `simulations/data/match_events.csv`)
 
 ## 2026-06-11 — Group(s) A
 
@@ -639,6 +639,38 @@ FIFA rules: **straight red or second yellow = 1-match ban**; **two yellows acros
 | Samuel Moutoussamy | DR Congo | Yellow card (yellow card 62′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Abdukodir Khusanov | Uzbekistan | Yellow card (yellow card 43′) | On **1 yellow** — second triggers ban | Wikipedia |
 | Sherzod Nasrullaev | Uzbekistan | Yellow card (yellow card 47′) | On **1 yellow** — second triggers ban | Wikipedia |
+
+## 2026-06-28 — Group(s) R32
+
+### South Africa 0–1 Canada
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Alphonso Davies | Canada | Injury cleared — Alphonso Davies Cleared to Play for Canada in World Cup Knockout Match vs. South Africa | Cleared / available | Yahoo Sports |
+| Alphonso Davies | Canada | Injury monitor — Is Alphonso Davies playing today for Canada? World Cup injury update for Round of 32 | Monitor fitness | USA Today |
+
+## 2026-06-29 — Group(s) R32
+
+### Brazil 2–1 Japan
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| Endrick | Brazil | Injury monitor — Brazil 1-1 Japan: Endrick subbed in (2nd half) | Monitor fitness | VnExpress International |
+| Raphinha | Brazil | Injury monitor — Raphinha Injury Update Revealed: Will Brazil Star Play in Next Game If Team Advances? | Monitor fitness | heavy.com |
+| Raphinha | Brazil | Injury out — Raphinha ruled out for Brazil VS. Japan at 2026 World Cup due to right thigh muscle injury | **Suspended** next match | MSN |
+| Takefusa Kubo | Japan | Injury monitor — Kubo Takefusa Injury: Why Is He Not Playing Today for Japan vs Brazil? | Monitor fitness | Athlon Sports |
+
+### Germany 1–1 Paraguay
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
+
+### Netherlands 1–1 Morocco
+
+| Player | Team | Event | Next-match impact | Source |
+|--------|------|-------|-------------------|--------|
+| — | — | _No events logged_ | — | — |
 
 ---
 

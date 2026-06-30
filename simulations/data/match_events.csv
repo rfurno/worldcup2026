@@ -230,3 +230,9 @@ date,team,player,event_type,severity,misses_next_match,yellow_count,notes,source
 2026-06-27,DR Congo,Nathanaël Mbuku,yellow_card,0.0,False,1,yellow card 45+4′,Wikipedia
 2026-06-27,Uzbekistan,Abdukodir Khusanov,yellow_card,0.0,False,1,yellow card 43′,Wikipedia
 2026-06-27,Uzbekistan,Sherzod Nasrullaev,yellow_card,0.0,False,1,yellow card 47′,Wikipedia
+2026-06-28,Canada,Alphonso Davies,injury_monitor,0.05,False,0,Is Alphonso Davies playing today for Canada? World Cup injury update for Round of 32,USA Today
+2026-06-28,Canada,Alphonso Davies,injury_clear,0.0,False,0,Alphonso Davies Cleared to Play for Canada in World Cup Knockout Match vs. South Africa,Yahoo Sports
+2026-06-29,Japan,Takefusa Kubo,injury_monitor,0.05,False,0,Kubo Takefusa Injury: Why Is He Not Playing Today for Japan vs Brazil?,Athlon Sports
+2026-06-29,Brazil,Raphinha,injury_monitor,0.05,False,0,Raphinha Injury Update Revealed: Will Brazil Star Play in Next Game If Team Advances?,heavy.com
+2026-06-29,Brazil,Raphinha,injury_out,0.1,True,0,Raphinha ruled out for Brazil VS. Japan at 2026 World Cup due to right thigh muscle injury,MSN
+2026-06-29,Brazil,Endrick,injury_monitor,0.05,False,0,Brazil 1-1 Japan: Endrick subbed in (2nd half),VnExpress International

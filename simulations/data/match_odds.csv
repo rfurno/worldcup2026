@@ -54,3 +54,9 @@ date,match_num,home,away,p_home,p_draw,p_away,source
 2026-06-24,53,Mexico,Czechia,0.400,0.280,0.320,market_estimate
 2026-06-24,54,South Africa,South Korea,0.360,0.280,0.360,market_estimate
 2026-06-28,73,South Africa,Canada,0.186,0.264,0.550,consensus_7books
+2026-06-30,77,France,Sweden,0.741,0.164,0.094,consensus_4books
+2026-06-30,78,Ivory Coast,Norway,0.263,0.273,0.464,consensus_6books
+2026-06-30,79,Mexico,Ecuador,0.437,0.317,0.246,consensus_4books
+2026-07-01,80,England,DR Congo,0.744,0.177,0.079,consensus_4books
+2026-07-01,81,Belgium,Senegal,0.434,0.297,0.269,consensus_5books
+2026-07-01,82,United States,Bosnia and Herzegovina,0.689,0.197,0.114,consensus_4books

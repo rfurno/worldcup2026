@@ -2,11 +2,25 @@
 
 Official results for completed group-stage matches.
 
-**Updated**: June 28, 2026 (auto-generated from `simulations/data/match_results.csv`)
+**Updated**: June 30, 2026 (auto-generated from `simulations/data/match_results.csv`)
 
 *Add results: `python -m wc2026_monte_carlo add-results ...`*
 
 ---
+
+## June 29, 2026 — Group(s) R32
+
+| Match | Home | Away | Score | Group | Venue |
+|-------|------|------|-------|-------|-------|
+| 74 | Germany | Paraguay | 1–1 | R32 | Boston |
+| 75 | Netherlands | Morocco | 1–1 | R32 | Guadalajara |
+| 76 | Brazil | Japan | 2–1 | R32 | Houston |
+
+## June 28, 2026 — Group(s) R32
+
+| Match | Home | Away | Score | Group | Venue |
+|-------|------|------|-------|-------|-------|
+| 73 | South Africa | Canada | 0–1 | R32 | Los Angeles |
 
 ## June 27, 2026 — Group(s) J, K, L
 

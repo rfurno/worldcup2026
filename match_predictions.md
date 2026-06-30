@@ -2,7 +2,7 @@
 
 Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (Elo + squad value + xG + recent form + club chemistry + injuries + match events + per-match odds blend + in-tournament form, anchored to betting odds).
 
-**Updated**: June 28, 2026 (auto-generated)
+**Updated**: June 30, 2026 (auto-generated)
 
 *Source: `simulations/data/match_predictions_log.csv` · Regenerate: `python -m wc2026_monte_carlo predict`*
 
@@ -10,57 +10,71 @@ Daily match-by-match forecasts using the market-calibrated Dixon-Coles model (El
 
 ## Prediction Performance
 
-- **Matches evaluated**: 72
-- **Winner accuracy**: 55.6%
-- **3-way accuracy**: 55.6%
-- **Mean Brier (3-way)**: 0.5710
+- **Matches evaluated**: 76
+- **Winner accuracy**: 55.3%
+- **3-way accuracy**: 55.3%
+- **Mean Brier (3-way)**: 0.5812
 
 ### By confidence tier
 
 | Tier | N | Winner accuracy | 3-way accuracy |
 |------|---|-----------------|----------------|
 | High | 1 | 100.0% | 100.0% |
-| Moderate | 23 | 65.2% | 65.2% |
-| Low | 48 | 50.0% | 50.0% |
+| Moderate | 25 | 60.0% | 60.0% |
+| Low | 50 | 52.0% | 52.0% |
 
-## June 29, 2026 — Match Predictions
+## July 01, 2026 — Match Predictions
 
-### Match 74: Germany vs Paraguay
+### Match 80: England vs DR Congo
 
-- Kickoff: 4:30 PM EDT | Gillette Stadium
+- Kickoff: 12:00 PM EDT | Mercedes-Benz Stadium
 - Round of 32 · regular time (90 min)
-- xG: 2.30 — 0.92
-- P(Germany win at 90 min): 66.6%
-- P(Draw at 90 min): 21.5%
-- P(Paraguay win at 90 min): 11.9%
-- Predicted 90-min winner: **Germany** (Moderate confidence)
-- Most likely score: 2-0 (10.8%)
+- xG: 2.24 — 0.91
+- P(England win at 90 min): 70.9%
+- P(Draw at 90 min): 19.5%
+- P(DR Congo win at 90 min): 9.6%
+- Predicted 90-min winner: **England** (High confidence)
+- Most likely score: 2-0 (11.0%)
 
-### Match 75: Netherlands vs Morocco
+### Match 81: Belgium vs Senegal
 
-- Kickoff: 9:00 PM CDT | Estadio BBVA
+- Kickoff: 4:00 PM EDT | Lumen Field
 - Round of 32 · regular time (90 min)
-- xG: 2.08 — 0.99
-- P(Netherlands win at 90 min): 60.7%
-- P(Draw at 90 min): 24.2%
-- P(Morocco win at 90 min): 15.1%
-- Predicted 90-min winner: **Netherlands** (Moderate confidence)
-- Most likely score: 2-0 (10.4%)
-
-### Match 76: Brazil vs Japan
-
-- Kickoff: 1:00 PM CDT | NRG Stadium
-- Round of 32 · regular time (90 min)
-- xG: 1.70 — 1.27
-- P(Brazil win at 90 min): 45.3%
-- P(Draw at 90 min): 28.3%
-- P(Japan win at 90 min): 26.5%
-- Predicted 90-min winner: **Brazil** (Low confidence)
+- xG: 1.73 — 1.23
+- P(Belgium win at 90 min): 44.8%
+- P(Draw at 90 min): 29.1%
+- P(Senegal win at 90 min): 26.1%
+- Predicted 90-min winner: **Belgium** (Low confidence)
 - Most likely score: 1-1 (11.5%)
+
+### Match 82: United States vs Bosnia and Herzegovina
+
+- Kickoff: 8:00 PM PDT | Levi's Stadium
+- Round of 32 · regular time (90 min)
+- xG: 2.59 — 1.08
+- P(United States win at 90 min): 68.7%
+- P(Draw at 90 min): 19.6%
+- P(Bosnia and Herzegovina win at 90 min): 11.7%
+- Predicted 90-min winner: **United States** (Moderate confidence)
+- Most likely score: 2-1 (9.5%)
 
 ---
 
 ## Completed Results
+
+### June 29, 2026
+
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| Germany vs Paraguay | 1–1 | Germany (67%) | 21.5% | ✗ |
+| Netherlands vs Morocco | 1–1 | Netherlands (61%) | 24.2% | ✗ |
+| Brazil vs Japan | 2–1 | Brazil (45%) | 28.3% | ✓ |
+
+### June 28, 2026
+
+| Match | Result | Model pick | Draw % | Correct? |
+|-------|--------|------------|--------|----------|
+| South Africa vs Canada | 0–1 | Canada (39%) | 25.6% | ✓ |
 
 ### June 27, 2026
 

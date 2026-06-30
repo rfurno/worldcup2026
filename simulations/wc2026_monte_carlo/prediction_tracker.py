@@ -160,7 +160,9 @@ def groups_with_results(
     df = load_completed_group_matches(results_path)
     if df.empty or "group" not in df.columns:
         return []
-    return sorted(df["group"].astype(str).unique().tolist())
+    return sorted(
+        g for g in df["group"].astype(str).unique().tolist() if g in GROUPS
+    )
 
 
 def append_match_results(
